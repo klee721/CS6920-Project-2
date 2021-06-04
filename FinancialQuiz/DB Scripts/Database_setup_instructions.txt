@@ -1,0 +1,4 @@
+Follow these steps to create thedatabase with the tables and data
+
+1) Execute the script "Database_SQL_server_script".
+
