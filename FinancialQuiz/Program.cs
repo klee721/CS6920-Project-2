@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using FinancialQuiz.View;
 using System.Windows.Forms;
 
 namespace FinancialQuiz
@@ -16,7 +14,7 @@ namespace FinancialQuiz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new View.MainMenu());
         }
     }
 }
