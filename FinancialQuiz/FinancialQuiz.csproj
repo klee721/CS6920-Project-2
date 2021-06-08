@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ManageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManageUserControl.Designer.cs">
+      <DependentUpon>ManageUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\ManageUserControl.resx">
+      <DependentUpon>ManageUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>

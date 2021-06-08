@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinancialQuiz.View
+namespace FinancialQuiz.UserControls
 {
-    public partial class AdminDashboard : Form
+    public partial class ManageUserControl : UserControl
     {
-        public AdminDashboard()
+        public ManageUserControl()
         {
             InitializeComponent();
-        }
-
-        private void QuestionsTab_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
