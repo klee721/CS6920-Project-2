@@ -9,7 +9,7 @@ namespace FinancialQuiz.Model
     /// <summary>
     /// Model class for Question object
     /// </summary>
-    class Question
+   public class Question
     {
         public int QuestionID { get; set; }
 

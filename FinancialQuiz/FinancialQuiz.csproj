@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="DAL\QuestionDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Model\Question.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
