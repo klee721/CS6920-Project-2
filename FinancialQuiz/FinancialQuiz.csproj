@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="DAL\QuestionDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Model\Question.cs" />

@@ -101,6 +101,7 @@ namespace FinancialQuiz.View
             this.LoginButton.TabIndex = 4;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // ExitButton
             // 
@@ -111,9 +112,12 @@ namespace FinancialQuiz.View
             this.ExitButton.TabIndex = 5;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // UserTypeComboBox
             // 
+            this.UserTypeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.UserTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.UserTypeComboBox.FormattingEnabled = true;
             this.UserTypeComboBox.Location = new System.Drawing.Point(327, 132);
             this.UserTypeComboBox.Name = "UserTypeComboBox";
@@ -131,6 +135,7 @@ namespace FinancialQuiz.View
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(327, 241);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(217, 20);
             this.PasswordTextBox.TabIndex = 3;
             // 
@@ -155,6 +160,7 @@ namespace FinancialQuiz.View
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exit);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

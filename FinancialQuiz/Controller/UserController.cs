@@ -1,9 +1,6 @@
 ﻿using FinancialQuiz.DAL;
-using System;
+using FinancialQuiz.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FinancialQuiz.Controller
 {
@@ -22,5 +19,12 @@ namespace FinancialQuiz.Controller
         {
             this.userDAL = new UserDAL();
         }
+
+        public List<User> UserLogin(string username, string password)
+        {
+            return this.userDAL.UserLogin(username, password);
+        }
+
+
     }
 }
