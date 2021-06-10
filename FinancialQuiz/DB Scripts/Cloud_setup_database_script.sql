@@ -1,6 +1,6 @@
 
 CREATE TABLE [Age_range](
-	[ID] [int] NOT NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](255) NOT NULL,
 	[Description] [varchar](255) NULL,
 PRIMARY KEY CLUSTERED 
@@ -19,7 +19,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Category](
-	[ID] [int] NOT NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](255) NOT NULL,
 	[Description] [varchar](255) NULL,
 PRIMARY KEY CLUSTERED 
@@ -38,7 +38,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Game_Level](
-	[ID] [int] NOT NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](255) NOT NULL,
 	[Description] [varchar](255) NULL,
 PRIMARY KEY CLUSTERED 
@@ -73,7 +73,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Games](
-	[ID] [int] NOT NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[userID] [int] NOT NULL,
 	[Start_Date] [date] NOT NULL,
 	[End_Date] [date] NOT NULL,
@@ -94,7 +94,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Questions](
-	[ID] [int] NOT NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[Age_range_id] [int] NOT NULL,
 	[Game_Level_ID] [int] NOT NULL,
 	[Category_ID] [int] NOT NULL,
@@ -120,7 +120,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Users](
-	[ID] [int] NOT NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[LastName] [varchar](255) NOT NULL,
 	[FirstName] [varchar](255) NULL,
 	[Age] [int] NULL,
