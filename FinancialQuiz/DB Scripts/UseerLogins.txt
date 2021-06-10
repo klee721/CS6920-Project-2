@@ -1,0 +1,6 @@
+Username	password
+Lauren	test123
+Laura	test4321  (Admin)
+doe	    test1234
+jane	test1234   (Admin)
+Sam	    test1234
