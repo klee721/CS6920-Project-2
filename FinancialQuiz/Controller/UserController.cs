@@ -25,6 +25,17 @@ namespace FinancialQuiz.Controller
             return this.userDAL.UserLogin(username, password);
         }
 
+        /// <summary>
+        /// Method that returns the selected user from the user table
+        /// </summary>
+        /// <param name="name">first name last name of the user</param>
+        /// <param name="username">username</param>
+        /// <param name="userId">user id of the user</param>
+        /// <returns>User object</returns>
+        public List<User> GetUsers(string name, string username, int userId)
+        {
+            return this.userDAL.GetUsers(name, username, userId);
+        }
 
     }
 }

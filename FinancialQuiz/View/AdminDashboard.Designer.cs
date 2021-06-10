@@ -33,7 +33,9 @@ namespace FinancialQuiz.View
             this.QuestionsTab = new System.Windows.Forms.TabPage();
             this.UsersTab = new System.Windows.Forms.TabPage();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+            this.manageUserControl1 = new FinancialQuiz.UserControls.ManageUserControl();
             this.PlayerDashTabControl.SuspendLayout();
+            this.UsersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +66,7 @@ namespace FinancialQuiz.View
             // 
             // UsersTab
             // 
+            this.UsersTab.Controls.Add(this.manageUserControl1);
             this.UsersTab.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.UsersTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsersTab.Location = new System.Drawing.Point(4, 25);
@@ -74,6 +77,13 @@ namespace FinancialQuiz.View
             this.UsersTab.TabIndex = 1;
             this.UsersTab.Text = "Users                                 ";
             this.UsersTab.UseVisualStyleBackColor = true;
+            // 
+            // manageUserControl1
+            // 
+            this.manageUserControl1.Location = new System.Drawing.Point(3, 0);
+            this.manageUserControl1.Name = "manageUserControl1";
+            this.manageUserControl1.Size = new System.Drawing.Size(1062, 696);
+            this.manageUserControl1.TabIndex = 0;
             // 
             // AdminDashboard
             // 
@@ -89,6 +99,7 @@ namespace FinancialQuiz.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
             this.PlayerDashTabControl.ResumeLayout(false);
+            this.UsersTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
 
@@ -100,5 +111,6 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.TabPage QuestionsTab;
         private System.Windows.Forms.TabPage UsersTab;
         private System.Diagnostics.PerformanceCounter performanceCounter1;
+        private UserControls.ManageUserControl manageUserControl1;
     }
 }
