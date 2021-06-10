@@ -71,6 +71,7 @@ namespace FinancialQuiz.View
             this.LogoutLink.TabIndex = 2;
             this.LogoutLink.TabStop = true;
             this.LogoutLink.Text = "Logout";
+            this.LogoutLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogoutLink_LinkClicked);
             // 
             // CategoryHeaderLabel
             // 

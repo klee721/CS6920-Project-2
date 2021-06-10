@@ -7,19 +7,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FinancialQuiz.Model;
 
 namespace FinancialQuiz.View
 {
     public partial class AdminDashboard : Form
     {
-        public AdminDashboard()
+
+        User loggedInUser;
+        private LoginForm loginForm;
+
+        public AdminDashboard(User user)
         {
             InitializeComponent();
+            this.loggedInUser = new User();
+            this.loggedInUser = user;
+            this.loginForm = new LoginForm();
+            this.FillOutComponents();
         }
 
-        private void QuestionsTab_Click(object sender, EventArgs e)
-        {
 
+        /// <summary>
+        /// Helper method to set any applicable labels to user specific data
+        /// </summary>
+        private void FillOutComponents()
+        {
+            this.UserNameLabel.Text = this.loggedInUser.FirstName;
+        }
+
+        /// <summary>
+        /// Stores a reference to the 'main menu' login form so the player can log out and return to it
+        /// </summary>
+        /// <param name="loginForm">the main menu form created on application startup</param>
+        public void SetLoginForm(LoginForm loginForm)
+        {
+            if (loginForm != null)
+            {
+                this.loginForm = loginForm;
+            }
+        }
+
+        private void LogoutLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.loggedInUser = null;
+            AdminDashboard.ActiveForm.Close();
+            this.loginForm.Show();
         }
     }
 }

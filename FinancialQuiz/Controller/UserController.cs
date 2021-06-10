@@ -19,10 +19,25 @@ namespace FinancialQuiz.Controller
         {
             this.userDAL = new UserDAL();
         }
-
+        /// <summary>
+        /// Accesses associated DAL method and returns a List of Users (players) that match the username and password
+        /// </summary>
+        /// <param name="username">the entered username</param>
+        /// <param name="password">the entered password</param>
+        /// <returns></returns>
         public List<User> UserLogin(string username, string password)
         {
             return this.userDAL.UserLogin(username, password);
+        }
+        /// <summary>
+        /// Accesses associated DAL method and returns a List of Users (admins) that match the username and password
+        /// </summary>
+        /// <param name="username">the entered username</param>
+        /// <param name="password">the entered password</param>
+        /// <returns></returns>
+        public List<User> AdminLogin(string username, string password)
+        {
+            return this.userDAL.AdminLogin(username, password);
         }
 
         /// <summary>

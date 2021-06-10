@@ -14,7 +14,7 @@ namespace FinancialQuiz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.MainMenu());
+            Application.Run(new View.LoginForm());
         }
     }
 }

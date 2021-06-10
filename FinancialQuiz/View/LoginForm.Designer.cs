@@ -1,7 +1,7 @@
 ﻿
 namespace FinancialQuiz.View
 {
-    partial class MainMenu
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -139,7 +139,7 @@ namespace FinancialQuiz.View
             this.PasswordTextBox.Size = new System.Drawing.Size(217, 20);
             this.PasswordTextBox.TabIndex = 3;
             // 
-            // MainMenu
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,7 +157,7 @@ namespace FinancialQuiz.View
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(766, 418);
             this.MinimumSize = new System.Drawing.Size(766, 418);
-            this.Name = "MainMenu";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exit);
