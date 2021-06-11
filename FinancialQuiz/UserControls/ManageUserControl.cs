@@ -137,11 +137,23 @@ namespace FinancialQuiz.UserControls
             userId = user.UserID;
             txtFirstName.Text = user.FirstName;
             txtLastName.Text = user.LastName;
-           // txtAge.Text = user.Age;
+            txtAge.Text = Convert.ToString(user.Age);
             txtUsername.Text = user.UserName;
             txtPassword.Text = user.Password;
         }
 
-       
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            cbxSearch.SelectedIndex = 0;
+            txtSearch.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtAge.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            btnRegister.Enabled = true;
+            btnUpdate.Enabled = false;
+            btnClear.Enabled = true;
+        }
     }
 }
