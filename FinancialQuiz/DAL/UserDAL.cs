@@ -136,7 +136,10 @@ namespace FinancialQuiz.DAL
             {
                 sqlStatement += "where concat(FirstName, ' ', LastName) = @Name";
             }
-            
+            else if (username != null && username.Length > 0)
+            {
+                sqlStatement += "where UserName = @Username";
+            }
             else if (userid > 0)
             {
                 sqlStatement += "where ID = @UserID";
@@ -152,7 +155,10 @@ namespace FinancialQuiz.DAL
                     {
                         selectCommand.Parameters.AddWithValue("@Name", name);
                     }
-                   
+                    else if (username != null && username.Length > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@Username", username);
+                    }
                     else if (userid > 0)
                     {
                         selectCommand.Parameters.AddWithValue("@UserID", userid);

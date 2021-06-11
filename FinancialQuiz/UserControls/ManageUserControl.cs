@@ -61,6 +61,19 @@ namespace FinancialQuiz.UserControls
                 txtSearch.Focus();
             }
 
+            else if (searchCriteria == "Username")
+            {
+                try
+                {
+                    string username = txtSearch.Text;
+                    userList = this.userController.GetUsers("", username, -1);
+                }
+                catch (FormatException)
+                {
+                    errorMessage = "Invalid username.";
+                    txtSearch.Focus();
+                }
+            }
             else if (searchCriteria == "User ID")
             {
                 try
