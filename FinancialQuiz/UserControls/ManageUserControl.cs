@@ -165,6 +165,7 @@ namespace FinancialQuiz.UserControls
             txtAge.Text = "";
             txtUsername.Text = "";
             txtPassword.Text = "";
+            cbBoxAdminStatus.SelectedIndex = -1;
             btnRegister.Enabled = true;
             btnUpdate.Enabled = false;
             btnClear.Enabled = true;
