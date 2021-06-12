@@ -193,15 +193,17 @@ namespace FinancialQuiz.DAL
         /// <param name="user">User object with required properties added to the DB</param>
         public static bool RegisterUser(User user)
         {
+            var convertedPassword = System.Text.Encoding.UTF8.GetBytes(user.Password);
+            string encodedPassword = System.Convert.ToBase64String(convertedPassword);
+
             using (SqlConnection connection = DBConnection.GetConnection())
             {
                 string insertStatement =
                "INSERT INTO users " +
-                "(LastName, FirstName, Age, UserName, Admin_ind) " +
-                //passwordHash
-                "VALUES (@last_name, @first_name, @age, @username, @admin_status)";
-                //@password
+                "(LastName, FirstName, Age, UserName, passwordHash, Admin_ind) " +
 
+                "VALUES (@last_name, @first_name, @age, @username,  CONVERT(binary, @password), @admin_status)";
+                
                 connection.Open();
 
                 using (SqlCommand insertCommand = new SqlCommand(insertStatement, connection))
@@ -210,7 +212,7 @@ namespace FinancialQuiz.DAL
                     insertCommand.Parameters.AddWithValue("@first_name", user.FirstName);
                     insertCommand.Parameters.AddWithValue("@age", user.Age);
                     insertCommand.Parameters.AddWithValue("@username", user.UserName);
-                    //insertCommand.Parameters.AddWithValue("@password", user.Password);
+                    insertCommand.Parameters.AddWithValue("@password", encodedPassword);
                     insertCommand.Parameters.AddWithValue("@admin_status", user.AdminInd);
                     user.UserID = Convert.ToInt32(insertCommand.ExecuteScalar());
 
