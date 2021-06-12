@@ -194,7 +194,9 @@ namespace FinancialQuiz.DAL
         public static bool RegisterUser(User user)
         {
             var convertedPassword = System.Text.Encoding.UTF8.GetBytes(user.Password);
-            string encodedPassword = System.Convert.ToBase64String(convertedPassword);
+            SHA512 shaM = new SHA512Managed();
+            Byte[] hashedBytes = shaM.ComputeHash(convertedPassword);
+
 
             using (SqlConnection connection = DBConnection.GetConnection())
             {
@@ -202,8 +204,9 @@ namespace FinancialQuiz.DAL
                "INSERT INTO users " +
                 "(LastName, FirstName, Age, UserName, passwordHash, Admin_ind) " +
 
-                "VALUES (@last_name, @first_name, @age, @username,  CONVERT(binary, @password), @admin_status); " +
+                "VALUES (@last_name, @first_name, @age, @username,  @password, @admin_status); " +
                 "SELECT CAST(scope_identity() AS int)";
+
 
                 connection.Open();
 
@@ -213,7 +216,7 @@ namespace FinancialQuiz.DAL
                     insertCommand.Parameters.AddWithValue("@first_name", user.FirstName);
                     insertCommand.Parameters.AddWithValue("@age", user.Age);
                     insertCommand.Parameters.AddWithValue("@username", user.UserName);
-                    insertCommand.Parameters.AddWithValue("@password", encodedPassword);
+                    insertCommand.Parameters.AddWithValue("@password", hashedBytes);
                     insertCommand.Parameters.AddWithValue("@admin_status", user.AdminInd);
                     user.UserID = Convert.ToInt32(insertCommand.ExecuteScalar());
 

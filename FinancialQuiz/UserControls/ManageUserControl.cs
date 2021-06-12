@@ -247,14 +247,15 @@ namespace FinancialQuiz.UserControls
                     newUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
 
                     String name = newUser.FirstName + " " + newUser.LastName;
-                    bool isRegistered = this.userController.RegisterUser(newUser);
-
+                   
                     if (this.isExistingUsername(newUser.UserName))
                     {
                         MessageBox.Show("User " + newUser.UserName + " already exists!", "Error");
                         return;
                     }
-                    
+
+                    bool isRegistered = this.userController.RegisterUser(newUser);
+
                     if (isRegistered)
                     {
                         MessageBox.Show(name + " has been created successfully. UserID: " + newUser.UserID, "Registration Complete");
