@@ -123,14 +123,17 @@ namespace FinancialQuiz.UserControls
 
         private void clearAllFields()
         {
+            txtbxUserId.Text = "";
+            txtSearch.Text = "";
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtAge.Text = "";
             txtUsername.Text = "";
             txtPassword.Text = "";
-
+            cbBoxAdminStatus.SelectedIndex = -1;
             btnRegister.Enabled = true;
             btnUpdate.Enabled = false;
+            btnClear.Enabled = true;
         }
 
 
@@ -160,18 +163,9 @@ namespace FinancialQuiz.UserControls
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtbxUserId.Text = "";
+            this.clearAllFields();
             cbxSearch.SelectedIndex = 0;
-            txtSearch.Text = "";
-            txtFirstName.Text = "";
-            txtLastName.Text = "";
-            txtAge.Text = "";
-            txtUsername.Text = "";
-            txtPassword.Text = "";
-            cbBoxAdminStatus.SelectedIndex = -1;
-            btnRegister.Enabled = true;
-            btnUpdate.Enabled = false;
-            btnClear.Enabled = true;
+
         }
 
         private bool HasValidFields()
@@ -226,8 +220,20 @@ namespace FinancialQuiz.UserControls
             }
         }
 
+        private Boolean isExistingUsername(String username)
+        {
+            List<User> userList = this.userController.GetUsers("", username, -1);
+            if (userList.Count > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
+           
             if (this.HasValidFields())
             {
                 try
@@ -241,8 +247,14 @@ namespace FinancialQuiz.UserControls
                     newUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
 
                     String name = newUser.FirstName + " " + newUser.LastName;
-                    
                     bool isRegistered = this.userController.RegisterUser(newUser);
+
+                    if (this.isExistingUsername(newUser.UserName))
+                    {
+                        MessageBox.Show("User " + newUser.UserName + " already exists!", "Error");
+                        return;
+                    }
+                    
                     if (isRegistered)
                     {
                         MessageBox.Show(name + " has been created successfully. UserID: " + newUser.UserID, "Registration Complete");
