@@ -153,6 +153,7 @@ namespace FinancialQuiz.UserControls
             txtAge.Text = Convert.ToString(user.Age);
             txtUsername.Text = user.UserName;
             txtPassword.Text = user.Password;
+            cbBoxAdminStatus.Text = user.AdminInd;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
