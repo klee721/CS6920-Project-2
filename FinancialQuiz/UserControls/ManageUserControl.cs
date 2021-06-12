@@ -149,6 +149,7 @@ namespace FinancialQuiz.UserControls
             btnUpdate.Enabled = true;
 
             userId = user.UserID;
+            txtbxUserId.Text = Convert.ToString(user.UserID);
             txtFirstName.Text = user.FirstName;
             txtLastName.Text = user.LastName;
             txtAge.Text = Convert.ToString(user.Age);
@@ -159,6 +160,7 @@ namespace FinancialQuiz.UserControls
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtbxUserId.Text = "";
             cbxSearch.SelectedIndex = 0;
             txtSearch.Text = "";
             txtFirstName.Text = "";
