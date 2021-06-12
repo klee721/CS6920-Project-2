@@ -202,8 +202,9 @@ namespace FinancialQuiz.DAL
                "INSERT INTO users " +
                 "(LastName, FirstName, Age, UserName, passwordHash, Admin_ind) " +
 
-                "VALUES (@last_name, @first_name, @age, @username,  CONVERT(binary, @password), @admin_status)";
-                
+                "VALUES (@last_name, @first_name, @age, @username,  CONVERT(binary, @password), @admin_status); " +
+                "SELECT CAST(scope_identity() AS int)";
+
                 connection.Open();
 
                 using (SqlCommand insertCommand = new SqlCommand(insertStatement, connection))

@@ -181,7 +181,7 @@ namespace FinancialQuiz.UserControls
                 txtLastName.Text == "" ||
                 txtAge.Text == "" ||
                 txtUsername.Text == "" ||
-               // txtPassword.Text == "" ||
+                txtPassword.Text == "" ||
                 cbBoxAdminStatus.Text == "")
             {
                 MessageBox.Show("Please check your information - some fields are empty.");
@@ -232,20 +232,23 @@ namespace FinancialQuiz.UserControls
             {
                 try
                 {
-                    User user = new User();
-                    user.FirstName = txtFirstName.Text;
-                    user.LastName = txtLastName.Text;
-                    user.Age = Convert.ToInt32(txtAge.Text);
-                    user.UserName = txtUsername.Text;
-                    user.Password = txtPassword.Text;
-                    user.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
+                    User newUser = new User();
+                    newUser.FirstName = txtFirstName.Text;
+                    newUser.LastName = txtLastName.Text;
+                    newUser.Age = Convert.ToInt32(txtAge.Text);
+                    newUser.UserName = txtUsername.Text;
+                    newUser.Password = txtPassword.Text;
+                    newUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
 
-                    String name = user.FirstName + " " + user.LastName;
+                    String name = newUser.FirstName + " " + newUser.LastName;
                     
-                    bool isRegistered = this.userController.RegisterUser(user);
+                    bool isRegistered = this.userController.RegisterUser(newUser);
                     if (isRegistered)
                     {
-                        MessageBox.Show(name + " has been created successfully. UserID: " + user.UserID, "Registration Complete");
+                        MessageBox.Show(name + " has been created successfully. UserID: " + newUser.UserID, "Registration Complete");
+                        btnRegister.Enabled = false;
+                        btnUpdate.Enabled = true;
+                        btnClear.Enabled = true;
                     }
                     else
                     {
