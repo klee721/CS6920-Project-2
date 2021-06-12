@@ -1,5 +1,6 @@
 ﻿using FinancialQuiz.DAL;
 using FinancialQuiz.Model;
+using System;
 using System.Collections.Generic;
 
 namespace FinancialQuiz.Controller
@@ -51,6 +52,18 @@ namespace FinancialQuiz.Controller
         {
             return this.userDAL.GetUsers(name, username, userId);
         }
+
+        /// <summary>
+        /// Adds a user to the database through the DAL class.
+        /// </summary>
+        /// <param name="user">User</param>
+        public Boolean RegisterUser(User user)
+        {
+
+            return UserDAL.RegisterUser(user);
+
+        }
+
 
     }
 }

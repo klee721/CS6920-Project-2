@@ -187,6 +187,37 @@ namespace FinancialQuiz.DAL
             return userList;
         }
 
+        /// <summary>
+        /// Adds a new user to the Users table of the database using a parameterized query.
+        /// </summary>
+        /// <param name="user">User object with required properties added to the DB</param>
+        public static bool RegisterUser(User user)
+        {
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                string insertStatement =
+               "INSERT INTO users " +
+                "(LastName, FirstName, Age, UserName, Admin_ind) " +
+                //passwordHash
+                "VALUES (@last_name, @first_name, @age, @username, @admin_status)";
+                //@password
+
+                connection.Open();
+
+                using (SqlCommand insertCommand = new SqlCommand(insertStatement, connection))
+                {
+                    insertCommand.Parameters.AddWithValue("@last_name", user.LastName);
+                    insertCommand.Parameters.AddWithValue("@first_name", user.FirstName);
+                    insertCommand.Parameters.AddWithValue("@age", user.Age);
+                    insertCommand.Parameters.AddWithValue("@username", user.UserName);
+                    //insertCommand.Parameters.AddWithValue("@password", user.Password);
+                    insertCommand.Parameters.AddWithValue("@admin_status", user.AdminInd);
+                    user.UserID = Convert.ToInt32(insertCommand.ExecuteScalar());
+
+                    return true;
+                }
+            }
+        }
     }
 }
 
