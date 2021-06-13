@@ -59,11 +59,18 @@ namespace FinancialQuiz.Controller
         /// <param name="user">User</param>
         public Boolean RegisterUser(User user)
         {
-
             return UserDAL.RegisterUser(user);
-
         }
 
+        /// <summary>
+        /// Updates the user in the Users table.
+        /// </summary>
+        /// <param name="user">User object</param>
+        /// <returns>true if user is updated successfully</returns>
+        public static bool UpdateUser(User user)
+        {
+            return UserDAL.UpdateUser(user);
+        }
 
     }
 }
