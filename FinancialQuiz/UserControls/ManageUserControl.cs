@@ -275,6 +275,39 @@ namespace FinancialQuiz.UserControls
             }
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (this.HasValidFields())
+            {
+                try
+                {
+                    User updatedUser = new User();
+                    updatedUser.FirstName = txtFirstName.Text;
+                    updatedUser.LastName = txtLastName.Text;
+                    updatedUser.Age = Convert.ToInt32(txtAge.Text);
+                    updatedUser.UserName = txtUsername.Text;
+                    updatedUser.Password = txtPassword.Text;
+                    updatedUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
+                    String name = updatedUser.FirstName + " " + updatedUser.LastName;
+
+                    bool isUpdated = UserController.UpdateUser(updatedUser);
+
+
+                    if (isUpdated)
+                    {
+                        MessageBox.Show(name + " is updated successfully! UserID: " + updatedUser.UserID, "Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to update the user!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().ToString());
+                }
+            }
+        }
     }
 }
 

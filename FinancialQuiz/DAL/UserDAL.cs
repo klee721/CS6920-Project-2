@@ -232,14 +232,17 @@ namespace FinancialQuiz.DAL
         /// <returns>true if user is updated successfully</returns>
         public static bool UpdateUser(User user)
         {
+            var convertedPassword = System.Text.Encoding.UTF8.GetBytes(user.Password);
+            SHA512 shaM = new SHA512Managed();
+            Byte[] hashedBytes = shaM.ComputeHash(convertedPassword);
+
             using (SqlConnection connection = DBConnection.GetConnection())
             {
                 string sqlStatement = "UPDATE Users" +
                 " SET LastName = @LastName, FirstName = @FirstName, Age = @Age, " +
                 "UserName = @UserName, passwordHash = @Password, Admin_ind = @AdminStatus " +
-
-                "WHERE ID = @UserID";
-
+                "WHERE ID = @UserID; " +
+                "SELECT CAST(scope_identity() AS int)";
                 connection.Open();
 
                 using (SqlCommand updateCommand = new SqlCommand(sqlStatement, connection))
@@ -249,7 +252,8 @@ namespace FinancialQuiz.DAL
                     updateCommand.Parameters.AddWithValue("@FirstName", user.FirstName);
                     updateCommand.Parameters.AddWithValue("@LastName", user.LastName);
                     updateCommand.Parameters.AddWithValue("@Age", user.Age);
-                    updateCommand.Parameters.AddWithValue("@Password", user.Password);
+                    updateCommand.Parameters.AddWithValue("@UserName", user.UserName);
+                    updateCommand.Parameters.AddWithValue("@Password", hashedBytes);
                     updateCommand.Parameters.AddWithValue("@AdminStatus", user.AdminInd);
 
                     updateCommand.ExecuteNonQuery();
