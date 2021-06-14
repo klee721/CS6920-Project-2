@@ -116,12 +116,13 @@ namespace FinancialQuiz.View
             // QuestionLabel
             // 
             this.QuestionLabel.AutoSize = true;
-            this.QuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionLabel.Location = new System.Drawing.Point(127, 156);
+            this.QuestionLabel.MaximumSize = new System.Drawing.Size(800, 0);
             this.QuestionLabel.Name = "QuestionLabel";
-            this.QuestionLabel.Size = new System.Drawing.Size(267, 24);
+            this.QuestionLabel.Size = new System.Drawing.Size(226, 40);
             this.QuestionLabel.TabIndex = 7;
-            this.QuestionLabel.Text = "Using a credit card is most like:";
+            this.QuestionLabel.Text = "Using a credit card is most like:\r\n\r\n";
             // 
             // RadioAnswerA
             // 
@@ -205,6 +206,7 @@ namespace FinancialQuiz.View
             this.Name = "PlayerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kiddie Cash Komprehension";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exit);
             this.ResumeLayout(false);
             this.PerformLayout();
 

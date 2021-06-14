@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinancialQuiz.Model;
+using FinancialQuiz.Controller;
 
 
 namespace FinancialQuiz.View
@@ -16,6 +17,7 @@ namespace FinancialQuiz.View
     {
         User loggedInUser;
         private LoginForm loginForm;
+        private QuestionController questionController;
 
         public PlayerDashboard(User user)
         {
@@ -23,9 +25,29 @@ namespace FinancialQuiz.View
             this.loggedInUser = new User();
             this.loggedInUser = user;
             this.loginForm = new LoginForm();
+            this.questionController = new QuestionController();
             this.FillOutComponents();
 
+            this.DisplayQuestionOne();
+
         }
+
+        /// <summary>
+        /// Helper method that displays the information for the first question in the DB. For demo/development purposes
+        /// </summary>
+        private void DisplayQuestionOne()
+        {
+            Question questionOne = new Question();
+            questionOne = this.questionController.GetSampleQuestion();
+
+            this.QuestionLabel.Text = questionOne.Description;
+            this.RadioAnswerA.Text = questionOne.OptionA;
+            this.RadioAnswerB.Text = questionOne.OptionB;
+            this.RadioAnswerC.Text = questionOne.OptionC;
+            this.RadioAnswerD.Text = questionOne.OptionD;
+
+        }
+
 
 
         /// <summary>
@@ -35,7 +57,8 @@ namespace FinancialQuiz.View
         /// <param name="e"></param>
         private void Exit(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            
+            this.loginForm.Show();
         }
 
         /// <summary>
