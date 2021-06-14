@@ -128,7 +128,7 @@ namespace FinancialQuiz.View
                 }
                 else
                 {
-                    MessageBox.Show("Username or Password is incorrect or entered user does not have administor privileges.", "Login Failed");
+                    MessageBox.Show("Username or Password is incorrect or entered user does not have adminstrator privileges.", "Login Failed");
                 }
 
 
