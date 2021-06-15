@@ -238,11 +238,11 @@ namespace FinancialQuiz.DAL
 
             using (SqlConnection connection = DBConnection.GetConnection())
             {
-                string sqlStatement = "UPDATE Users" +
+                string sqlStatement = "UPDATE users" +
                 " SET LastName = @LastName, FirstName = @FirstName, Age = @Age, " +
                 "UserName = @UserName, passwordHash = @Password, Admin_ind = @AdminStatus " +
-                "WHERE ID = @UserID; " +
-                "SELECT CAST(scope_identity() AS int)";
+                "WHERE ID = @UserID"; 
+             
                 connection.Open();
 
                 using (SqlCommand updateCommand = new SqlCommand(sqlStatement, connection))

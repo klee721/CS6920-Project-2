@@ -281,7 +281,9 @@ namespace FinancialQuiz.UserControls
             {
                 try
                 {
+                    
                     User updatedUser = new User();
+                    updatedUser.UserID = this.userId;
                     updatedUser.FirstName = txtFirstName.Text;
                     updatedUser.LastName = txtLastName.Text;
                     updatedUser.Age = Convert.ToInt32(txtAge.Text);
@@ -289,6 +291,7 @@ namespace FinancialQuiz.UserControls
                     updatedUser.Password = txtPassword.Text;
                     updatedUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
                     String name = updatedUser.FirstName + " " + updatedUser.LastName;
+                    
 
                     bool isUpdated = UserController.UpdateUser(updatedUser);
 
