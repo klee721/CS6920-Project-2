@@ -1,0 +1,17 @@
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\FinancialQuizTests1.dll
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\FinancialQuizTests1.pdb
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\FinancialQuiz.exe
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\FinancialQuiz.pdb
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\FinancialQuiz.exe.config
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\obj\Debug\FinancialQuizTests1.csproj.AssemblyReference.cache
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\obj\Debug\FinancialQuizTests1.csproj.CoreCompileInputs.cache
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\obj\Debug\FinancialQuizTests1.csproj.CopyComplete
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\obj\Debug\FinancialQuizTests1.dll
+C:\Users\sivan\OneDrive\Documents\GitHub\CS6920-Project-2\FinancialQuizTests1\obj\Debug\FinancialQuizTests1.pdb
