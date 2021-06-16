@@ -293,7 +293,7 @@ namespace FinancialQuiz.UserControls
                     String name = updatedUser.FirstName + " " + updatedUser.LastName;
                     
 
-                    bool isUpdated = UserController.UpdateUser(updatedUser);
+                    bool isUpdated = this.userController.UpdateUser(updatedUser);
 
 
                     if (isUpdated)

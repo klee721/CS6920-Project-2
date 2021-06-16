@@ -67,7 +67,7 @@ namespace FinancialQuiz.Controller
         /// </summary>
         /// <param name="user">User object</param>
         /// <returns>true if user is updated successfully</returns>
-        public static bool UpdateUser(User user)
+        public bool UpdateUser(User user)
         {
             return UserDAL.UpdateUser(user);
         }
