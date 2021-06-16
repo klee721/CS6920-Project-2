@@ -13,6 +13,8 @@ namespace FinancialQuiz.View
 {
     public partial class UserTableView : Form
     {
+        private int selectedRowIndex = -1;
+
         public UserTableView()
         {
             InitializeComponent();
@@ -28,7 +30,6 @@ namespace FinancialQuiz.View
 
         private void UserTableView_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_CS6920_Team4DataSetUsers.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this._CS6920_Team4DataSetUsers.Users);
             usersDataGridView.ClearSelection();
         }
@@ -41,5 +42,31 @@ namespace FinancialQuiz.View
         {
             this.usersDataGridView.DataSource = userList;
         }
+
+        /// <summary>
+        /// Returns the current selected index.
+        /// </summary>
+        /// <returns>selectedRowIndex</returns>
+        public int GetSelectedRowIndex()
+        {
+            return selectedRowIndex;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Dispose();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void usersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRowIndex = usersDataGridView.CurrentRow.Index;
+        }
+
     }
 }

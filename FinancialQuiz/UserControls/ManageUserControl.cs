@@ -116,8 +116,14 @@ namespace FinancialQuiz.UserControls
             else if (userList.Count > 1)
             {
                 View.UserTableView userTableView = new View.UserTableView();
+                userTableView.StartPosition = FormStartPosition.CenterParent;
                 userTableView.RefreshUsersDataView(userList);
                 userTableView.ShowDialog();
+                int selectedIndex = userTableView.GetSelectedRowIndex();
+                if (userTableView.DialogResult == DialogResult.OK && selectedIndex > -1)
+                {
+                    this.PopulateUserData(userList[selectedIndex]);
+                }
             }
 
         }

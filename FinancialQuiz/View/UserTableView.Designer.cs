@@ -38,7 +38,6 @@ namespace FinancialQuiz.View
             this.usersTableAdapter = new FinancialQuiz._CS6920_Team4DataSetUsersTableAdapters.UsersTableAdapter();
             this.tableAdapterManager = new FinancialQuiz._CS6920_Team4DataSetUsersTableAdapters.TableAdapterManager();
             this.usersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +55,7 @@ namespace FinancialQuiz.View
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblSearchResults
             // 
@@ -76,6 +76,7 @@ namespace FinancialQuiz.View
             this.btnSelect.TabIndex = 11;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // _CS6920_Team4DataSetUsers
             // 
@@ -99,29 +100,25 @@ namespace FinancialQuiz.View
             // 
             // usersDataGridView
             // 
+            this.usersDataGridView.AllowUserToAddRows = false;
+            this.usersDataGridView.AllowUserToDeleteRows = false;
             this.usersDataGridView.AutoGenerateColumns = false;
             this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.usersDataGridView.DataSource = this.usersBindingSource;
-            this.usersDataGridView.Location = new System.Drawing.Point(0, 103);
+            this.usersDataGridView.Location = new System.Drawing.Point(12, 104);
             this.usersDataGridView.Name = "usersDataGridView";
+            this.usersDataGridView.ReadOnly = true;
             this.usersDataGridView.RowHeadersWidth = 51;
             this.usersDataGridView.RowTemplate.Height = 24;
             this.usersDataGridView.Size = new System.Drawing.Size(776, 220);
             this.usersDataGridView.TabIndex = 14;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.usersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersDataGridView_CellContentClick);
+            this.usersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -129,7 +126,8 @@ namespace FinancialQuiz.View
             this.dataGridViewTextBoxColumn2.HeaderText = "LastName";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 146;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -137,7 +135,8 @@ namespace FinancialQuiz.View
             this.dataGridViewTextBoxColumn3.HeaderText = "FirstName";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 146;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -145,7 +144,8 @@ namespace FinancialQuiz.View
             this.dataGridViewTextBoxColumn4.HeaderText = "Age";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 90;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -153,7 +153,8 @@ namespace FinancialQuiz.View
             this.dataGridViewTextBoxColumn5.HeaderText = "UserName";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 146;
             // 
             // UserTableView
             // 
@@ -185,7 +186,6 @@ namespace FinancialQuiz.View
         private _CS6920_Team4DataSetUsersTableAdapters.UsersTableAdapter usersTableAdapter;
         private _CS6920_Team4DataSetUsersTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView usersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
