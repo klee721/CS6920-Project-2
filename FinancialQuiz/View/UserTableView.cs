@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialQuiz.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,16 @@ namespace FinancialQuiz.View
         {
             // TODO: This line of code loads data into the '_CS6920_Team4DataSetUsers.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this._CS6920_Team4DataSetUsers.Users);
+            usersDataGridView.ClearSelection();
+        }
 
+        /// <summary>
+        /// Updates data in the view.
+        /// </summary>
+        /// <param name="userList"></param>
+        public void RefreshUsersDataView(List<User> userList)
+        {
+            this.usersDataGridView.DataSource = userList;
         }
     }
 }

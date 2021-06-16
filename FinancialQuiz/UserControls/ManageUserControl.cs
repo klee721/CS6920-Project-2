@@ -115,7 +115,9 @@ namespace FinancialQuiz.UserControls
             }
             else if (userList.Count > 1)
             {
-                //TODO
+                View.UserTableView userTableView = new View.UserTableView();
+                userTableView.RefreshUsersDataView(userList);
+                userTableView.ShowDialog();
             }
 
         }
