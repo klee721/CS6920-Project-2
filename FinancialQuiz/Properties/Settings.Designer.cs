@@ -33,5 +33,16 @@ namespace FinancialQuiz.Properties {
                 return ((string)(this["CS6920_Team4ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=cs6920.database.windows.net;Initial Catalog=CS6920-Team4;Persist Secu" +
+            "rity Info=True;User ID=cs6920;Password=P@ssw0rd")]
+        public string CS6920_Team4ConnectionString1 {
+            get {
+                return ((string)(this["CS6920_Team4ConnectionString1"]));
+            }
+        }
     }
 }

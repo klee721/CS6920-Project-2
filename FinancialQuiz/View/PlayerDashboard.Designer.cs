@@ -42,32 +42,36 @@ namespace FinancialQuiz.View
             this.RadioAnswerC = new System.Windows.Forms.RadioButton();
             this.RadioAnswerD = new System.Windows.Forms.RadioButton();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.reportLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // HelloLabel
             // 
             this.HelloLabel.AutoSize = true;
-            this.HelloLabel.Location = new System.Drawing.Point(907, 19);
+            this.HelloLabel.Location = new System.Drawing.Point(1360, 29);
+            this.HelloLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HelloLabel.Name = "HelloLabel";
-            this.HelloLabel.Size = new System.Drawing.Size(31, 13);
+            this.HelloLabel.Size = new System.Drawing.Size(45, 20);
             this.HelloLabel.TabIndex = 0;
             this.HelloLabel.Text = "Hello";
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Location = new System.Drawing.Point(944, 19);
+            this.UserNameLabel.Location = new System.Drawing.Point(1416, 29);
+            this.UserNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(126, 13);
+            this.UserNameLabel.Size = new System.Drawing.Size(196, 20);
             this.UserNameLabel.TabIndex = 1;
             this.UserNameLabel.Text = "XXXXXXXXXXXXXXXXX";
             // 
             // LogoutLink
             // 
             this.LogoutLink.AutoSize = true;
-            this.LogoutLink.Location = new System.Drawing.Point(1030, 45);
+            this.LogoutLink.Location = new System.Drawing.Point(1545, 69);
+            this.LogoutLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogoutLink.Name = "LogoutLink";
-            this.LogoutLink.Size = new System.Drawing.Size(40, 13);
+            this.LogoutLink.Size = new System.Drawing.Size(59, 20);
             this.LogoutLink.TabIndex = 2;
             this.LogoutLink.TabStop = true;
             this.LogoutLink.Text = "Logout";
@@ -77,9 +81,10 @@ namespace FinancialQuiz.View
             // 
             this.CategoryHeaderLabel.AutoSize = true;
             this.CategoryHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryHeaderLabel.Location = new System.Drawing.Point(14, 42);
+            this.CategoryHeaderLabel.Location = new System.Drawing.Point(21, 65);
+            this.CategoryHeaderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CategoryHeaderLabel.Name = "CategoryHeaderLabel";
-            this.CategoryHeaderLabel.Size = new System.Drawing.Size(79, 16);
+            this.CategoryHeaderLabel.Size = new System.Drawing.Size(113, 25);
             this.CategoryHeaderLabel.TabIndex = 3;
             this.CategoryHeaderLabel.Text = "Category: ";
             // 
@@ -87,9 +92,10 @@ namespace FinancialQuiz.View
             // 
             this.CategoryLabel.AutoSize = true;
             this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryLabel.Location = new System.Drawing.Point(90, 42);
+            this.CategoryLabel.Location = new System.Drawing.Point(135, 65);
+            this.CategoryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(162, 16);
+            this.CategoryLabel.Size = new System.Drawing.Size(254, 25);
             this.CategoryLabel.TabIndex = 4;
             this.CategoryLabel.Text = "xxxxxxxxxxxxxxxxxxxxxx";
             // 
@@ -97,9 +103,10 @@ namespace FinancialQuiz.View
             // 
             this.QuestionProgressLabel.AutoSize = true;
             this.QuestionProgressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionProgressLabel.Location = new System.Drawing.Point(268, 42);
+            this.QuestionProgressLabel.Location = new System.Drawing.Point(402, 65);
+            this.QuestionProgressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.QuestionProgressLabel.Name = "QuestionProgressLabel";
-            this.QuestionProgressLabel.Size = new System.Drawing.Size(29, 16);
+            this.QuestionProgressLabel.Size = new System.Drawing.Size(43, 25);
             this.QuestionProgressLabel.TabIndex = 5;
             this.QuestionProgressLabel.Text = "0/0";
             // 
@@ -107,9 +114,10 @@ namespace FinancialQuiz.View
             // 
             this.QuestionNumberLabel.AutoSize = true;
             this.QuestionNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionNumberLabel.Location = new System.Drawing.Point(96, 156);
+            this.QuestionNumberLabel.Location = new System.Drawing.Point(144, 240);
+            this.QuestionNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.QuestionNumberLabel.Name = "QuestionNumberLabel";
-            this.QuestionNumberLabel.Size = new System.Drawing.Size(25, 24);
+            this.QuestionNumberLabel.Size = new System.Drawing.Size(39, 33);
             this.QuestionNumberLabel.TabIndex = 6;
             this.QuestionNumberLabel.Text = "0.";
             // 
@@ -117,10 +125,11 @@ namespace FinancialQuiz.View
             // 
             this.QuestionLabel.AutoSize = true;
             this.QuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionLabel.Location = new System.Drawing.Point(127, 156);
-            this.QuestionLabel.MaximumSize = new System.Drawing.Size(800, 0);
+            this.QuestionLabel.Location = new System.Drawing.Point(190, 240);
+            this.QuestionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.QuestionLabel.MaximumSize = new System.Drawing.Size(1200, 0);
             this.QuestionLabel.Name = "QuestionLabel";
-            this.QuestionLabel.Size = new System.Drawing.Size(226, 40);
+            this.QuestionLabel.Size = new System.Drawing.Size(345, 58);
             this.QuestionLabel.TabIndex = 7;
             this.QuestionLabel.Text = "Using a credit card is most like:\r\n\r\n";
             // 
@@ -128,9 +137,10 @@ namespace FinancialQuiz.View
             // 
             this.RadioAnswerA.AutoSize = true;
             this.RadioAnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerA.Location = new System.Drawing.Point(100, 236);
+            this.RadioAnswerA.Location = new System.Drawing.Point(150, 363);
+            this.RadioAnswerA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RadioAnswerA.Name = "RadioAnswerA";
-            this.RadioAnswerA.Size = new System.Drawing.Size(130, 28);
+            this.RadioAnswerA.Size = new System.Drawing.Size(196, 37);
             this.RadioAnswerA.TabIndex = 8;
             this.RadioAnswerA.TabStop = true;
             this.RadioAnswerA.Text = "A. Answer 1";
@@ -140,9 +150,10 @@ namespace FinancialQuiz.View
             // 
             this.RadioAnswerB.AutoSize = true;
             this.RadioAnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerB.Location = new System.Drawing.Point(100, 304);
+            this.RadioAnswerB.Location = new System.Drawing.Point(150, 468);
+            this.RadioAnswerB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RadioAnswerB.Name = "RadioAnswerB";
-            this.RadioAnswerB.Size = new System.Drawing.Size(129, 28);
+            this.RadioAnswerB.Size = new System.Drawing.Size(196, 37);
             this.RadioAnswerB.TabIndex = 9;
             this.RadioAnswerB.TabStop = true;
             this.RadioAnswerB.Text = "B. Answer 2";
@@ -152,9 +163,10 @@ namespace FinancialQuiz.View
             // 
             this.RadioAnswerC.AutoSize = true;
             this.RadioAnswerC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerC.Location = new System.Drawing.Point(100, 379);
+            this.RadioAnswerC.Location = new System.Drawing.Point(150, 583);
+            this.RadioAnswerC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RadioAnswerC.Name = "RadioAnswerC";
-            this.RadioAnswerC.Size = new System.Drawing.Size(130, 28);
+            this.RadioAnswerC.Size = new System.Drawing.Size(198, 37);
             this.RadioAnswerC.TabIndex = 10;
             this.RadioAnswerC.TabStop = true;
             this.RadioAnswerC.Text = "C. Answer 3";
@@ -164,9 +176,10 @@ namespace FinancialQuiz.View
             // 
             this.RadioAnswerD.AutoSize = true;
             this.RadioAnswerD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerD.Location = new System.Drawing.Point(100, 454);
+            this.RadioAnswerD.Location = new System.Drawing.Point(150, 698);
+            this.RadioAnswerD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RadioAnswerD.Name = "RadioAnswerD";
-            this.RadioAnswerD.Size = new System.Drawing.Size(130, 28);
+            this.RadioAnswerD.Size = new System.Drawing.Size(198, 37);
             this.RadioAnswerD.TabIndex = 11;
             this.RadioAnswerD.TabStop = true;
             this.RadioAnswerD.Text = "D. Answer 4";
@@ -175,18 +188,31 @@ namespace FinancialQuiz.View
             // SubmitButton
             // 
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(499, 524);
+            this.SubmitButton.Location = new System.Drawing.Point(748, 806);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(138, 47);
+            this.SubmitButton.Size = new System.Drawing.Size(207, 72);
             this.SubmitButton.TabIndex = 12;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
             // 
+            // reportLabel
+            // 
+            this.reportLabel.AutoSize = true;
+            this.reportLabel.Location = new System.Drawing.Point(1364, 69);
+            this.reportLabel.Name = "reportLabel";
+            this.reportLabel.Size = new System.Drawing.Size(58, 20);
+            this.reportLabel.TabIndex = 14;
+            this.reportLabel.TabStop = true;
+            this.reportLabel.Text = "Report";
+            this.reportLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.reportLabel_LinkClicked);
+            // 
             // PlayerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 629);
+            this.ClientSize = new System.Drawing.Size(1670, 942);
+            this.Controls.Add(this.reportLabel);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.RadioAnswerD);
             this.Controls.Add(this.RadioAnswerC);
@@ -200,9 +226,10 @@ namespace FinancialQuiz.View
             this.Controls.Add(this.LogoutLink);
             this.Controls.Add(this.UserNameLabel);
             this.Controls.Add(this.HelloLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1135, 668);
-            this.MinimumSize = new System.Drawing.Size(1135, 668);
+            this.MaximumSize = new System.Drawing.Size(1692, 998);
+            this.MinimumSize = new System.Drawing.Size(1692, 998);
             this.Name = "PlayerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kiddie Cash Komprehension";
@@ -227,5 +254,6 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.RadioButton RadioAnswerC;
         private System.Windows.Forms.RadioButton RadioAnswerD;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.LinkLabel reportLabel;
     }
 }

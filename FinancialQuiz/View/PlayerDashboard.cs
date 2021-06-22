@@ -17,6 +17,7 @@ namespace FinancialQuiz.View
     {
         User loggedInUser;
         private LoginForm loginForm;
+        private UserStatsForm userStatsForm;
         private QuestionController questionController;
 
         public PlayerDashboard(User user)
@@ -25,6 +26,7 @@ namespace FinancialQuiz.View
             this.loggedInUser = new User();
             this.loggedInUser = user;
             this.loginForm = new LoginForm();
+            this.userStatsForm = new UserStatsForm();
             this.questionController = new QuestionController();
             this.FillOutComponents();
 
@@ -106,6 +108,12 @@ namespace FinancialQuiz.View
             PlayerDashboard.ActiveForm.Close();
             this.loginForm.Show();
             
+        }
+
+        private void reportLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.userStatsForm.SetUser(this.loggedInUser);
+            this.userStatsForm.Show();
         }
     }
 }

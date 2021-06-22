@@ -72,6 +72,24 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -94,11 +112,17 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserControls\ManageUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ManageUserControl.Designer.cs">
       <DependentUpon>ManageUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserStatsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserStatsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="View\AdminDashboard.cs">
       <SubType>Form</SubType>
@@ -124,11 +148,20 @@
     <Compile Include="View\PlayerDashboard.Designer.cs">
       <DependentUpon>PlayerDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserStatsForm.Designer.cs">
+      <DependentUpon>UserStatsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserTableView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\UserTableView.Designer.cs">
       <DependentUpon>UserTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_CS6920_Team4DataSetUsers.cs">
+      <DependentUpon>_CS6920_Team4DataSetUsers.xsd</DependentUpon>
     </Compile>
     <Compile Include="_CS6920_Team4DataSetUsers.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -159,10 +192,16 @@
     <EmbeddedResource Include="View\PlayerDashboard.resx">
       <DependentUpon>PlayerDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserGamesReport.rdlc" />
+    <EmbeddedResource Include="View\UserStatsForm.resx">
+      <DependentUpon>UserStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserStatsReport.rdlc" />
     <EmbeddedResource Include="View\UserTableView.resx">
       <DependentUpon>UserTableView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FinancialQuiz_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,6 +212,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UserStatsDataSet.xsc">
+      <DependentUpon>UserStatsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserStatsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserStatsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserStatsDataSet.xss">
+      <DependentUpon>UserStatsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="_CS6920_Team4DataSetUsers.xsc">
       <DependentUpon>_CS6920_Team4DataSetUsers.xsd</DependentUpon>
     </None>
@@ -199,6 +249,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
