@@ -192,7 +192,7 @@
     <EmbeddedResource Include="View\PlayerDashboard.resx">
       <DependentUpon>PlayerDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserGamesReport.rdlc" />
+    <EmbeddedResource Include="View\UserReport.rdlc" />
     <EmbeddedResource Include="View\UserStatsForm.resx">
       <DependentUpon>UserStatsForm.cs</DependentUpon>
     </EmbeddedResource>

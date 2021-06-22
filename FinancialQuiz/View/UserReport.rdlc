@@ -22,7 +22,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Id</Value>
+                              <Value>score percentage</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -61,14 +61,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Id">
+                    <Textbox Name="score_percentage">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Min(Fields!Id.Value)</Value>
+                              <Value>=Fields!score_percentage.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -78,7 +78,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Id</rd:DefaultName>
+                      <rd:DefaultName>score_percentage</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -114,7 +114,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>start date</Value>
+                            <Value>Id</Value>
                             <Style>
                               <FontSize>11pt</FontSize>
                               <FontWeight>Bold</FontWeight>
@@ -158,7 +158,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>end date</Value>
+                                <Value>start date</Value>
                                 <Style>
                                   <FontSize>11pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
@@ -202,7 +202,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Total questions</Value>
+                                    <Value>end date</Value>
                                     <Style>
                                       <FontSize>11pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
@@ -246,7 +246,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Completed ind</Value>
+                                        <Value>Total questions</Value>
                                         <Style>
                                           <FontSize>11pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
@@ -290,7 +290,7 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>questions Correct</Value>
+                                            <Value>Completed ind</Value>
                                             <Style>
                                               <FontSize>11pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
@@ -334,7 +334,7 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>questions Missed</Value>
+                                                <Value>questions Correct</Value>
                                                 <Style>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
@@ -378,7 +378,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>score percentage</Value>
+                                                    <Value>questions Missed</Value>
                                                     <Style>
                                                       <FontSize>11pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
@@ -427,27 +427,27 @@
               </TablixMembers>
             </TablixMember>
             <TablixMember>
-              <Group Name="start_date">
+              <Group Name="Id">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!start_date.Value</GroupExpression>
+                  <GroupExpression>=Fields!Id.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!start_date.Value</Value>
+                  <Value>=Fields!Id.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
                 <Size>1in</Size>
                 <CellContents>
-                  <Textbox Name="start_date">
+                  <Textbox Name="Id">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!start_date.Value</Value>
+                            <Value>=Fields!Id.Value</Value>
                             <Style>
                               <FontWeight>Normal</FontWeight>
                               <Color>#333333</Color>
@@ -457,7 +457,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>start_date</rd:DefaultName>
+                    <rd:DefaultName>Id</rd:DefaultName>
                     <Style>
                       <Border>
                         <Style>None</Style>
@@ -478,27 +478,27 @@
               </TablixHeader>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="end_date">
+                  <Group Name="start_date">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!end_date.Value</GroupExpression>
+                      <GroupExpression>=Fields!start_date.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!end_date.Value</Value>
+                      <Value>=Fields!start_date.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
                     <Size>1in</Size>
                     <CellContents>
-                      <Textbox Name="end_date">
+                      <Textbox Name="start_date">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>=Fields!end_date.Value</Value>
+                                <Value>=Fields!start_date.Value</Value>
                                 <Style>
                                   <FontWeight>Normal</FontWeight>
                                   <Color>#333333</Color>
@@ -508,7 +508,7 @@
                             <Style />
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>end_date</rd:DefaultName>
+                        <rd:DefaultName>start_date</rd:DefaultName>
                         <Style>
                           <Border>
                             <Style>None</Style>
@@ -529,27 +529,27 @@
                   </TablixHeader>
                   <TablixMembers>
                     <TablixMember>
-                      <Group Name="Total_questions">
+                      <Group Name="end_date">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Total_questions.Value</GroupExpression>
+                          <GroupExpression>=Fields!end_date.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Total_questions.Value</Value>
+                          <Value>=Fields!end_date.Value</Value>
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
                         <Size>1in</Size>
                         <CellContents>
-                          <Textbox Name="Total_questions">
+                          <Textbox Name="end_date">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>=Fields!Total_questions.Value</Value>
+                                    <Value>=Fields!end_date.Value</Value>
                                     <Style>
                                       <FontWeight>Normal</FontWeight>
                                       <Color>#333333</Color>
@@ -559,7 +559,7 @@
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Total_questions</rd:DefaultName>
+                            <rd:DefaultName>end_date</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Style>None</Style>
@@ -580,27 +580,27 @@
                       </TablixHeader>
                       <TablixMembers>
                         <TablixMember>
-                          <Group Name="Completed_ind">
+                          <Group Name="Total_questions">
                             <GroupExpressions>
-                              <GroupExpression>=Fields!Completed_ind.Value</GroupExpression>
+                              <GroupExpression>=Fields!Total_questions.Value</GroupExpression>
                             </GroupExpressions>
                           </Group>
                           <SortExpressions>
                             <SortExpression>
-                              <Value>=Fields!Completed_ind.Value</Value>
+                              <Value>=Fields!Total_questions.Value</Value>
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
                             <Size>1in</Size>
                             <CellContents>
-                              <Textbox Name="Completed_ind">
+                              <Textbox Name="Total_questions">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>=Fields!Completed_ind.Value</Value>
+                                        <Value>=Fields!Total_questions.Value</Value>
                                         <Style>
                                           <FontWeight>Normal</FontWeight>
                                           <Color>#333333</Color>
@@ -610,7 +610,7 @@
                                     <Style />
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>Completed_ind</rd:DefaultName>
+                                <rd:DefaultName>Total_questions</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Style>None</Style>
@@ -631,27 +631,27 @@
                           </TablixHeader>
                           <TablixMembers>
                             <TablixMember>
-                              <Group Name="questionsCorrect">
+                              <Group Name="Completed_ind">
                                 <GroupExpressions>
-                                  <GroupExpression>=Fields!questionsCorrect.Value</GroupExpression>
+                                  <GroupExpression>=Fields!Completed_ind.Value</GroupExpression>
                                 </GroupExpressions>
                               </Group>
                               <SortExpressions>
                                 <SortExpression>
-                                  <Value>=Fields!questionsCorrect.Value</Value>
+                                  <Value>=Fields!Completed_ind.Value</Value>
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
                                 <Size>1in</Size>
                                 <CellContents>
-                                  <Textbox Name="questionsCorrect">
+                                  <Textbox Name="Completed_ind">
                                     <CanGrow>true</CanGrow>
                                     <KeepTogether>true</KeepTogether>
                                     <Paragraphs>
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>=Fields!questionsCorrect.Value</Value>
+                                            <Value>=Fields!Completed_ind.Value</Value>
                                             <Style>
                                               <FontWeight>Normal</FontWeight>
                                               <Color>#333333</Color>
@@ -661,7 +661,7 @@
                                         <Style />
                                       </Paragraph>
                                     </Paragraphs>
-                                    <rd:DefaultName>questionsCorrect</rd:DefaultName>
+                                    <rd:DefaultName>Completed_ind</rd:DefaultName>
                                     <Style>
                                       <Border>
                                         <Style>None</Style>
@@ -682,27 +682,27 @@
                               </TablixHeader>
                               <TablixMembers>
                                 <TablixMember>
-                                  <Group Name="questionsMissed">
+                                  <Group Name="questionsCorrect">
                                     <GroupExpressions>
-                                      <GroupExpression>=Fields!questionsMissed.Value</GroupExpression>
+                                      <GroupExpression>=Fields!questionsCorrect.Value</GroupExpression>
                                     </GroupExpressions>
                                   </Group>
                                   <SortExpressions>
                                     <SortExpression>
-                                      <Value>=Fields!questionsMissed.Value</Value>
+                                      <Value>=Fields!questionsCorrect.Value</Value>
                                     </SortExpression>
                                   </SortExpressions>
                                   <TablixHeader>
                                     <Size>1in</Size>
                                     <CellContents>
-                                      <Textbox Name="questionsMissed">
+                                      <Textbox Name="questionsCorrect">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!questionsMissed.Value</Value>
+                                                <Value>=Fields!questionsCorrect.Value</Value>
                                                 <Style>
                                                   <FontWeight>Normal</FontWeight>
                                                   <Color>#333333</Color>
@@ -712,7 +712,7 @@
                                             <Style />
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>questionsMissed</rd:DefaultName>
+                                        <rd:DefaultName>questionsCorrect</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>None</Style>
@@ -733,27 +733,27 @@
                                   </TablixHeader>
                                   <TablixMembers>
                                     <TablixMember>
-                                      <Group Name="score_percentage">
+                                      <Group Name="questionsMissed">
                                         <GroupExpressions>
-                                          <GroupExpression>=Fields!score_percentage.Value</GroupExpression>
+                                          <GroupExpression>=Fields!questionsMissed.Value</GroupExpression>
                                         </GroupExpressions>
                                       </Group>
                                       <SortExpressions>
                                         <SortExpression>
-                                          <Value>=Fields!score_percentage.Value</Value>
+                                          <Value>=Fields!questionsMissed.Value</Value>
                                         </SortExpression>
                                       </SortExpressions>
                                       <TablixHeader>
                                         <Size>1in</Size>
                                         <CellContents>
-                                          <Textbox Name="score_percentage">
+                                          <Textbox Name="questionsMissed">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!score_percentage.Value</Value>
+                                                    <Value>=Fields!questionsMissed.Value</Value>
                                                     <Style>
                                                       <FontWeight>Normal</FontWeight>
                                                       <Color>#333333</Color>
@@ -763,7 +763,7 @@
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>score_percentage</rd:DefaultName>
+                                            <rd:DefaultName>questionsMissed</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Style>None</Style>
@@ -800,7 +800,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>UserStatsDataSet</DataSetName>
+        <DataSetName>UserStatsReportDataSet</DataSetName>
         <Height>0.5in</Height>
         <Width>8in</Width>
         <Style>
@@ -828,11 +828,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>4efcde31-38a9-410a-8d65-afb6f9e8c291</rd:DataSourceID>
+      <rd:DataSourceID>91a3e5c0-de23-4b1c-9398-649254784e54</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="UserStatsDataSet">
+    <DataSet Name="UserStatsReportDataSet">
       <Query>
         <DataSourceName>UserStatsDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -882,5 +882,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>57b7c124-8d33-4e1c-8692-903d50ac6f52</rd:ReportID>
+  <rd:ReportID>559768e3-a497-459d-9e93-11124c68c50e</rd:ReportID>
 </Report>

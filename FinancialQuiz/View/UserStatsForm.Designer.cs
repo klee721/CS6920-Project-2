@@ -56,10 +56,10 @@ namespace FinancialQuiz.View
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "UserStatsDataSet";
+            reportDataSource1.Name = "UserStatsReportDataSet";
             reportDataSource1.Value = this.getUserReportBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "FinancialQuiz.View.UserStatsReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "FinancialQuiz.View.UserReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
