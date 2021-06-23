@@ -196,7 +196,6 @@
     <EmbeddedResource Include="View\UserStatsForm.resx">
       <DependentUpon>UserStatsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserStatsReport.rdlc" />
     <EmbeddedResource Include="View\UserTableView.resx">
       <DependentUpon>UserTableView.cs</DependentUpon>
     </EmbeddedResource>
