@@ -98,6 +98,20 @@ namespace FinancialQuiz.View
         }
 
         /// <summary>
+        /// Method to retrieve the game settings for this session from the GameLauncher window
+        /// </summary>
+        /// <param name="categoryID">ID# correpsonding to the question topic</param>
+        /// <param name="age">ID# corresponding to the age set</param>
+        /// <param name="numberOfQuestions">number of questions pulled into the quiz set</param>
+        public void GetGameSettings(int categoryID, int age, int numberOfQuestions)
+        {
+
+
+
+        }
+
+
+        /// <summary>
         /// Logout link closes this instance of the dashboard and sends the user back to the main menu
         /// </summary>
         /// <param name="sender"></param>

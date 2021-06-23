@@ -83,9 +83,14 @@ namespace FinancialQuiz.View
                     //TEST OUTPUT
                     Console.WriteLine("You've logged in: " + testUser.FirstName + " " + testUser.LastName + " " + testUser.UserName + " " + testUser.Age + " as a PLAYER.");
 
-                    PlayerDashboard playerDashboard = new PlayerDashboard(testUser);
-                    playerDashboard.SetLoginForm(this);
-                    playerDashboard.Show();
+                    GameLauncher gameLauncher = new GameLauncher(testUser);
+                    gameLauncher.SetLoginForm(this);
+                    gameLauncher.Show();
+                    
+                    //PlayerDashboard playerDashboard = new PlayerDashboard(testUser);
+                    //playerDashboard.SetLoginForm(this);
+                    //playerDashboard.Show();
+
                     this.Hide();
                     this.ClearInputFields();
 

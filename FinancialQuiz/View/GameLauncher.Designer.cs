@@ -102,6 +102,7 @@ namespace FinancialQuiz.View
             this.BeginGameButton.TabIndex = 6;
             this.BeginGameButton.Text = "Begin Game";
             this.BeginGameButton.UseVisualStyleBackColor = true;
+            this.BeginGameButton.Click += new System.EventHandler(this.BeginGameButton_Click);
             // 
             // InstructionsLabel
             // 
