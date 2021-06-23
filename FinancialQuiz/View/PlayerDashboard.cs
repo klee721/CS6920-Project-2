@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinancialQuiz.Model;
 using FinancialQuiz.Controller;
@@ -128,6 +121,35 @@ namespace FinancialQuiz.View
         {
             this.userStatsForm.SetUser(this.loggedInUser);
             this.userStatsForm.Show();
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+
+
+
+
+            //Correct/incorrect label test
+            if (CorrectLabel.Visible == false)
+            {
+               CorrectLabel.Visible = true;
+            }
+            else
+            {
+                CorrectLabel.Visible = false;
+            }
+
+            if(WrongLabel.Visible == false)
+            {
+                WrongLabel.Visible = true;
+            }
+            else
+            {
+                WrongLabel.Visible = false;
+            }
+
+
+
         }
     }
 }
