@@ -27,6 +27,17 @@ namespace FinancialQuiz.Controller
         {
             return this.questionDAL.GetSampleQuestion();
         }
-        
+
+        /// <summary>
+        /// Method that returns a selected question from the question table
+        /// </summary>
+        /// <param name="questionId">id of the question</param>
+        /// <returns>Question object</returns>
+        public List<Question> GetQuestions(int questionId)
+        {
+            return this.questionDAL.GetQuestions(questionId);
+        }
+
+
     }
 }

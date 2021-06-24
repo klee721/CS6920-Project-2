@@ -187,6 +187,7 @@ namespace FinancialQuiz.UserControls
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblAnswerD
             // 
@@ -400,6 +401,7 @@ namespace FinancialQuiz.UserControls
             this.Controls.Add(this.tblLtPnlManageUser);
             this.Name = "ManageQuestionControl";
             this.Size = new System.Drawing.Size(967, 740);
+            this.Load += new System.EventHandler(this.ManageQuestionControl_Load);
             this.tblLtPnlManageUser.ResumeLayout(false);
             this.tblLtPnlManageUser.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);

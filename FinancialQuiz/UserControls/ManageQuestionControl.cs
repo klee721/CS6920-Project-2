@@ -1,4 +1,5 @@
 ﻿using FinancialQuiz.Controller;
+using FinancialQuiz.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,84 @@ namespace FinancialQuiz.UserControls
     public partial class ManageQuestionControl : UserControl
     {
         private readonly QuestionController questionController;
+        private Question question;
+        private int questionId;
+        private List<Question> questionList;
+        private ToolTip toolTip;
         public ManageQuestionControl()
         {
             InitializeComponent();
             this.questionController = new QuestionController();
+            this.question = new Question();
+            btnAddQ.Enabled = true;
+            btnUpdateQ.Enabled = false;
+            btnDeleteQ.Enabled = false;
+            btnClearQ.Enabled = false;
+            txtSearch.Focus();
+            questionId = 0;
+            toolTip = new ToolTip();
+        }
+
+        private void ManageQuestionControl_Load(object sender, EventArgs e)
+        {
+            cbxSearch.SelectedIndex = 0;
+            cbxSearch.Focus();
+        }
+
+        /// <summary>
+        /// Method that returns the currently selected question
+        /// </summary>
+        public Question GetCurrentQuestion()
+        {
+            return this.question;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            questionId = 0;
+            string searchCriteria = cbxSearch.SelectedItem.ToString();
+            string searchString = txtSearch.Text;
+
+            string errorMessage = "";
+            if (searchString.Trim().Length == 0)
+            {
+                errorMessage = "Please enter " + searchCriteria;
+                txtSearch.Focus();
+            }
+
+            if (searchCriteria == "Question ID")
+            {
+                try
+                {
+                    int questionId = Convert.ToInt32(txtSearch.Text);
+                    if (questionId < 0)
+                    {
+                        errorMessage = "Please enter valid question id!";
+                        txtSearch.Focus();
+                    }
+
+                    questionList = this.questionController.GetQuestions(questionId);
+                    this.PopulateQuestionData(questionList[0]);
+                }
+                catch (FormatException)
+                {
+                    errorMessage = "Please enter valid user id!";
+                    txtSearch.Focus();
+                }
+
+            }
+        }
+
+        private void PopulateQuestionData(Question question)
+        {
+            questionId = question.QuestionID;
+            txtQuestion.Text = question.Description;
+            txtAnswerA.Text = question.OptionA;
+            txtAnswerB.Text = question.OptionB;
+            txtAnswerC.Text = question.OptionC;
+            txtAnswerD.Text = question.OptionD;
+            txtCorrectAnswer.Text = question.CorrectOption;
+            
         }
 
     }
