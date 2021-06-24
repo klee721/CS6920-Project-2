@@ -45,6 +45,7 @@ namespace FinancialQuiz.View
             this.reportLabel = new System.Windows.Forms.LinkLabel();
             this.CorrectLabel = new System.Windows.Forms.Label();
             this.WrongLabel = new System.Windows.Forms.Label();
+            this.ProgressLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // HelloLabel
@@ -100,7 +101,7 @@ namespace FinancialQuiz.View
             // 
             this.QuestionProgressLabel.AutoSize = true;
             this.QuestionProgressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionProgressLabel.Location = new System.Drawing.Point(268, 42);
+            this.QuestionProgressLabel.Location = new System.Drawing.Point(90, 71);
             this.QuestionProgressLabel.Name = "QuestionProgressLabel";
             this.QuestionProgressLabel.Size = new System.Drawing.Size(29, 16);
             this.QuestionProgressLabel.TabIndex = 5;
@@ -221,11 +222,22 @@ namespace FinancialQuiz.View
             this.WrongLabel.TabIndex = 16;
             this.WrongLabel.Text = " INCORRECT";
             // 
+            // ProgressLabel
+            // 
+            this.ProgressLabel.AutoSize = true;
+            this.ProgressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressLabel.Location = new System.Drawing.Point(12, 71);
+            this.ProgressLabel.Name = "ProgressLabel";
+            this.ProgressLabel.Size = new System.Drawing.Size(79, 16);
+            this.ProgressLabel.TabIndex = 17;
+            this.ProgressLabel.Text = "Progress: ";
+            // 
             // PlayerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 623);
+            this.Controls.Add(this.ProgressLabel);
             this.Controls.Add(this.WrongLabel);
             this.Controls.Add(this.CorrectLabel);
             this.Controls.Add(this.reportLabel);
@@ -272,5 +284,6 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.LinkLabel reportLabel;
         private System.Windows.Forms.Label CorrectLabel;
         private System.Windows.Forms.Label WrongLabel;
+        private System.Windows.Forms.Label ProgressLabel;
     }
 }

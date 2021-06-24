@@ -83,12 +83,14 @@ namespace FinancialQuiz.View
             int selectedCategory;
             int selectedAge; 
             int numberOfQuestions;
+            string categoryName;
 
             selectedCategory = (int)this.CategoryComboBox.SelectedValue;
             selectedAge = (int)this.AgeComboBox.SelectedValue;
             numberOfQuestions = (int)this.NumberOfQuestionsNumUpDown.Value;
+            categoryName = this.CategoryComboBox.Text;
 
-            playerDashboard.GetGameSettings(selectedCategory, selectedAge, numberOfQuestions);
+            playerDashboard.GetGameSettings(selectedCategory, categoryName, selectedAge, numberOfQuestions);
 
             GameLauncher.ActiveForm.Close();
             playerDashboard.Show();

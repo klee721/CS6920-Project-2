@@ -15,6 +15,8 @@ namespace FinancialQuiz.View
         int categoryID;
         int ageID;
         int numberOfQuestions;
+        string categoryName;
+        int currentQuestion;
 
         public PlayerDashboard(User user)
         {
@@ -24,7 +26,8 @@ namespace FinancialQuiz.View
             this.loginForm = new LoginForm();
             this.userStatsForm = new UserStatsForm();
             this.questionController = new QuestionController();
-            this.FillOutComponents();
+            this.currentQuestion = 1;
+            
 
             this.DisplayQuestionOne();
 
@@ -65,6 +68,8 @@ namespace FinancialQuiz.View
         private void FillOutComponents()
         {
             this.UserNameLabel.Text = this.loggedInUser.FirstName;
+            this.CategoryLabel.Text = this.categoryName;
+            this.QuestionProgressLabel.Text = this.currentQuestion+ "/" + this.numberOfQuestions;
         }
 
         /// <summary>
@@ -99,14 +104,15 @@ namespace FinancialQuiz.View
         /// <param name="categoryID">ID# correpsonding to the question topic</param>
         /// <param name="age">ID# corresponding to the age set</param>
         /// <param name="numberOfQuestions">number of questions pulled into the quiz set</param>
-        public void GetGameSettings(int categoryID, int age, int numberOfQuestions)
+        public void GetGameSettings(int categoryID, string categoryName, int age, int numberOfQuestions)
         {
             this.categoryID = categoryID;
             this.ageID = age;
             this.numberOfQuestions = numberOfQuestions;
+            this.categoryName = categoryName;
 
             Console.WriteLine("Values are: " + categoryID + " " + age + " " + numberOfQuestions);
-
+            this.FillOutComponents();
 
         }
 
