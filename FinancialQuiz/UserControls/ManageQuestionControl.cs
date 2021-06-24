@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialQuiz.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace FinancialQuiz.UserControls
 {
     public partial class ManageQuestionControl : UserControl
     {
+        private readonly QuestionController questionController;
         public ManageQuestionControl()
         {
             InitializeComponent();
+            this.questionController = new QuestionController();
         }
+
     }
 }

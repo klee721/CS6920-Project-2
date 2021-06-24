@@ -30,7 +30,6 @@ namespace FinancialQuiz.UserControls
         private void InitializeComponent()
         {
             this.tblLtPnlManageUser = new System.Windows.Forms.TableLayoutPanel();
-            this.lblCorrectAnswer = new System.Windows.Forms.Label();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.lblSearchBy = new System.Windows.Forms.Label();
             this.txtQuestion = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@ namespace FinancialQuiz.UserControls
             this.txtAnswerC = new System.Windows.Forms.TextBox();
             this.txtAnswerD = new System.Windows.Forms.TextBox();
             this.txtCorrectAnswer = new System.Windows.Forms.TextBox();
+            this.lblCorrectAnswer = new System.Windows.Forms.Label();
             this.btnAddQ = new System.Windows.Forms.Button();
             this.btnUpdateQ = new System.Windows.Forms.Button();
             this.btnClearQ = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.ColumnCount = 3;
             this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.43478F));
             this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.56522F));
-            this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
+            this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
             this.tblLtPnlManageUser.Controls.Add(this.lblQuestion, 0, 3);
             this.tblLtPnlManageUser.Controls.Add(this.lblSearchBy, 0, 0);
             this.tblLtPnlManageUser.Controls.Add(this.txtQuestion, 1, 3);
@@ -100,18 +100,6 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.Size = new System.Drawing.Size(935, 501);
             this.tblLtPnlManageUser.TabIndex = 3;
             // 
-            // lblCorrectAnswer
-            // 
-            this.lblCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblCorrectAnswer.AutoSize = true;
-            this.lblCorrectAnswer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorrectAnswer.Location = new System.Drawing.Point(76, 463);
-            this.lblCorrectAnswer.Name = "lblCorrectAnswer";
-            this.lblCorrectAnswer.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblCorrectAnswer.Size = new System.Drawing.Size(142, 21);
-            this.lblCorrectAnswer.TabIndex = 42;
-            this.lblCorrectAnswer.Text = "Correct Answer:";
-            // 
             // lblQuestion
             // 
             this.lblQuestion.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -144,7 +132,7 @@ namespace FinancialQuiz.UserControls
             this.txtQuestion.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtQuestion.MaxLength = 45;
             this.txtQuestion.Name = "txtQuestion";
-            this.txtQuestion.Size = new System.Drawing.Size(483, 28);
+            this.txtQuestion.Size = new System.Drawing.Size(482, 28);
             this.txtQuestion.TabIndex = 7;
             // 
             // tableLayoutPanel4
@@ -161,7 +149,7 @@ namespace FinancialQuiz.UserControls
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(500, 37);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(499, 37);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // txtSearch
@@ -192,7 +180,7 @@ namespace FinancialQuiz.UserControls
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSearch.Location = new System.Drawing.Point(730, 15);
+            this.btnSearch.Location = new System.Drawing.Point(729, 15);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(131, 37);
@@ -232,7 +220,7 @@ namespace FinancialQuiz.UserControls
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtFirstName.MaxLength = 45;
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(483, 28);
+            this.txtFirstName.Size = new System.Drawing.Size(482, 28);
             this.txtFirstName.TabIndex = 5;
             // 
             // lblAnswerB
@@ -267,7 +255,7 @@ namespace FinancialQuiz.UserControls
             this.txtCategory.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtCategory.MaxLength = 45;
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(483, 28);
+            this.txtCategory.Size = new System.Drawing.Size(482, 28);
             this.txtCategory.TabIndex = 44;
             // 
             // lblAnswer
@@ -290,7 +278,7 @@ namespace FinancialQuiz.UserControls
             this.txtAnswerA.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerA.MaxLength = 45;
             this.txtAnswerA.Name = "txtAnswerA";
-            this.txtAnswerA.Size = new System.Drawing.Size(483, 28);
+            this.txtAnswerA.Size = new System.Drawing.Size(482, 28);
             this.txtAnswerA.TabIndex = 46;
             // 
             // txtAnswerB
@@ -301,7 +289,7 @@ namespace FinancialQuiz.UserControls
             this.txtAnswerB.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerB.MaxLength = 45;
             this.txtAnswerB.Name = "txtAnswerB";
-            this.txtAnswerB.Size = new System.Drawing.Size(483, 28);
+            this.txtAnswerB.Size = new System.Drawing.Size(482, 28);
             this.txtAnswerB.TabIndex = 47;
             // 
             // label1
@@ -324,7 +312,7 @@ namespace FinancialQuiz.UserControls
             this.txtAnswerC.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerC.MaxLength = 45;
             this.txtAnswerC.Name = "txtAnswerC";
-            this.txtAnswerC.Size = new System.Drawing.Size(483, 28);
+            this.txtAnswerC.Size = new System.Drawing.Size(482, 28);
             this.txtAnswerC.TabIndex = 49;
             // 
             // txtAnswerD
@@ -335,7 +323,7 @@ namespace FinancialQuiz.UserControls
             this.txtAnswerD.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerD.MaxLength = 45;
             this.txtAnswerD.Name = "txtAnswerD";
-            this.txtAnswerD.Size = new System.Drawing.Size(483, 28);
+            this.txtAnswerD.Size = new System.Drawing.Size(482, 28);
             this.txtAnswerD.TabIndex = 50;
             // 
             // txtCorrectAnswer
@@ -346,8 +334,20 @@ namespace FinancialQuiz.UserControls
             this.txtCorrectAnswer.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtCorrectAnswer.MaxLength = 45;
             this.txtCorrectAnswer.Name = "txtCorrectAnswer";
-            this.txtCorrectAnswer.Size = new System.Drawing.Size(483, 28);
+            this.txtCorrectAnswer.Size = new System.Drawing.Size(482, 28);
             this.txtCorrectAnswer.TabIndex = 51;
+            // 
+            // lblCorrectAnswer
+            // 
+            this.lblCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblCorrectAnswer.AutoSize = true;
+            this.lblCorrectAnswer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorrectAnswer.Location = new System.Drawing.Point(76, 463);
+            this.lblCorrectAnswer.Name = "lblCorrectAnswer";
+            this.lblCorrectAnswer.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.lblCorrectAnswer.Size = new System.Drawing.Size(142, 21);
+            this.lblCorrectAnswer.TabIndex = 42;
+            this.lblCorrectAnswer.Text = "Correct Answer:";
             // 
             // btnAddQ
             // 
