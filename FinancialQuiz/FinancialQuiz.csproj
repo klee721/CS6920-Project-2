@@ -113,6 +113,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UserControls\ManageQuestionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManageQuestionControl.Designer.cs">
+      <DependentUpon>ManageQuestionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ManageUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\ManageQuestionControl.resx">
+      <DependentUpon>ManageQuestionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ManageUserControl.resx">
       <DependentUpon>ManageUserControl.cs</DependentUpon>
     </EmbeddedResource>
