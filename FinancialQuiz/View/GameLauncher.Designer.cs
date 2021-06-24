@@ -32,12 +32,13 @@ namespace FinancialQuiz.View
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.AgeLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.AgeComboBox = new System.Windows.Forms.ComboBox();
             this.NumberOfQuestionsLabel = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.BeginGameButton = new System.Windows.Forms.Button();
             this.InstructionsLabel = new System.Windows.Forms.Label();
             this.NewGameTitleLabel = new System.Windows.Forms.Label();
+            this.NumberOfQuestionsNumUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfQuestionsNumUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // CategoryLabel
@@ -52,6 +53,7 @@ namespace FinancialQuiz.View
             // 
             // CategoryComboBox
             // 
+            this.CategoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryComboBox.FormattingEnabled = true;
             this.CategoryComboBox.Location = new System.Drawing.Point(145, 159);
             this.CategoryComboBox.Name = "CategoryComboBox";
@@ -68,13 +70,14 @@ namespace FinancialQuiz.View
             this.AgeLabel.TabIndex = 2;
             this.AgeLabel.Text = "Age: ";
             // 
-            // comboBox1
+            // AgeComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(145, 237);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(62, 21);
-            this.comboBox1.TabIndex = 3;
+            this.AgeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AgeComboBox.FormattingEnabled = true;
+            this.AgeComboBox.Location = new System.Drawing.Point(145, 237);
+            this.AgeComboBox.Name = "AgeComboBox";
+            this.AgeComboBox.Size = new System.Drawing.Size(62, 21);
+            this.AgeComboBox.TabIndex = 3;
             // 
             // NumberOfQuestionsLabel
             // 
@@ -82,17 +85,9 @@ namespace FinancialQuiz.View
             this.NumberOfQuestionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumberOfQuestionsLabel.Location = new System.Drawing.Point(41, 316);
             this.NumberOfQuestionsLabel.Name = "NumberOfQuestionsLabel";
-            this.NumberOfQuestionsLabel.Size = new System.Drawing.Size(85, 32);
+            this.NumberOfQuestionsLabel.Size = new System.Drawing.Size(89, 48);
             this.NumberOfQuestionsLabel.TabIndex = 4;
-            this.NumberOfQuestionsLabel.Text = "Number of \r\nQuestions: ";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(145, 327);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(62, 21);
-            this.comboBox2.TabIndex = 5;
+            this.NumberOfQuestionsLabel.Text = "Number of \r\nQuestions:  \r\n(5 - 20)";
             // 
             // BeginGameButton
             // 
@@ -123,17 +118,29 @@ namespace FinancialQuiz.View
             this.NewGameTitleLabel.TabIndex = 8;
             this.NewGameTitleLabel.Text = "Create a New Game";
             // 
+            // NumberOfQuestionsNumUpDown
+            // 
+            this.NumberOfQuestionsNumUpDown.Location = new System.Drawing.Point(145, 328);
+            this.NumberOfQuestionsNumUpDown.Name = "NumberOfQuestionsNumUpDown";
+            this.NumberOfQuestionsNumUpDown.Size = new System.Drawing.Size(62, 20);
+            this.NumberOfQuestionsNumUpDown.TabIndex = 9;
+            this.NumberOfQuestionsNumUpDown.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // GameLauncher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 531);
+            this.Controls.Add(this.NumberOfQuestionsNumUpDown);
             this.Controls.Add(this.NewGameTitleLabel);
             this.Controls.Add(this.InstructionsLabel);
             this.Controls.Add(this.BeginGameButton);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.NumberOfQuestionsLabel);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.AgeComboBox);
             this.Controls.Add(this.AgeLabel);
             this.Controls.Add(this.CategoryComboBox);
             this.Controls.Add(this.CategoryLabel);
@@ -141,6 +148,7 @@ namespace FinancialQuiz.View
             this.Name = "GameLauncher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameLauncher";
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfQuestionsNumUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,11 +159,11 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.Label CategoryLabel;
         private System.Windows.Forms.ComboBox CategoryComboBox;
         private System.Windows.Forms.Label AgeLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox AgeComboBox;
         private System.Windows.Forms.Label NumberOfQuestionsLabel;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button BeginGameButton;
         private System.Windows.Forms.Label InstructionsLabel;
         private System.Windows.Forms.Label NewGameTitleLabel;
+        private System.Windows.Forms.NumericUpDown NumberOfQuestionsNumUpDown;
     }
 }

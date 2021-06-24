@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using FinancialQuiz.Model;
+using FinancialQuiz.Controller;
 
 namespace FinancialQuiz.View
 {
@@ -9,6 +10,7 @@ namespace FinancialQuiz.View
 
         User loggedInUser;
         private LoginForm loginForm;
+        CategoryController categorySource;
 
         public GameLauncher(User user)
         {
@@ -17,7 +19,38 @@ namespace FinancialQuiz.View
             this.loggedInUser = user;
             this.loginForm = new LoginForm();
 
+            this.categorySource = new CategoryController();
 
+            this.FillOutCategoryComboBox();
+            this.FillOutAgeComboBox();
+            this.FillOutQuestionsComboBox();
+
+        }
+
+        /// <summary>
+        /// Method to fill out the Number of Questions combo box
+        /// </summary>
+        private void FillOutQuestionsComboBox()
+        {
+            this.NumberOfQuestionsNumUpDown.Minimum = 5;
+            this.NumberOfQuestionsNumUpDown.Maximum = 20;
+        }
+        /// <summary>
+        /// Method to fill out the Age combo box
+        /// </summary>
+        private void FillOutAgeComboBox()
+        {
+            
+        }
+        /// <summary>
+        /// Method to fill out the Category combo box
+        /// </summary>
+        private void FillOutCategoryComboBox()
+        {
+            this.CategoryComboBox.DataSource = this.categorySource.GetAllCategories();
+            this.CategoryComboBox.DisplayMember = "Name";
+            this.CategoryComboBox.ValueMember = "CategoryID";
+            
         }
 
 

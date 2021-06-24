@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FinancialQuiz.Model;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace FinancialQuiz.DAL
