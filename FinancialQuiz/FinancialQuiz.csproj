@@ -160,6 +160,12 @@
     <Compile Include="View\PlayerDashboard.Designer.cs">
       <DependentUpon>PlayerDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\StudyGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StudyGroup.Designer.cs">
+      <DependentUpon>StudyGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserStatsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PlayerDashboard.resx">
       <DependentUpon>PlayerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StudyGroup.resx">
+      <DependentUpon>StudyGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserReport.rdlc" />
     <EmbeddedResource Include="View\UserStatsForm.resx">

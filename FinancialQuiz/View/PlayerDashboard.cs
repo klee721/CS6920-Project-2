@@ -11,6 +11,7 @@ namespace FinancialQuiz.View
         User loggedInUser;
         private LoginForm loginForm;
         private UserStatsForm userStatsForm;
+        private StudyGroup myStudyGroup;
         private QuestionController questionController;
         int categoryID;
         int ageID;
@@ -24,7 +25,8 @@ namespace FinancialQuiz.View
             this.loggedInUser = new User();
             this.loggedInUser = user;
             this.loginForm = new LoginForm();
-            this.userStatsForm = new UserStatsForm();
+            
+            
             this.questionController = new QuestionController();
             this.currentQuestion = 1;
             
@@ -132,6 +134,7 @@ namespace FinancialQuiz.View
 
         private void reportLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.userStatsForm = new UserStatsForm();
             this.userStatsForm.SetUser(this.loggedInUser);
             this.userStatsForm.Show();
         }
@@ -163,6 +166,13 @@ namespace FinancialQuiz.View
 
 
 
+        }
+
+        private void StudyGroupLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.myStudyGroup = new StudyGroup();
+            this.myStudyGroup.SetUser(this.loggedInUser);
+            this.myStudyGroup.Show();
         }
     }
 }

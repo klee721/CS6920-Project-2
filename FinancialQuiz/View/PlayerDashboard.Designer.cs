@@ -46,6 +46,8 @@ namespace FinancialQuiz.View
             this.CorrectLabel = new System.Windows.Forms.Label();
             this.WrongLabel = new System.Windows.Forms.Label();
             this.ProgressLabel = new System.Windows.Forms.Label();
+            this.SaveQuestionButton = new System.Windows.Forms.Button();
+            this.StudyGroupLink = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // HelloLabel
@@ -131,6 +133,7 @@ namespace FinancialQuiz.View
             // RadioAnswerA
             // 
             this.RadioAnswerA.AutoSize = true;
+            this.RadioAnswerA.Checked = true;
             this.RadioAnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioAnswerA.Location = new System.Drawing.Point(100, 236);
             this.RadioAnswerA.Name = "RadioAnswerA";
@@ -148,7 +151,6 @@ namespace FinancialQuiz.View
             this.RadioAnswerB.Name = "RadioAnswerB";
             this.RadioAnswerB.Size = new System.Drawing.Size(129, 28);
             this.RadioAnswerB.TabIndex = 9;
-            this.RadioAnswerB.TabStop = true;
             this.RadioAnswerB.Text = "B. Answer 2";
             this.RadioAnswerB.UseVisualStyleBackColor = true;
             // 
@@ -160,7 +162,6 @@ namespace FinancialQuiz.View
             this.RadioAnswerC.Name = "RadioAnswerC";
             this.RadioAnswerC.Size = new System.Drawing.Size(130, 28);
             this.RadioAnswerC.TabIndex = 10;
-            this.RadioAnswerC.TabStop = true;
             this.RadioAnswerC.Text = "C. Answer 3";
             this.RadioAnswerC.UseVisualStyleBackColor = true;
             // 
@@ -172,7 +173,6 @@ namespace FinancialQuiz.View
             this.RadioAnswerD.Name = "RadioAnswerD";
             this.RadioAnswerD.Size = new System.Drawing.Size(130, 28);
             this.RadioAnswerD.TabIndex = 11;
-            this.RadioAnswerD.TabStop = true;
             this.RadioAnswerD.Text = "D. Answer 4";
             this.RadioAnswerD.UseVisualStyleBackColor = true;
             // 
@@ -232,11 +232,36 @@ namespace FinancialQuiz.View
             this.ProgressLabel.TabIndex = 17;
             this.ProgressLabel.Text = "Progress: ";
             // 
+            // SaveQuestionButton
+            // 
+            this.SaveQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveQuestionButton.Location = new System.Drawing.Point(91, 527);
+            this.SaveQuestionButton.Name = "SaveQuestionButton";
+            this.SaveQuestionButton.Size = new System.Drawing.Size(262, 47);
+            this.SaveQuestionButton.TabIndex = 18;
+            this.SaveQuestionButton.Text = "Add to Study Group";
+            this.SaveQuestionButton.UseVisualStyleBackColor = true;
+            this.SaveQuestionButton.Visible = false;
+            // 
+            // StudyGroupLink
+            // 
+            this.StudyGroupLink.AutoSize = true;
+            this.StudyGroupLink.Location = new System.Drawing.Point(932, 71);
+            this.StudyGroupLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.StudyGroupLink.Name = "StudyGroupLink";
+            this.StudyGroupLink.Size = new System.Drawing.Size(109, 13);
+            this.StudyGroupLink.TabIndex = 19;
+            this.StudyGroupLink.TabStop = true;
+            this.StudyGroupLink.Text = "View My Study Group";
+            this.StudyGroupLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.StudyGroupLink_LinkClicked);
+            // 
             // PlayerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 623);
+            this.Controls.Add(this.StudyGroupLink);
+            this.Controls.Add(this.SaveQuestionButton);
             this.Controls.Add(this.ProgressLabel);
             this.Controls.Add(this.WrongLabel);
             this.Controls.Add(this.CorrectLabel);
@@ -285,5 +310,7 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.Label CorrectLabel;
         private System.Windows.Forms.Label WrongLabel;
         private System.Windows.Forms.Label ProgressLabel;
+        private System.Windows.Forms.Button SaveQuestionButton;
+        private System.Windows.Forms.LinkLabel StudyGroupLink;
     }
 }
