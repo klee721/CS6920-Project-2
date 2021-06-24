@@ -39,7 +39,7 @@ namespace FinancialQuiz.UserControls
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblAnswerD = new System.Windows.Forms.Label();
             this.lblAgeRange = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtAgeRange = new System.Windows.Forms.TextBox();
             this.lblAnswerB = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.txtCategory = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.Controls.Add(this.btnSearch, 2, 0);
             this.tblLtPnlManageUser.Controls.Add(this.lblAnswerD, 0, 7);
             this.tblLtPnlManageUser.Controls.Add(this.lblAgeRange, 0, 2);
-            this.tblLtPnlManageUser.Controls.Add(this.txtFirstName, 1, 2);
+            this.tblLtPnlManageUser.Controls.Add(this.txtAgeRange, 1, 2);
             this.tblLtPnlManageUser.Controls.Add(this.lblAnswerB, 0, 5);
             this.tblLtPnlManageUser.Controls.Add(this.lblCategory, 0, 1);
             this.tblLtPnlManageUser.Controls.Add(this.txtCategory, 1, 1);
@@ -213,16 +213,16 @@ namespace FinancialQuiz.UserControls
             this.lblAgeRange.TabIndex = 27;
             this.lblAgeRange.Text = "Age Range: ";
             // 
-            // txtFirstName
+            // txtAgeRange
             // 
-            this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtFirstName.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtFirstName.Location = new System.Drawing.Point(241, 141);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.txtFirstName.MaxLength = 45;
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(482, 28);
-            this.txtFirstName.TabIndex = 5;
+            this.txtAgeRange.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAgeRange.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtAgeRange.Location = new System.Drawing.Point(241, 141);
+            this.txtAgeRange.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.txtAgeRange.MaxLength = 45;
+            this.txtAgeRange.Name = "txtAgeRange";
+            this.txtAgeRange.Size = new System.Drawing.Size(482, 28);
+            this.txtAgeRange.TabIndex = 5;
             // 
             // lblAnswerB
             // 
@@ -379,6 +379,7 @@ namespace FinancialQuiz.UserControls
             this.btnClearQ.TabIndex = 31;
             this.btnClearQ.Text = "Clear";
             this.btnClearQ.UseVisualStyleBackColor = true;
+            this.btnClearQ.Click += new System.EventHandler(this.btnClearQ_Click);
             // 
             // btnDeleteQ
             // 
@@ -423,7 +424,7 @@ namespace FinancialQuiz.UserControls
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblAnswerD;
         private System.Windows.Forms.Label lblAgeRange;
-        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtAgeRange;
         private System.Windows.Forms.Label lblAnswerB;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.TextBox txtCategory;

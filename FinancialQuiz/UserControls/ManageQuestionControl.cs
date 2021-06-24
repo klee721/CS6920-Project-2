@@ -24,10 +24,10 @@ namespace FinancialQuiz.UserControls
             InitializeComponent();
             this.questionController = new QuestionController();
             this.question = new Question();
-            btnAddQ.Enabled = true;
-            btnUpdateQ.Enabled = false;
-            btnDeleteQ.Enabled = false;
-            btnClearQ.Enabled = false;
+           // btnAddQ.Enabled = true;
+           // btnUpdateQ.Enabled = false;
+          //  btnDeleteQ.Enabled = false;
+          //  btnClearQ.Enabled = false;
             txtSearch.Focus();
             questionId = 0;
             toolTip = new ToolTip();
@@ -95,5 +95,22 @@ namespace FinancialQuiz.UserControls
             
         }
 
+        private void btnClearQ_Click(object sender, EventArgs e)
+        {
+            cbxSearch.SelectedIndex = 0;
+            txtSearch.Text = "";
+            txtCategory.Text = "";
+            txtAgeRange.Text = "";
+            txtQuestion.Text = "";
+            txtAnswerA.Text = "";
+            txtAnswerB.Text = "";
+            txtAnswerC.Text = "";
+            txtAnswerD.Text = "";
+            txtCorrectAnswer.Text = "";
+            
+          //  btnUpdateQ.Enabled = false;
+           // btnAddQ.Enabled = true;
+           // btnClearQ.Enabled = true;
+        }
     }
 }
