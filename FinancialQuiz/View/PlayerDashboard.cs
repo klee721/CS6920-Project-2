@@ -12,6 +12,9 @@ namespace FinancialQuiz.View
         private LoginForm loginForm;
         private UserStatsForm userStatsForm;
         private QuestionController questionController;
+        int categoryID;
+        int ageID;
+        int numberOfQuestions;
 
         public PlayerDashboard(User user)
         {
@@ -98,7 +101,11 @@ namespace FinancialQuiz.View
         /// <param name="numberOfQuestions">number of questions pulled into the quiz set</param>
         public void GetGameSettings(int categoryID, int age, int numberOfQuestions)
         {
+            this.categoryID = categoryID;
+            this.ageID = age;
+            this.numberOfQuestions = numberOfQuestions;
 
+            Console.WriteLine("Values are: " + categoryID + " " + age + " " + numberOfQuestions);
 
 
         }

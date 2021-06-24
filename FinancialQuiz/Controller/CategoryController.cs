@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FinancialQuiz.DAL;
 using FinancialQuiz.Model;
 
@@ -18,7 +15,10 @@ namespace FinancialQuiz.Controller
         {
             categoryDAL = new CategoryDAL();
         }
-
+        /// <summary>
+        /// Grabs and returns all question Categories from the DB
+        /// </summary>
+        /// <returns></returns>
         public List<Category> GetAllCategories()
         {
             return this.categoryDAL.GetAllCategories();

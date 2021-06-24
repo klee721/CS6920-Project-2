@@ -11,6 +11,7 @@ namespace FinancialQuiz.View
         User loggedInUser;
         private LoginForm loginForm;
         CategoryController categorySource;
+        AgeController ageSource;
 
         public GameLauncher(User user)
         {
@@ -20,6 +21,7 @@ namespace FinancialQuiz.View
             this.loginForm = new LoginForm();
 
             this.categorySource = new CategoryController();
+            this.ageSource = new AgeController();
 
             this.FillOutCategoryComboBox();
             this.FillOutAgeComboBox();
@@ -40,7 +42,9 @@ namespace FinancialQuiz.View
         /// </summary>
         private void FillOutAgeComboBox()
         {
-            
+            this.AgeComboBox.DataSource = this.ageSource.GetAllAges();
+            this.AgeComboBox.DisplayMember = "Name";
+            this.AgeComboBox.ValueMember = "AgeID";
         }
         /// <summary>
         /// Method to fill out the Category combo box
@@ -76,7 +80,15 @@ namespace FinancialQuiz.View
             PlayerDashboard playerDashboard = new PlayerDashboard(this.loggedInUser);
             playerDashboard.SetLoginForm(this.loginForm);
 
-            playerDashboard.GetGameSettings(1,2,3);  //NEEDS TO PULL FORM SELECTED DATA
+            int selectedCategory;
+            int selectedAge; 
+            int numberOfQuestions;
+
+            selectedCategory = (int)this.CategoryComboBox.SelectedValue;
+            selectedAge = (int)this.AgeComboBox.SelectedValue;
+            numberOfQuestions = (int)this.NumberOfQuestionsNumUpDown.Value;
+
+            playerDashboard.GetGameSettings(selectedCategory, selectedAge, numberOfQuestions);
 
             GameLauncher.ActiveForm.Close();
             playerDashboard.Show();

@@ -5,18 +5,17 @@ using System.Data.SqlClient;
 
 namespace FinancialQuiz.DAL
 {
-   public class CategoryDAL
+    public class AgeDAL
     {
         /// <summary>
-        /// Method to grab all categories in the DB with their ID, name and description
+        /// Method to grab and return all of the Age categories in the DB
         /// </summary>
         /// <returns></returns>
-        public List<Category> GetAllCategories()
+        public List<Age> GetAllAges()
         {
+            List<Age> ageList = new List<Age>();
 
-            List<Category> categoryList = new List<Category>();
-
-            string sqlStatement = "SELECT * from Category ";
+            string sqlStatement = "SELECT * from Age_range ";
 
             using (SqlConnection connection = DBConnection.GetConnection())
             {
@@ -30,37 +29,18 @@ namespace FinancialQuiz.DAL
 
                         while (reader.Read())
                         {
-                            Category newCategory = new Category();
-                            newCategory.CategoryID = Convert.ToInt32(reader["ID"].ToString());
-                            newCategory.Name = reader["Name"].ToString();
-                            newCategory.Description = reader["Description"].ToString();
+                            Age newAge = new Age();
+                            newAge.AgeID = Convert.ToInt32(reader["ID"].ToString());
+                            newAge.Name = reader["Name"].ToString();
+                            newAge.Description = reader["Description"].ToString();
 
-                            categoryList.Add(newCategory);
+                            ageList.Add(newAge);
                         }
                     }
                 }
             }
+            return ageList;
 
-                    return categoryList;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
