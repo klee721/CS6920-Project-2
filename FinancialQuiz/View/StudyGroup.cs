@@ -23,5 +23,17 @@ namespace FinancialQuiz.View
         {
             label1.Text = user.FirstName;
         }
+
+        private void AnswerDisplayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.CorrectAnswer.Visible == false)
+            {
+                this.CorrectAnswer.Visible = true;
+            }
+            else
+            {
+                this.CorrectAnswer.Visible = false;
+            }
+        }
     }
 }

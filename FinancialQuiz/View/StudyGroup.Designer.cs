@@ -36,6 +36,7 @@ namespace FinancialQuiz.View
             this.QuestionLabel = new System.Windows.Forms.Label();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.AnswerDisplayCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@ namespace FinancialQuiz.View
             this.CorrectAnswer.Size = new System.Drawing.Size(105, 20);
             this.CorrectAnswer.TabIndex = 9;
             this.CorrectAnswer.Text = "Both A and D";
+            this.CorrectAnswer.Visible = false;
             // 
             // AnswerLabel
             // 
@@ -110,11 +112,24 @@ namespace FinancialQuiz.View
             this.label1.TabIndex = 13;
             this.label1.Text = "label1";
             // 
+            // AnswerDisplayCheckBox
+            // 
+            this.AnswerDisplayCheckBox.AutoSize = true;
+            this.AnswerDisplayCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerDisplayCheckBox.Location = new System.Drawing.Point(32, 202);
+            this.AnswerDisplayCheckBox.Name = "AnswerDisplayCheckBox";
+            this.AnswerDisplayCheckBox.Size = new System.Drawing.Size(127, 20);
+            this.AnswerDisplayCheckBox.TabIndex = 14;
+            this.AnswerDisplayCheckBox.Text = "Display Answers";
+            this.AnswerDisplayCheckBox.UseVisualStyleBackColor = true;
+            this.AnswerDisplayCheckBox.CheckedChanged += new System.EventHandler(this.AnswerDisplayCheckBox_CheckedChanged);
+            // 
             // StudyGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.AnswerDisplayCheckBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.QuestionLabel);
@@ -144,5 +159,6 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.Label QuestionLabel;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox AnswerDisplayCheckBox;
     }
 }
