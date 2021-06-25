@@ -11,3 +11,5 @@ update GameDetails set userOption =  @userOption where gameID = @gameId and Ques
 
   
 end
+--exec UpdateUserQuestionAnswer @gameId=1,@questionId=1, @userOption='B';
+

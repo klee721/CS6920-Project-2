@@ -13,3 +13,4 @@ select q.Id, q.Description, q.OptionA, q.OptionB, q.OptionC, q.OptionD from (SEL
 
   
 end
+--exec GetGameQuestion  @gameId=1, @questionNumber=2;
