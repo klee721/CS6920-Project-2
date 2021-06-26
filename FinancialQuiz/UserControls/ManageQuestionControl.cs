@@ -30,10 +30,10 @@ namespace FinancialQuiz.UserControls
             this.categorySource = new CategoryController();
             this.ageSource = new AgeController();
 
-            // btnAddQ.Enabled = true;
-            // btnUpdateQ.Enabled = false;
-            //  btnDeleteQ.Enabled = false;
-            //  btnClearQ.Enabled = false;
+            btnAddQ.Enabled = true;
+            btnUpdateQ.Enabled = false;
+            btnDeleteQ.Enabled = false;
+            btnClearQ.Enabled = false;
             txtSearch.Focus();
             questionId = 0;
             toolTip = new ToolTip();
@@ -91,6 +91,11 @@ namespace FinancialQuiz.UserControls
 
         private void PopulateQuestionData(Question question)
         {
+            btnUpdateQ.Enabled = true;
+            btnAddQ.Enabled = false;
+            btnClearQ.Enabled = true;
+            btnDeleteQ.Enabled = true;
+
             questionId = question.QuestionID;
             this.FillOutCategoryComboBox();
             this.FillOutAgeComboBox();
@@ -116,9 +121,10 @@ namespace FinancialQuiz.UserControls
             txtAnswerD.Text = "";
             txtCorrectAnswer.Text = "";
             
-          //  btnUpdateQ.Enabled = false;
-           // btnAddQ.Enabled = true;
-           // btnClearQ.Enabled = true;
+            btnUpdateQ.Enabled = false;
+            btnAddQ.Enabled = true;
+            btnDeleteQ.Enabled = false;
+            btnClearQ.Enabled = false;
         }
 
 
