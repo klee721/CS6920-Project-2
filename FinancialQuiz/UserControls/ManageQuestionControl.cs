@@ -156,5 +156,61 @@ namespace FinancialQuiz.UserControls
             this.cbxAge.DisplayMember = "Name";
             this.cbxAge.ValueMember = "AgeID";
         }
+
+        private void btnUpdateQ_Click(object sender, EventArgs e)
+        {
+            if (this.isValid())
+            {
+                try
+                {
+                    Question updatedQuestion = new Question();
+                    updatedQuestion.QuestionID = this.questionId;
+                    
+                    updatedQuestion.Description = txtQuestion.Text;
+                    updatedQuestion.OptionA= txtAnswerA.Text;
+                    updatedQuestion.OptionB = txtAnswerB.Text;
+                    updatedQuestion.OptionC = txtAnswerC.Text;
+                    updatedQuestion.OptionD = txtAnswerD.Text;
+                    updatedQuestion.CorrectOption = txtCorrectAnswer.Text;
+
+                    bool isUpdated = this.questionController.UpdateQuestion(updatedQuestion);
+
+
+                    if (isUpdated)
+                    {
+                        MessageBox.Show("Question is updated successfully! QuestionID: " + updatedQuestion.QuestionID, "Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to update the question!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().ToString());
+                }
+            }
+        }
+
+        private bool isValid()
+        {
+
+            if (txtQuestion.Text == "" ||
+                txtAnswerA.Text == "" ||
+                txtAnswerB.Text == "" ||
+                txtAnswerC.Text == "" ||
+                txtAnswerD.Text == "" ||
+                txtCorrectAnswer.Text == "" ||
+                cbxCat.Text == "" ||
+                cbxAge.Text == "")
+            {
+                MessageBox.Show("Please check your information - some fields are empty.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

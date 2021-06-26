@@ -30,13 +30,10 @@ namespace FinancialQuiz.UserControls
         private void InitializeComponent()
         {
             this.tblLtPnlManageUser = new System.Windows.Forms.TableLayoutPanel();
+            this.cbxCat = new System.Windows.Forms.ComboBox();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.lblSearchBy = new System.Windows.Forms.Label();
             this.txtQuestion = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cbxSearch = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.lblAnswerD = new System.Windows.Forms.Label();
             this.lblAgeRange = new System.Windows.Forms.Label();
             this.lblAnswerB = new System.Windows.Forms.Label();
@@ -49,12 +46,15 @@ namespace FinancialQuiz.UserControls
             this.txtAnswerD = new System.Windows.Forms.TextBox();
             this.txtCorrectAnswer = new System.Windows.Forms.TextBox();
             this.lblCorrectAnswer = new System.Windows.Forms.Label();
+            this.cbxAge = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbxSearch = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.btnAddQ = new System.Windows.Forms.Button();
             this.btnUpdateQ = new System.Windows.Forms.Button();
             this.btnClearQ = new System.Windows.Forms.Button();
             this.btnDeleteQ = new System.Windows.Forms.Button();
-            this.cbxCat = new System.Windows.Forms.ComboBox();
-            this.cbxAge = new System.Windows.Forms.ComboBox();
             this.tblLtPnlManageUser.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +100,21 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.Size = new System.Drawing.Size(1267, 599);
             this.tblLtPnlManageUser.TabIndex = 3;
             // 
+            // cbxCat
+            // 
+            this.cbxCat.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCat.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCat.FormattingEnabled = true;
+            this.cbxCat.ItemHeight = 22;
+            this.cbxCat.Items.AddRange(new object[] {
+            "Question ID"});
+            this.cbxCat.Location = new System.Drawing.Point(215, 88);
+            this.cbxCat.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
+            this.cbxCat.Name = "cbxCat";
+            this.cbxCat.Size = new System.Drawing.Size(541, 30);
+            this.cbxCat.TabIndex = 4;
+            // 
             // lblQuestion
             // 
             this.lblQuestion.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -135,60 +150,6 @@ namespace FinancialQuiz.UserControls
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.Size = new System.Drawing.Size(850, 71);
             this.txtQuestion.TabIndex = 7;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.97291F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.02709F));
-            this.tableLayoutPanel4.Controls.Add(this.cbxSearch, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtSearch, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(199, 17);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(849, 37);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(249, 2);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(597, 28);
-            this.txtSearch.TabIndex = 3;
-            // 
-            // cbxSearch
-            // 
-            this.cbxSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSearch.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxSearch.FormattingEnabled = true;
-            this.cbxSearch.ItemHeight = 22;
-            this.cbxSearch.Items.AddRange(new object[] {
-            "Question ID"});
-            this.cbxSearch.Location = new System.Drawing.Point(19, 2);
-            this.cbxSearch.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
-            this.cbxSearch.Name = "cbxSearch";
-            this.cbxSearch.Size = new System.Drawing.Size(192, 30);
-            this.cbxSearch.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSearch.Location = new System.Drawing.Point(1072, 17);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(131, 37);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblAnswerD
             // 
@@ -333,6 +294,75 @@ namespace FinancialQuiz.UserControls
             this.lblCorrectAnswer.TabIndex = 42;
             this.lblCorrectAnswer.Text = "Correct Answer:";
             // 
+            // cbxAge
+            // 
+            this.cbxAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxAge.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAge.FormattingEnabled = true;
+            this.cbxAge.ItemHeight = 22;
+            this.cbxAge.Items.AddRange(new object[] {
+            "Question ID"});
+            this.cbxAge.Location = new System.Drawing.Point(215, 151);
+            this.cbxAge.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
+            this.cbxAge.Name = "cbxAge";
+            this.cbxAge.Size = new System.Drawing.Size(195, 30);
+            this.cbxAge.TabIndex = 52;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.97291F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.02709F));
+            this.tableLayoutPanel4.Controls.Add(this.cbxSearch, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtSearch, 1, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(199, 17);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(849, 37);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // cbxSearch
+            // 
+            this.cbxSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSearch.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSearch.FormattingEnabled = true;
+            this.cbxSearch.ItemHeight = 22;
+            this.cbxSearch.Items.AddRange(new object[] {
+            "Question ID"});
+            this.cbxSearch.Location = new System.Drawing.Point(19, 2);
+            this.cbxSearch.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
+            this.cbxSearch.Name = "cbxSearch";
+            this.cbxSearch.Size = new System.Drawing.Size(192, 30);
+            this.cbxSearch.TabIndex = 2;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(249, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(597, 28);
+            this.txtSearch.TabIndex = 3;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSearch.Location = new System.Drawing.Point(1072, 17);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 37);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // btnAddQ
             // 
             this.btnAddQ.Location = new System.Drawing.Point(613, 675);
@@ -352,6 +382,7 @@ namespace FinancialQuiz.UserControls
             this.btnUpdateQ.TabIndex = 29;
             this.btnUpdateQ.Text = "Update";
             this.btnUpdateQ.UseVisualStyleBackColor = true;
+            this.btnUpdateQ.Click += new System.EventHandler(this.btnUpdateQ_Click);
             // 
             // btnClearQ
             // 
@@ -373,36 +404,6 @@ namespace FinancialQuiz.UserControls
             this.btnDeleteQ.TabIndex = 32;
             this.btnDeleteQ.Text = "Delete";
             this.btnDeleteQ.UseVisualStyleBackColor = true;
-            // 
-            // cbxCat
-            // 
-            this.cbxCat.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCat.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCat.FormattingEnabled = true;
-            this.cbxCat.ItemHeight = 22;
-            this.cbxCat.Items.AddRange(new object[] {
-            "Question ID"});
-            this.cbxCat.Location = new System.Drawing.Point(215, 89);
-            this.cbxCat.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
-            this.cbxCat.Name = "cbxCat";
-            this.cbxCat.Size = new System.Drawing.Size(541, 30);
-            this.cbxCat.TabIndex = 4;
-            // 
-            // cbxAge
-            // 
-            this.cbxAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxAge.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAge.FormattingEnabled = true;
-            this.cbxAge.ItemHeight = 22;
-            this.cbxAge.Items.AddRange(new object[] {
-            "Question ID"});
-            this.cbxAge.Location = new System.Drawing.Point(215, 152);
-            this.cbxAge.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
-            this.cbxAge.Name = "cbxAge";
-            this.cbxAge.Size = new System.Drawing.Size(195, 30);
-            this.cbxAge.TabIndex = 52;
             // 
             // ManageQuestionControl
             // 

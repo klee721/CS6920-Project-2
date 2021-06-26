@@ -40,5 +40,16 @@ namespace FinancialQuiz.Controller
         }
 
 
+        /// <summary>
+        /// Updates the question in the Questions table.
+        /// </summary>
+        /// <param name="question">Question object</param>
+        /// <returns>true if the question is updated successfully</returns>
+        public bool UpdateQuestion(Question question)
+        {
+            return QuestionDAL.UpdateQuestion(question);
+        }
+
+
     }
 }

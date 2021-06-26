@@ -53,15 +53,15 @@ namespace FinancialQuiz.DAL
         /// <summary>
         /// Method that returns a selected question from the questions table
         /// </summary>
-        /// <param name="questionid">user id</param>
-        /// <returns>User object</returns>
+        /// <param name="questionid">question id</param>
+        /// <returns>Question object</returns>
         public List<Question> GetQuestions(int questionid)
         {
             List<Question> questionList = new List<Question>();
 
             string sqlStatement = "SELECT ID, Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, Correct_Option from Questions ";
 
-              if (questionid > 0)
+            if (questionid > 0)
             {
                 sqlStatement += "where ID = @QuestionID";
             }
@@ -72,7 +72,7 @@ namespace FinancialQuiz.DAL
 
                 using (SqlCommand selectCommand = new SqlCommand(sqlStatement, connection))
                 {
-                     if (questionid > 0)
+                    if (questionid > 0)
                     {
                         selectCommand.Parameters.AddWithValue("@QuestionID", questionid);
                     }
@@ -100,6 +100,44 @@ namespace FinancialQuiz.DAL
 
             return questionList;
         }
-    }
 
+
+        /// <summary>
+        /// Updates the question in the Questions table.
+        /// </summary>
+        /// <param name="question">Question object</param>
+        /// <returns>true if question is updated successfully</returns>
+        public static bool UpdateQuestion(Question question)
+        {
+
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                string sqlStatement = "UPDATE Questions" +
+                " SET Age_range_id = @AgeRangeId, Game_Level_ID = @GameLevelID, Category_ID = @CategoryID, " +
+                "Description = @Description, OptionA = @OptionA, OptionB = @OptionB, " +
+                "OptionC = @OptionC, OptionD = @OptionD, Correct_Option = @CorrectOption " +
+                "WHERE ID = @QuestionID";
+                connection.Open();
+
+                using (SqlCommand updateCommand = new SqlCommand(sqlStatement, connection))
+                {
+                    updateCommand.Connection = connection;
+                    updateCommand.Parameters.AddWithValue("@QuestionID", question.QuestionID);
+                    updateCommand.Parameters.AddWithValue("@AgeRangeId", question.AgeRangeID);
+                    updateCommand.Parameters.AddWithValue("@GameLevelID", question.GameLevelID);
+                    updateCommand.Parameters.AddWithValue("@CategoryID", question.CategoryID);
+                    updateCommand.Parameters.AddWithValue("@Description", question.Description);
+                    updateCommand.Parameters.AddWithValue("@OptionA", question.OptionA);
+                    updateCommand.Parameters.AddWithValue("@OptionB", question.OptionB);
+                    updateCommand.Parameters.AddWithValue("@OptionC", question.OptionC);
+                    updateCommand.Parameters.AddWithValue("@OptionD", question.OptionD);
+                    updateCommand.Parameters.AddWithValue("@CorrectOption", question.CorrectOption);
+
+                    updateCommand.ExecuteNonQuery();
+                    return true;
+                }
+            }
+        }
+
+    }
 }
