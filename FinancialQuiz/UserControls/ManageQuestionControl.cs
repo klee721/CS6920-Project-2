@@ -19,15 +19,21 @@ namespace FinancialQuiz.UserControls
         private int questionId;
         private List<Question> questionList;
         private ToolTip toolTip;
+        readonly CategoryController categorySource;
+        readonly AgeController ageSource;
+
         public ManageQuestionControl()
         {
             InitializeComponent();
             this.questionController = new QuestionController();
             this.question = new Question();
-           // btnAddQ.Enabled = true;
-           // btnUpdateQ.Enabled = false;
-          //  btnDeleteQ.Enabled = false;
-          //  btnClearQ.Enabled = false;
+            this.categorySource = new CategoryController();
+            this.ageSource = new AgeController();
+
+            // btnAddQ.Enabled = true;
+            // btnUpdateQ.Enabled = false;
+            //  btnDeleteQ.Enabled = false;
+            //  btnClearQ.Enabled = false;
             txtSearch.Focus();
             questionId = 0;
             toolTip = new ToolTip();
@@ -86,6 +92,8 @@ namespace FinancialQuiz.UserControls
         private void PopulateQuestionData(Question question)
         {
             questionId = question.QuestionID;
+            this.FillOutCategoryComboBox();
+            this.FillOutAgeComboBox();
             txtQuestion.Text = question.Description;
             txtAnswerA.Text = question.OptionA;
             txtAnswerB.Text = question.OptionB;
@@ -99,8 +107,8 @@ namespace FinancialQuiz.UserControls
         {
             cbxSearch.SelectedIndex = 0;
             txtSearch.Text = "";
-            txtCategory.Text = "";
-            txtAgeRange.Text = "";
+            cbxCat.SelectedIndex = -1;
+            cbxAge.SelectedIndex = -1;
             txtQuestion.Text = "";
             txtAnswerA.Text = "";
             txtAnswerB.Text = "";
@@ -111,6 +119,23 @@ namespace FinancialQuiz.UserControls
           //  btnUpdateQ.Enabled = false;
            // btnAddQ.Enabled = true;
            // btnClearQ.Enabled = true;
+        }
+
+
+
+        private void FillOutCategoryComboBox()
+        {
+            this.cbxCat.DataSource = this.categorySource.GetAllCategories();
+            this.cbxCat.DisplayMember = "Name";
+            this.cbxCat.ValueMember = "CategoryID";
+
+        }
+
+        private void FillOutAgeComboBox()
+        {
+            this.cbxAge.DataSource = this.ageSource.GetAllAges();
+            this.cbxAge.DisplayMember = "Name";
+            this.cbxAge.ValueMember = "AgeID";
         }
     }
 }
