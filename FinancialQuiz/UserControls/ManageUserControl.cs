@@ -79,7 +79,7 @@ namespace FinancialQuiz.UserControls
                 try
                 {
                     int userId = Convert.ToInt32(txtSearch.Text);
-                    if (userId < 0)
+                    if (userId <= 0)
                     {
                         errorMessage = "Please enter valid user id!";
                         txtSearch.Focus();

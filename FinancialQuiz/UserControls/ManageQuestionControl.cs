@@ -65,27 +65,40 @@ namespace FinancialQuiz.UserControls
                 errorMessage = "Please enter " + searchCriteria;
                 txtSearch.Focus();
             }
-
-            if (searchCriteria == "Question ID")
+            else if (searchCriteria == "Question ID")
             {
                 try
                 {
                     int questionId = Convert.ToInt32(txtSearch.Text);
-                    if (questionId < 0)
+                    if (questionId <= 0)
                     {
                         errorMessage = "Please enter valid question id!";
                         txtSearch.Focus();
                     }
-
                     questionList = this.questionController.GetQuestions(questionId);
-                    this.PopulateQuestionData(questionList[0]);
                 }
                 catch (FormatException)
                 {
                     errorMessage = "Please enter valid user id!";
                     txtSearch.Focus();
                 }
-
+            }
+            
+            if (errorMessage.Length > 0)
+            {
+                MessageBox.Show(errorMessage, "Error");
+                btnClearQ.Enabled = true;
+                btnAddQ.Enabled = false;
+            }
+            else if (questionList.Count == 0)
+            {
+                MessageBox.Show("Question doesn't exist. Please check your information.", "Error");
+                btnClearQ.Enabled = true;
+                btnAddQ.Enabled = false;
+            }
+            else if (questionList.Count == 1)
+            {
+                this.PopulateQuestionData(questionList[0]);
             }
         }
 
