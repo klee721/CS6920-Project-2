@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -219,6 +220,11 @@ namespace FinancialQuiz.UserControls
                 cbxAge.Text == "")
             {
                 MessageBox.Show("Please check your information - some fields are empty.");
+                return false;
+            }
+            else if (!Regex.IsMatch(txtCorrectAnswer.Text, @"^[A-D]+$") || txtCorrectAnswer.Text.Length > 1)
+            {
+                MessageBox.Show("Correct Answer must be one capital letter (A, B, C, D).");
                 return false;
             }
             else
