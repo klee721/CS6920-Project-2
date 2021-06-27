@@ -167,7 +167,8 @@ namespace FinancialQuiz.UserControls
      
                     updatedQuestion.QuestionID = this.questionId;
                     updatedQuestion.CategoryID = (int)this.cbxCat.SelectedValue;
-                    
+                    updatedQuestion.AgeRangeID = (int)this.cbxAge.SelectedValue;
+                    //updatedQuestion.GameLevelID = (int)this.cbxGameLevel.SelectedValue;
                     updatedQuestion.Description = txtQuestion.Text;
                     updatedQuestion.OptionA= txtAnswerA.Text;
                     updatedQuestion.OptionB = txtAnswerB.Text;
