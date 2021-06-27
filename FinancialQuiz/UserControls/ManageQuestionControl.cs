@@ -128,6 +128,7 @@ namespace FinancialQuiz.UserControls
             cbxSearch.SelectedIndex = 0;
             txtSearch.Text = "";
             cbxCat.SelectedIndex = -1;
+            cbxGameLevel.SelectedIndex = -1;
             cbxAge.SelectedIndex = -1;
             txtQuestion.Text = "";
             txtAnswerA.Text = "";
