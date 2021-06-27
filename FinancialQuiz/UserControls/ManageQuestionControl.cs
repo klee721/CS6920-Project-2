@@ -164,7 +164,9 @@ namespace FinancialQuiz.UserControls
                 try
                 {
                     Question updatedQuestion = new Question();
+     
                     updatedQuestion.QuestionID = this.questionId;
+                    updatedQuestion.CategoryID = (int)this.cbxCat.SelectedValue;
                     
                     updatedQuestion.Description = txtQuestion.Text;
                     updatedQuestion.OptionA= txtAnswerA.Text;
