@@ -51,12 +51,12 @@ namespace FinancialQuiz.UserControls
             this.cbxSearch = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.lblGameLevel = new System.Windows.Forms.Label();
+            this.cbxGameLevel = new System.Windows.Forms.ComboBox();
             this.btnAddQ = new System.Windows.Forms.Button();
             this.btnUpdateQ = new System.Windows.Forms.Button();
             this.btnClearQ = new System.Windows.Forms.Button();
             this.btnDeleteQ = new System.Windows.Forms.Button();
-            this.lblGameLevel = new System.Windows.Forms.Label();
-            this.cbxGameLevel = new System.Windows.Forms.ComboBox();
             this.tblLtPnlManageUser.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -368,6 +368,31 @@ namespace FinancialQuiz.UserControls
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // lblGameLevel
+            // 
+            this.lblGameLevel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblGameLevel.AutoSize = true;
+            this.lblGameLevel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameLevel.Location = new System.Drawing.Point(78, 118);
+            this.lblGameLevel.Name = "lblGameLevel";
+            this.lblGameLevel.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.lblGameLevel.Size = new System.Drawing.Size(115, 21);
+            this.lblGameLevel.TabIndex = 53;
+            this.lblGameLevel.Text = "Game Level:";
+            // 
+            // cbxGameLevel
+            // 
+            this.cbxGameLevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxGameLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxGameLevel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGameLevel.FormattingEnabled = true;
+            this.cbxGameLevel.ItemHeight = 22;
+            this.cbxGameLevel.Location = new System.Drawing.Point(215, 113);
+            this.cbxGameLevel.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
+            this.cbxGameLevel.Name = "cbxGameLevel";
+            this.cbxGameLevel.Size = new System.Drawing.Size(541, 30);
+            this.cbxGameLevel.TabIndex = 54;
+            // 
             // btnAddQ
             // 
             this.btnAddQ.Location = new System.Drawing.Point(613, 675);
@@ -409,31 +434,6 @@ namespace FinancialQuiz.UserControls
             this.btnDeleteQ.TabIndex = 32;
             this.btnDeleteQ.Text = "Delete";
             this.btnDeleteQ.UseVisualStyleBackColor = true;
-            // 
-            // lblGameLevel
-            // 
-            this.lblGameLevel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblGameLevel.AutoSize = true;
-            this.lblGameLevel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameLevel.Location = new System.Drawing.Point(78, 118);
-            this.lblGameLevel.Name = "lblGameLevel";
-            this.lblGameLevel.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblGameLevel.Size = new System.Drawing.Size(115, 21);
-            this.lblGameLevel.TabIndex = 53;
-            this.lblGameLevel.Text = "Game Level:";
-            // 
-            // cbxGameLevel
-            // 
-            this.cbxGameLevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbxGameLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxGameLevel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGameLevel.FormattingEnabled = true;
-            this.cbxGameLevel.ItemHeight = 22;
-            this.cbxGameLevel.Location = new System.Drawing.Point(215, 114);
-            this.cbxGameLevel.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
-            this.cbxGameLevel.Name = "cbxGameLevel";
-            this.cbxGameLevel.Size = new System.Drawing.Size(541, 30);
-            this.cbxGameLevel.TabIndex = 54;
             // 
             // ManageQuestionControl
             // 

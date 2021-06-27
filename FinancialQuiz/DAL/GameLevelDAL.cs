@@ -18,7 +18,7 @@ namespace FinancialQuiz.DAL
         {
             List<GameLevel> gameLevelList = new List<GameLevel>();
 
-            string sqlStatement = "SELECT * from game_level ";
+            string sqlStatement = "SELECT * from Game_Level ";
 
             using (SqlConnection connection = DBConnection.GetConnection())
             {

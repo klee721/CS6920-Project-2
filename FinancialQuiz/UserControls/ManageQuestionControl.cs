@@ -20,6 +20,7 @@ namespace FinancialQuiz.UserControls
         private List<Question> questionList;
         private ToolTip toolTip;
         readonly CategoryController categorySource;
+        readonly GameLevelController gamelevelSource;
         readonly AgeController ageSource;
 
         public ManageQuestionControl()
@@ -28,8 +29,8 @@ namespace FinancialQuiz.UserControls
             this.questionController = new QuestionController();
             this.question = new Question();
             this.categorySource = new CategoryController();
+            this.gamelevelSource = new GameLevelController();
             this.ageSource = new AgeController();
-
             btnAddQ.Enabled = true;
             btnUpdateQ.Enabled = false;
             btnDeleteQ.Enabled = false;
@@ -111,6 +112,7 @@ namespace FinancialQuiz.UserControls
 
             questionId = question.QuestionID;
             this.FillOutCategoryComboBox();
+            this.FillOutGameLevelComboBox();
             this.FillOutAgeComboBox();
             txtQuestion.Text = question.Description;
             txtAnswerA.Text = question.OptionA;
@@ -147,7 +149,13 @@ namespace FinancialQuiz.UserControls
             this.cbxCat.DataSource = this.categorySource.GetAllCategories();
             this.cbxCat.DisplayMember = "Name";
             this.cbxCat.ValueMember = "CategoryID";
+        }
 
+        private void FillOutGameLevelComboBox()
+        {
+            this.cbxGameLevel.DataSource = this.gamelevelSource.GetAllGameLevels();
+            this.cbxGameLevel.DisplayMember = "Name";
+            this.cbxGameLevel.ValueMember = "GameLevelID";
         }
 
         private void FillOutAgeComboBox()
@@ -156,6 +164,8 @@ namespace FinancialQuiz.UserControls
             this.cbxAge.DisplayMember = "Name";
             this.cbxAge.ValueMember = "AgeID";
         }
+
+        
 
         private void btnUpdateQ_Click(object sender, EventArgs e)
         {
@@ -168,7 +178,7 @@ namespace FinancialQuiz.UserControls
                     updatedQuestion.QuestionID = this.questionId;
                     updatedQuestion.CategoryID = (int)this.cbxCat.SelectedValue;
                     updatedQuestion.AgeRangeID = (int)this.cbxAge.SelectedValue;
-                    //updatedQuestion.GameLevelID = (int)this.cbxGameLevel.SelectedValue;
+                    updatedQuestion.GameLevelID = (int)this.cbxGameLevel.SelectedValue;
                     updatedQuestion.Description = txtQuestion.Text;
                     updatedQuestion.OptionA= txtAnswerA.Text;
                     updatedQuestion.OptionB = txtAnswerB.Text;
