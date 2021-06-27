@@ -25,7 +25,7 @@ namespace FinancialQuiz.Model
 
         public string CorrectOption { get; set; }
 
-        public string AgeRangeID { get; set; }
+        public int AgeRangeID { get; set; }
 
         public int CategoryID { get; set; }
 
