@@ -45,7 +45,12 @@ namespace FinancialQuiz.UserControls
         {
             cbxSearch.SelectedIndex = 0;
             cbxSearch.Focus();
-          
+            this.FillOutCategoryComboBox();
+            this.FillOutGameLevelComboBox();
+            this.FillOutAgeComboBox();
+            cbxAge.SelectedIndex = -1;
+            cbxGameLevel.SelectedIndex = -1;
+            cbxCat.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -113,15 +118,10 @@ namespace FinancialQuiz.UserControls
             btnDeleteQ.Enabled = true;
 
             questionId = question.QuestionID;
-            this.FillOutCategoryComboBox();
-            this.FillOutGameLevelComboBox();
-            this.FillOutAgeComboBox();
-
-
+           
             cbxCat.SelectedValue = question.CategoryID;
             cbxAge.SelectedValue = question.AgeRangeID;
             cbxGameLevel.SelectedValue = question.GameLevelID;
-
             txtQuestion.Text = question.Description;
             txtAnswerA.Text = question.OptionA;
             txtAnswerB.Text = question.OptionB;
@@ -224,8 +224,6 @@ namespace FinancialQuiz.UserControls
             if (txtQuestion.Text == "" ||
                 txtAnswerA.Text == "" ||
                 txtAnswerB.Text == "" ||
-                txtAnswerC.Text == "" ||
-                txtAnswerD.Text == "" ||
                 txtCorrectAnswer.Text == "" ||
                 cbxCat.Text == "" ||
                 cbxAge.Text == "")
@@ -243,5 +241,46 @@ namespace FinancialQuiz.UserControls
                 return true;
             }
         }
+
+        private void btnAddQ_Click(object sender, EventArgs e)
+        {
+            if (this.isValid())
+            {
+                try
+                {
+                    Question newQuestion = new Question();
+                   
+                    newQuestion.CategoryID = (int)this.cbxCat.SelectedValue;
+                    newQuestion.AgeRangeID = (int)this.cbxAge.SelectedValue;
+                    newQuestion.GameLevelID = (int)this.cbxGameLevel.SelectedValue;
+                    newQuestion.Description = txtQuestion.Text;
+                    newQuestion.OptionA = txtAnswerA.Text;
+                    newQuestion.OptionB = txtAnswerB.Text;
+                    newQuestion.OptionC = txtAnswerC.Text;
+                    newQuestion.OptionD = txtAnswerD.Text;
+                    newQuestion.CorrectOption = txtCorrectAnswer.Text;
+  
+                    bool isAdded = this.questionController.AddQuestion(newQuestion);
+
+                    if (isAdded)
+                    {
+                        MessageBox.Show("Question has been created successfully. QuestionID: " + newQuestion.QuestionID, "Registration Complete");
+                        btnAddQ.Enabled = false;
+                        btnUpdateQ.Enabled = true;
+                        btnClearQ.Enabled = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Question could not be added at this time");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().ToString());
+                }
+            }
+        }
+
     }
 }
+
