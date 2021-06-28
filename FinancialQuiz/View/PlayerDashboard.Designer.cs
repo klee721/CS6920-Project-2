@@ -48,6 +48,8 @@ namespace FinancialQuiz.View
             this.ProgressLabel = new System.Windows.Forms.Label();
             this.SaveQuestionButton = new System.Windows.Forms.Button();
             this.StudyGroupLink = new System.Windows.Forms.LinkLabel();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.NewGameButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HelloLabel
@@ -255,11 +257,37 @@ namespace FinancialQuiz.View
             this.StudyGroupLink.Text = "View My Study Group";
             this.StudyGroupLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.StudyGroupLink_LinkClicked);
             // 
+            // NextButton
+            // 
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.Location = new System.Drawing.Point(499, 524);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(138, 47);
+            this.NextButton.TabIndex = 20;
+            this.NextButton.Text = "Next Question";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Visible = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // NewGameButton
+            // 
+            this.NewGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewGameButton.Location = new System.Drawing.Point(499, 518);
+            this.NewGameButton.Name = "NewGameButton";
+            this.NewGameButton.Size = new System.Drawing.Size(138, 53);
+            this.NewGameButton.TabIndex = 21;
+            this.NewGameButton.Text = "Start a New Game";
+            this.NewGameButton.UseVisualStyleBackColor = true;
+            this.NewGameButton.Visible = false;
+            this.NewGameButton.Click += new System.EventHandler(this.NewGameButton_Click);
+            // 
             // PlayerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 623);
+            this.Controls.Add(this.NewGameButton);
+            this.Controls.Add(this.NextButton);
             this.Controls.Add(this.StudyGroupLink);
             this.Controls.Add(this.SaveQuestionButton);
             this.Controls.Add(this.ProgressLabel);
@@ -285,7 +313,6 @@ namespace FinancialQuiz.View
             this.Name = "PlayerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kiddie Cash Komprehension";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exit);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +339,7 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.Label ProgressLabel;
         private System.Windows.Forms.Button SaveQuestionButton;
         private System.Windows.Forms.LinkLabel StudyGroupLink;
+        private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button NewGameButton;
     }
 }

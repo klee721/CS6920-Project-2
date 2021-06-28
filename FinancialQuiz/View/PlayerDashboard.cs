@@ -9,6 +9,7 @@ namespace FinancialQuiz.View
     public partial class PlayerDashboard : Form
     {
         User loggedInUser;
+        Question currentQuestion;
         private LoginForm loginForm;
         private UserStatsForm userStatsForm;
         private StudyGroup myStudyGroup;
@@ -17,7 +18,8 @@ namespace FinancialQuiz.View
         int ageID;
         int numberOfQuestions;
         string categoryName;
-        int currentQuestion;
+        int currentQuestionCount;
+        int gameID;
 
         public PlayerDashboard(User user)
         {
@@ -28,41 +30,9 @@ namespace FinancialQuiz.View
             
             
             this.questionController = new QuestionController();
-            this.currentQuestion = 1;
-            
+            this.currentQuestionCount = 1;
+           
 
-            this.DisplayQuestionOne();
-
-        }
-
-        /// <summary>
-        /// Helper method that displays the information for the first question in the DB. For demo/development purposes
-        /// </summary>
-        private void DisplayQuestionOne()
-        {
-            Question questionOne = new Question();
-            questionOne = this.questionController.GetSampleQuestion();
-
-            this.QuestionLabel.Text = questionOne.Description;
-            this.RadioAnswerA.Text = questionOne.OptionA;
-            this.RadioAnswerB.Text = questionOne.OptionB;
-            this.RadioAnswerC.Text = questionOne.OptionC;
-            this.RadioAnswerD.Text = questionOne.OptionD;
-
-            this.QuestionNumberLabel.Text = this.currentQuestion.ToString();
-        }
-
-
-
-        /// <summary>
-        /// Helper method for when the user clicks the X button to close the app
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Exit(object sender, FormClosedEventArgs e)
-        {
-            
-            this.loginForm.Show();
         }
 
         /// <summary>
@@ -117,7 +87,37 @@ namespace FinancialQuiz.View
             Console.WriteLine("Values are: " + categoryID + " " + age + " " + numberOfQuestions);
             this.FillOutComponents();
 
+
+            //CREATE GAME ROUTINE, RETURNS GAMEID
+
+
+            this.DisplayCurrentQuestion();
+
+
+
         }
+
+        private void DisplayCurrentQuestion()
+        {
+           
+
+            this.gameID = 1;   //HARD CODED TEST DATA 
+
+           
+            this.currentQuestion = this.questionController.GetQuizQuestion(this.gameID,this.currentQuestionCount);
+            this.QuestionProgressLabel.Text = this.currentQuestionCount + "/" + this.numberOfQuestions;
+            this.QuestionNumberLabel.Text = this.currentQuestionCount.ToString()+".";
+            this.QuestionLabel.Text = currentQuestion.Description;
+            this.RadioAnswerA.Text = currentQuestion.OptionA;
+            this.RadioAnswerB.Text = currentQuestion.OptionB;
+            this.RadioAnswerC.Text = currentQuestion.OptionC;
+            this.RadioAnswerD.Text = currentQuestion.OptionD;
+
+            
+
+
+        }
+
 
 
         /// <summary>
@@ -142,31 +142,39 @@ namespace FinancialQuiz.View
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            SubmitButton.Visible = false;
+            NextButton.Visible = true;
+            SaveQuestionButton.Visible = true;
+
+            //TODO: VERIFY CORRECT ANSWER
 
 
 
-
-            //Correct/incorrect label test
-            if (CorrectLabel.Visible == false)
+            if (this.currentQuestionCount == this.numberOfQuestions)
             {
-               CorrectLabel.Visible = true;
-            }
-            else
-            {
-                CorrectLabel.Visible = false;
-            }
-
-            if(WrongLabel.Visible == false)
-            {
-                WrongLabel.Visible = true;
-            }
-            else
-            {
-                WrongLabel.Visible = false;
-            }
+                NextButton.Visible = false;
+                this.NewGameButton.Visible = true;
+                MessageBox.Show("You have completed this quiz! Click 'Start a New Game' to play again, or logout to quit.");
 
 
 
+
+
+
+                //TODO: Finished game routine; offer new game/quit
+            }
+
+        }
+
+
+        private void NewGameCreation()
+        {
+            GameLauncher newLauncher = new GameLauncher(this.loggedInUser);
+            newLauncher.SetLoginForm(this.loginForm);
+
+            this.loginForm.Hide();
+            PlayerDashboard.ActiveForm.Close();
+            newLauncher.Show();
         }
 
         private void StudyGroupLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -174,6 +182,23 @@ namespace FinancialQuiz.View
             this.myStudyGroup = new StudyGroup();
             this.myStudyGroup.SetUser(this.loggedInUser);
             this.myStudyGroup.Show();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            this.currentQuestionCount++;
+            this.NextButton.Visible = false;
+            this.SubmitButton.Visible = true;
+            this.SaveQuestionButton.Visible = false;
+
+            this.DisplayCurrentQuestion();
+
+        }
+
+        private void NewGameButton_Click(object sender, EventArgs e)
+        {
+
+            this.NewGameCreation();
         }
     }
 }

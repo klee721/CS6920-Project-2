@@ -50,6 +50,11 @@ namespace FinancialQuiz.Controller
             return QuestionDAL.UpdateQuestion(question);
         }
 
+        public Question GetQuizQuestion(int gameId, int questionNumber)
+        {
+            return this.questionDAL.GetQuizQuestion(gameId, questionNumber);
+        }
+
 
     }
 }
