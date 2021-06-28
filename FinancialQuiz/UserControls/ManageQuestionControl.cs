@@ -45,6 +45,7 @@ namespace FinancialQuiz.UserControls
         {
             cbxSearch.SelectedIndex = 0;
             cbxSearch.Focus();
+          
         }
 
         /// <summary>
@@ -113,13 +114,14 @@ namespace FinancialQuiz.UserControls
 
             questionId = question.QuestionID;
             this.FillOutCategoryComboBox();
-           // cbxCat.SelectedItem = question.CategoryID;
-           // int temp = cbxCat.Items.IndexOf(question.CategoryID);
-           
-           // this.cbxCat.SelectedIndex = temp;
-
             this.FillOutGameLevelComboBox();
             this.FillOutAgeComboBox();
+
+
+            cbxCat.SelectedValue = question.CategoryID;
+            cbxAge.SelectedValue = question.AgeRangeID;
+            cbxGameLevel.SelectedValue = question.GameLevelID;
+
             txtQuestion.Text = question.Description;
             txtAnswerA.Text = question.OptionA;
             txtAnswerB.Text = question.OptionB;
