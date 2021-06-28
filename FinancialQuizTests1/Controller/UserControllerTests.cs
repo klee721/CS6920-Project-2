@@ -92,6 +92,7 @@ namespace UserDAL.Tests
             return randomString;
         }
 
+        /*
         [TestMethod()]
         public void RegisterUserTest()
         {
@@ -116,9 +117,8 @@ namespace UserDAL.Tests
             listUsers = userController.GetUsers("Test Last", null, 0);
             Assert.AreEqual(1, listUsers.Count);
             Assert.AreEqual("testuser", listUsers[0].UserName);
-
-
         }
+        */
 
         
         [TestMethod()]

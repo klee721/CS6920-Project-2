@@ -49,6 +49,7 @@ namespace FinancialQuiz.View
             this.RadioAnswerC.Text = questionOne.OptionC;
             this.RadioAnswerD.Text = questionOne.OptionD;
 
+            this.QuestionNumberLabel.Text = this.currentQuestion.ToString();
         }
 
 

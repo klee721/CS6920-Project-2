@@ -112,8 +112,8 @@ namespace FinancialQuizTests1.Model
         public void TestQuestionGetSetAgeRangeID()
         {
             Question testQuestion = new Question();
-            testQuestion.AgeRangeID = "1-10";
-            Assert.AreEqual(testQuestion.AgeRangeID, "1-10");
+            testQuestion.AgeRangeID = 1;
+            Assert.AreEqual(testQuestion.AgeRangeID, 1);
 
         }
 
