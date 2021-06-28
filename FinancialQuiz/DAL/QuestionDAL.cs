@@ -141,5 +141,59 @@ namespace FinancialQuiz.DAL
             }
         }
 
+        /// <summary>
+        /// Method that returns the quiz question
+        /// </summary>
+        /// <param name="questionid">question id</param>
+        /// <returns>Question object</returns>
+        public Question GetQuizQuestion(int gameId, int questionNumber)
+        {
+            Question question = new Question();
+
+            
+           
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                connection.Open();
+                
+
+                using (SqlCommand selectCommand = new SqlCommand("GetGameQuestion", connection))
+                {
+                    selectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    if (gameId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@gameId", gameId);
+                    }
+
+                    if (questionNumber > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@questionNumber", questionNumber);
+                    }
+
+                    
+
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                           
+                            question.QuestionID = Convert.ToInt32(reader["ID"].ToString());
+                            question.Description = reader["Description"].ToString();
+                            question.OptionA = reader["OptionA"].ToString();
+                            question.OptionB = reader["OptionB"].ToString();
+                            question.OptionC = reader["OptionC"].ToString();
+                            question.OptionD = reader["OptionD"].ToString();
+                            question.CorrectOption = reader["Correct_Option"].ToString();
+
+                            
+                        }
+                    }
+                }
+            }
+
+            return question;
+        }
+
+
     }
 }
