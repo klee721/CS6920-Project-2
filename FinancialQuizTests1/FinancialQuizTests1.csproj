@@ -57,6 +57,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Controller\UserControllerTests.cs" />
+    <Compile Include="Model\AgeModelTests.cs" />
+    <Compile Include="Model\CategoryModelTests.cs" />
+    <Compile Include="Model\GameLevelModelTests.cs" />
     <Compile Include="Model\QuestionModelTests.cs" />
     <Compile Include="Model\UserModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

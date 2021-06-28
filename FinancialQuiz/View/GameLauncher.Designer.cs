@@ -87,7 +87,7 @@ namespace FinancialQuiz.View
             this.NumberOfQuestionsLabel.Name = "NumberOfQuestionsLabel";
             this.NumberOfQuestionsLabel.Size = new System.Drawing.Size(89, 48);
             this.NumberOfQuestionsLabel.TabIndex = 4;
-            this.NumberOfQuestionsLabel.Text = "Number of \r\nQuestions:  \r\n(5 - 20)";
+            this.NumberOfQuestionsLabel.Text = "Number of \r\nQuestions:  \r\n(5)";
             // 
             // BeginGameButton
             // 

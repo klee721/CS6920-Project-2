@@ -35,7 +35,7 @@ namespace FinancialQuiz.View
         private void FillOutQuestionsComboBox()
         {
             this.NumberOfQuestionsNumUpDown.Minimum = 5;
-            this.NumberOfQuestionsNumUpDown.Maximum = 20;
+            this.NumberOfQuestionsNumUpDown.Maximum = 5;
         }
         /// <summary>
         /// Method to fill out the Age combo box

@@ -31,12 +31,12 @@ namespace FinancialQuiz.View
         {
             this.PlayerDashTabControl = new System.Windows.Forms.TabControl();
             this.QuestionsTab = new System.Windows.Forms.TabPage();
-            this.manageQuestionControl1 = new FinancialQuiz.UserControls.ManageQuestionControl();
             this.UsersTab = new System.Windows.Forms.TabPage();
-            this.manageUserControl1 = new FinancialQuiz.UserControls.ManageUserControl();
             this.LogoutLink = new System.Windows.Forms.LinkLabel();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.HelloLabel = new System.Windows.Forms.Label();
+            this.manageQuestionControl1 = new FinancialQuiz.UserControls.ManageQuestionControl();
+            this.manageUserControl1 = new FinancialQuiz.UserControls.ManageUserControl();
             this.PlayerDashTabControl.SuspendLayout();
             this.QuestionsTab.SuspendLayout();
             this.UsersTab.SuspendLayout();
@@ -50,7 +50,7 @@ namespace FinancialQuiz.View
             this.PlayerDashTabControl.Margin = new System.Windows.Forms.Padding(4);
             this.PlayerDashTabControl.Name = "PlayerDashTabControl";
             this.PlayerDashTabControl.SelectedIndex = 0;
-            this.PlayerDashTabControl.Size = new System.Drawing.Size(1491, 706);
+            this.PlayerDashTabControl.Size = new System.Drawing.Size(1491, 1200);
             this.PlayerDashTabControl.TabIndex = 1;
             // 
             // QuestionsTab
@@ -62,17 +62,10 @@ namespace FinancialQuiz.View
             this.QuestionsTab.Margin = new System.Windows.Forms.Padding(4);
             this.QuestionsTab.Name = "QuestionsTab";
             this.QuestionsTab.Padding = new System.Windows.Forms.Padding(4);
-            this.QuestionsTab.Size = new System.Drawing.Size(1483, 677);
+            this.QuestionsTab.Size = new System.Drawing.Size(1483, 1171);
             this.QuestionsTab.TabIndex = 0;
             this.QuestionsTab.Text = "Questions                        ";
             this.QuestionsTab.UseVisualStyleBackColor = true;
-            // 
-            // manageQuestionControl1
-            // 
-            this.manageQuestionControl1.Location = new System.Drawing.Point(3, 0);
-            this.manageQuestionControl1.Name = "manageQuestionControl1";
-            this.manageQuestionControl1.Size = new System.Drawing.Size(967, 740);
-            this.manageQuestionControl1.TabIndex = 0;
             // 
             // UsersTab
             // 
@@ -83,18 +76,10 @@ namespace FinancialQuiz.View
             this.UsersTab.Margin = new System.Windows.Forms.Padding(4);
             this.UsersTab.Name = "UsersTab";
             this.UsersTab.Padding = new System.Windows.Forms.Padding(4);
-            this.UsersTab.Size = new System.Drawing.Size(1483, 677);
+            this.UsersTab.Size = new System.Drawing.Size(1483, 1171);
             this.UsersTab.TabIndex = 1;
             this.UsersTab.Text = "Users                                 ";
             this.UsersTab.UseVisualStyleBackColor = true;
-            // 
-            // manageUserControl1
-            // 
-            this.manageUserControl1.Location = new System.Drawing.Point(3, 0);
-            this.manageUserControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.manageUserControl1.Name = "manageUserControl1";
-            this.manageUserControl1.Size = new System.Drawing.Size(1061, 697);
-            this.manageUserControl1.TabIndex = 0;
             // 
             // LogoutLink
             // 
@@ -128,19 +113,34 @@ namespace FinancialQuiz.View
             this.HelloLabel.TabIndex = 3;
             this.HelloLabel.Text = "Hello";
             // 
+            // manageQuestionControl1
+            // 
+            this.manageQuestionControl1.Location = new System.Drawing.Point(0, 3);
+            this.manageQuestionControl1.Name = "manageQuestionControl1";
+            this.manageQuestionControl1.Size = new System.Drawing.Size(1319, 775);
+            this.manageQuestionControl1.TabIndex = 0;
+            // 
+            // manageUserControl1
+            // 
+            this.manageUserControl1.Location = new System.Drawing.Point(3, 0);
+            this.manageUserControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manageUserControl1.Name = "manageUserControl1";
+            this.manageUserControl1.Size = new System.Drawing.Size(1061, 697);
+            this.manageUserControl1.TabIndex = 0;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1488, 762);
+            this.ClientSize = new System.Drawing.Size(1488, 981);
             this.Controls.Add(this.LogoutLink);
             this.Controls.Add(this.UserNameLabel);
             this.Controls.Add(this.HelloLabel);
             this.Controls.Add(this.PlayerDashTabControl);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1506, 809);
-            this.MinimumSize = new System.Drawing.Size(1506, 809);
+            this.MaximumSize = new System.Drawing.Size(1506, 1200);
+            this.MinimumSize = new System.Drawing.Size(1506, 1028);
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
