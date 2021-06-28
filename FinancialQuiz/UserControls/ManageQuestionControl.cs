@@ -113,6 +113,11 @@ namespace FinancialQuiz.UserControls
 
             questionId = question.QuestionID;
             this.FillOutCategoryComboBox();
+           // cbxCat.SelectedItem = question.CategoryID;
+           // int temp = cbxCat.Items.IndexOf(question.CategoryID);
+           
+           // this.cbxCat.SelectedIndex = temp;
+
             this.FillOutGameLevelComboBox();
             this.FillOutAgeComboBox();
             txtQuestion.Text = question.Description;
@@ -121,7 +126,10 @@ namespace FinancialQuiz.UserControls
             txtAnswerC.Text = question.OptionC;
             txtAnswerD.Text = question.OptionD;
             txtCorrectAnswer.Text = question.CorrectOption;
-            
+            Console.WriteLine("Question cat id : " + question.CategoryID);
+            Console.WriteLine("Question age id : " + question.AgeRangeID);
+            Console.WriteLine("Question game l id : " + question.GameLevelID);
+
         }
 
         private void btnClearQ_Click(object sender, EventArgs e)
@@ -151,6 +159,7 @@ namespace FinancialQuiz.UserControls
             this.cbxCat.DataSource = this.categorySource.GetAllCategories();
             this.cbxCat.DisplayMember = "Name";
             this.cbxCat.ValueMember = "CategoryID";
+          
         }
 
         private void FillOutGameLevelComboBox()
