@@ -84,7 +84,9 @@ namespace FinancialQuiz.DAL
                             Question question = new Question();
 
                             question.QuestionID = Convert.ToInt32(reader["ID"].ToString());
-
+                            question.AgeRangeID = Convert.ToInt32(reader["Age_range_id"].ToString());
+                            question.GameLevelID = Convert.ToInt32(reader["Game_Level_ID"].ToString());
+                            question.CategoryID = Convert.ToInt32(reader["Category_ID"].ToString());
                             question.Description = reader["Description"].ToString();
                             question.OptionA = reader["OptionA"].ToString();
                             question.OptionB = reader["OptionB"].ToString();
