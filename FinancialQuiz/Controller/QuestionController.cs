@@ -59,6 +59,17 @@ namespace FinancialQuiz.Controller
             return QuestionDAL.UpdateQuestion(question);
         }
 
+        /// <summary>
+        /// Updates the question in the Questions table.
+        /// </summary>
+        /// <param name="question">Question object</param>
+        /// <returns>true if the question is updated successfully</returns>
+        public string UpdateUserQuestionAnswer(int gameId, int questionId, string userOption)
+        {
+            return this.questionDAL.UpdateUserQuestionAnswer(gameId, questionId, userOption);
+        }
+
+
         public int InsertQuizQuestion(int userId, int total_questions, int categoryId, int AgeGroupId, int gameLevelId)
         {
             return this.questionDAL.InsertQuizQuestion(userId, total_questions, categoryId, AgeGroupId, gameLevelId);

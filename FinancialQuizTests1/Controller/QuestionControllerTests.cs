@@ -45,6 +45,22 @@ namespace FinancialQuiz.Controller.Tests
 
         }
 
+        [TestMethod()]
+        public void UpdateUserQuestionAnswerTest()
+        {
+            // Arrange
+            int gameId = 1;
+            int questionId = 1;
+            string userOption = "A";
+            string usranswer = "";
+
+            QuestionController controller = new QuestionController();
+            usranswer = controller.UpdateUserQuestionAnswer(gameId, questionId, userOption);
+            Assert.AreEqual(userOption, usranswer);
+
+
+        }
+
 
     }
 }

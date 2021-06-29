@@ -254,6 +254,56 @@ namespace FinancialQuiz.DAL
         }
 
         /// <summary>
+        /// Method that returns the quiz question
+        /// </summary>
+        /// <param name="questionid">question id</param>
+        /// <returns>Question object</returns>
+        public string UpdateUserQuestionAnswer(int gameId, int questionId, string userOption)
+        {
+            string  useranswer = "";
+
+
+
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                connection.Open();
+
+
+                using (SqlCommand selectCommand = new SqlCommand("UpdateUserQuestionAnswer", connection))
+                {
+                    selectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    if (gameId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@gameId", gameId);
+                    }
+
+                    if (questionId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@questionId", questionId);
+                    }
+
+                    
+                        selectCommand.Parameters.AddWithValue("@userOption", userOption);
+                    
+
+
+
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            useranswer = reader["userOption"].ToString();
+                            
+                        }
+                    }
+                }
+            }
+
+            return useranswer;
+        }
+
+        /// <summary>
         /// Adds a new question to the Questions table of the database using a parameterized query.
         /// </summary>
         /// <param name="question">Question object with required properties added to the DB</param>
