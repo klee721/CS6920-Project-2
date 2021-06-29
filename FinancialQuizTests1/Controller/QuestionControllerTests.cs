@@ -17,8 +17,6 @@ namespace FinancialQuiz.Controller.Tests
         public void GetQuizQuestionTest()
         {
             // Arrange
-            string username = "jane";
-            string password = "test1234";
             int gameId = 1;
             int questionNumber = 2;
             QuestionController controller = new QuestionController();
@@ -29,6 +27,24 @@ namespace FinancialQuiz.Controller.Tests
 
         }
 
-       
+        [TestMethod()]
+        public void InsertQuizQuestionTest()
+        {
+            // Arrange
+            int userId = 1;
+            int totalQuestions = 5;
+            int categoryId = 1;
+            int gameLevelId = 1;
+            int agegroupId = 1;
+            QuestionController controller = new QuestionController();
+            int gameId = 0;
+            gameId = controller.InsertQuizQuestion(userId, totalQuestions, categoryId, agegroupId, gameLevelId);
+            Console.WriteLine(gameId);
+            Assert.AreNotEqual(gameId, 0);
+
+
+        }
+
+
     }
 }

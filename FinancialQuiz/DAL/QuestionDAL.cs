@@ -195,6 +195,65 @@ namespace FinancialQuiz.DAL
         }
 
         /// <summary>
+        /// Method that returns the quiz question
+        /// </summary>
+        /// <param name="questionid">question id</param>
+        /// <returns>Question object</returns>
+        public int InsertQuizQuestion(int userId, int total_questions, int categoryId , int AgeGroupId ,int gameLevelId)
+        {
+
+
+            int gameId =0;
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                connection.Open();
+
+
+                using (SqlCommand selectCommand = new SqlCommand("InsertQuizGameDetails", connection))
+                {
+                    selectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    if (userId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@UserId", userId);
+                    }
+
+                    if (total_questions > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@Total_questions", total_questions);
+                    }
+
+                    if (categoryId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@CategoryId", categoryId);
+                    }
+
+                    if (gameLevelId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@GameLevelId", gameLevelId);
+                    }
+
+                    if (AgeGroupId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@AgeGroupId", AgeGroupId);
+                    }
+
+
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            gameId = Convert.ToInt32(reader["gameId"].ToString());
+                            
+                        }
+                    }
+                }
+            }
+
+            return gameId;
+        }
+
+        /// <summary>
         /// Adds a new question to the Questions table of the database using a parameterized query.
         /// </summary>
         /// <param name="question">Question object with required properties added to the DB</param>

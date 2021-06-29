@@ -59,9 +59,9 @@ namespace FinancialQuiz.Controller
             return QuestionDAL.UpdateQuestion(question);
         }
 
-        public Question GetQuizQuestion(int gameId, int questionNumber)
+        public int InsertQuizQuestion(int userId, int total_questions, int categoryId, int AgeGroupId, int gameLevelId)
         {
-            return this.questionDAL.GetQuizQuestion(gameId, questionNumber);
+            return this.questionDAL.InsertQuizQuestion(userId, total_questions, categoryId, AgeGroupId, gameLevelId);
         }
 
         /// <summary>

@@ -1,14 +1,12 @@
-CREATE PROCEDURE InsertQuizGameDetails
+CREATE PROCEDURE [dbo].[InsertQuizGameDetails]
     @UserId INT,   
     @Total_questions INT,
 	@CategoryId INT,
 	@AgeGroupId INT,
 	@GameLevelId INT
 AS   
-BEGIn
-
-
-  
+BEGIN
+   DECLARE @gameId INT;
    
   INSERT INTO Games
            (userID
@@ -22,14 +20,17 @@ BEGIn
            ,ISNULL(@Total_questions,5)
            ,'N'
            );
-		   
-
+	
+    SET @gameId = SCOPE_IDENTITY()
+  
 	insert into gameDetails(gameId,questionId)
-  (select TOP(ISNULL(@Total_questions,5)) @UserId,id from Questions
+  (select TOP(ISNULL(@Total_questions,5)) 
+    @gameId,id from Questions
    where game_level_id = ISNULL(@GameLevelId, 1) 
    and category_id = ISNULL(@CategoryId, 1) 
    and age_range_id = ISNULL(@AgeGroupId, 1));
    
-   select max(id) from games where userID = @UserId;
+   select max(id) gameId from games where userID = @UserId;
   
 end
+GO
