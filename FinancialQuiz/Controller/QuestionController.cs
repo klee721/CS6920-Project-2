@@ -39,6 +39,15 @@ namespace FinancialQuiz.Controller
             return this.questionDAL.GetQuestions(questionId);
         }
 
+        /// <summary>
+        /// Method that returns a selected question from the question table
+        /// </summary>
+        /// <param name="questionId">id of the question</param>
+        /// <returns>Question object</returns>
+        public Question GetQuizQuestion(int gameId, int questionNumber)
+        {
+            return this.questionDAL.GetQuizQuestion(gameId, questionNumber);
+        }
 
         /// <summary>
         /// Updates the question in the Questions table.
