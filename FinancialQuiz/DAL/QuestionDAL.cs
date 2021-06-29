@@ -194,6 +194,45 @@ namespace FinancialQuiz.DAL
             return question;
         }
 
+        /// <summary>
+        /// Adds a new question to the Questions table of the database using a parameterized query.
+        /// </summary>
+        /// <param name="question">Question object with required properties added to the DB</param>
+        public static bool AddQuestion(Question question)
+        {
 
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                //INSERT INTO Questions (Age_range_id, Game_Level_ID, Category_ID, Description,
+                //OptionA,OptionB,OptionC,OptionD,Correct_Option) VALUES 
+                string insertStatement =
+               "INSERT INTO questions " +
+                "(Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, " +
+                "Correct_Option) " +
+
+                "VALUES (@AgeRangeId, @GameLevelID, @CategoryID, " +
+                "@Description, @OptionA, @OptionB, " +
+                "@OptionC, @OptionD, @CorrectOption ); " +
+                "SELECT CAST(scope_identity() AS int)";
+
+                connection.Open();
+
+                using (SqlCommand insertCommand = new SqlCommand(insertStatement, connection))
+                {
+                    insertCommand.Parameters.AddWithValue("@AgeRangeId", question.AgeRangeID);
+                    insertCommand.Parameters.AddWithValue("@GameLevelID", question.GameLevelID);
+                    insertCommand.Parameters.AddWithValue("@CategoryID", question.CategoryID);
+                    insertCommand.Parameters.AddWithValue("@Description", question.Description);
+                    insertCommand.Parameters.AddWithValue("@OptionA", question.OptionA);
+                    insertCommand.Parameters.AddWithValue("@OptionB", question.OptionB);
+                    insertCommand.Parameters.AddWithValue("@OptionC", question.OptionC);
+                    insertCommand.Parameters.AddWithValue("@OptionD", question.OptionD);
+                    insertCommand.Parameters.AddWithValue("@CorrectOption", question.CorrectOption);
+                    question.QuestionID = Convert.ToInt32(insertCommand.ExecuteScalar());
+
+                    return true;
+                }
+            }
+        }
     }
 }

@@ -59,6 +59,19 @@ namespace FinancialQuiz.Controller
             return QuestionDAL.UpdateQuestion(question);
         }
 
+        public Question GetQuizQuestion(int gameId, int questionNumber)
+        {
+            return this.questionDAL.GetQuizQuestion(gameId, questionNumber);
+        }
+
+        /// <summary>
+        /// Adds a question to the database through the DAL class.
+        /// </summary>
+        /// <param name="question">Question</param>
+        public Boolean AddQuestion(Question question)
+        {
+            return QuestionDAL.AddQuestion(question);
+        }
 
     }
 }
