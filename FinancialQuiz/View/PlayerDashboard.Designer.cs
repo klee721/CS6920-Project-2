@@ -223,6 +223,7 @@ namespace FinancialQuiz.View
             this.WrongLabel.Size = new System.Drawing.Size(249, 40);
             this.WrongLabel.TabIndex = 16;
             this.WrongLabel.Text = " INCORRECT";
+            this.WrongLabel.Visible = false;
             // 
             // ProgressLabel
             // 

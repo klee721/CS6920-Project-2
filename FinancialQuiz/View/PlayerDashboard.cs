@@ -14,12 +14,15 @@ namespace FinancialQuiz.View
         private UserStatsForm userStatsForm;
         private StudyGroup myStudyGroup;
         private QuestionController questionController;
+        private GamesController gamesController;
         int categoryID;
         int ageID;
         int numberOfQuestions;
+        int gameLevelID;
         string categoryName;
         int currentQuestionCount;
         int gameID;
+        string chosenAnswer;
 
         public PlayerDashboard(User user)
         {
@@ -30,6 +33,7 @@ namespace FinancialQuiz.View
             
             
             this.questionController = new QuestionController();
+            this.gamesController = new GamesController();
             this.currentQuestionCount = 1;
            
 
@@ -88,8 +92,11 @@ namespace FinancialQuiz.View
             this.FillOutComponents();
 
 
-            //CREATE GAME ROUTINE, RETURNS GAMEID
+            //Hard coding GameLevelID 1 until a picker is provided
+            this.gameLevelID = 1;
+            this.gameID = this.gamesController.InsertQuizGameDetails(this.loggedInUser.UserID, this.numberOfQuestions, this.categoryID, this.ageID, this.gameLevelID);
 
+            Console.WriteLine("Procedure returned: " + this.gameID);
 
             this.DisplayCurrentQuestion();
 
@@ -99,11 +106,6 @@ namespace FinancialQuiz.View
 
         private void DisplayCurrentQuestion()
         {
-           
-
-            this.gameID = 1;   //HARD CODED TEST DATA 
-
-           
             this.currentQuestion = this.questionController.GetQuizQuestion(this.gameID,this.currentQuestionCount);
             this.QuestionProgressLabel.Text = this.currentQuestionCount + "/" + this.numberOfQuestions;
             this.QuestionNumberLabel.Text = this.currentQuestionCount.ToString()+".";
@@ -112,10 +114,6 @@ namespace FinancialQuiz.View
             this.RadioAnswerB.Text = currentQuestion.OptionB;
             this.RadioAnswerC.Text = currentQuestion.OptionC;
             this.RadioAnswerD.Text = currentQuestion.OptionD;
-
-            
-
-
         }
 
 
@@ -140,13 +138,44 @@ namespace FinancialQuiz.View
             this.userStatsForm.Show();
         }
 
-        private void SubmitButton_Click(object sender, EventArgs e)
+        private void SubmitButton_Click(object sender, EventArgs e)   //TODO refactor this to cleaner code
         {
             SubmitButton.Visible = false;
             NextButton.Visible = true;
             SaveQuestionButton.Visible = true;
 
-            //TODO: VERIFY CORRECT ANSWER
+            if (RadioAnswerA.Checked == true)
+            {
+                chosenAnswer = "A";
+            }
+            else if (RadioAnswerB.Checked == true)
+            {
+                chosenAnswer = "B";
+            }
+            else if (RadioAnswerC.Checked == true)
+            {
+                chosenAnswer = "C";
+            }
+            else if (RadioAnswerD.Checked == true)
+            {
+                chosenAnswer = "D";
+            }
+
+
+            if ((RadioAnswerA.Checked==true && currentQuestion.CorrectOption == "A") || (RadioAnswerB.Checked == true && currentQuestion.CorrectOption == "B") 
+                    || (RadioAnswerC.Checked == true && currentQuestion.CorrectOption == "C") || (RadioAnswerD.Checked == true && currentQuestion.CorrectOption == "D"))
+            {
+                this.WrongLabel.Visible = false;
+                this.CorrectLabel.Visible = true;
+            }else
+            {
+                this.WrongLabel.Visible = true;
+                this.CorrectLabel.Visible = false;
+            }
+
+
+            this.questionController.UpdateUserQuestionAnswer(this.gameID, this.currentQuestion.QuestionID, chosenAnswer);
+
 
 
 
@@ -155,13 +184,6 @@ namespace FinancialQuiz.View
                 NextButton.Visible = false;
                 this.NewGameButton.Visible = true;
                 MessageBox.Show("You have completed this quiz! Click 'Start a New Game' to play again, or logout to quit.");
-
-
-
-
-
-
-                //TODO: Finished game routine; offer new game/quit
             }
 
         }
@@ -186,10 +208,15 @@ namespace FinancialQuiz.View
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            this.CorrectLabel.Visible = false;
+            this.WrongLabel.Visible = false;
+
             this.currentQuestionCount++;
             this.NextButton.Visible = false;
             this.SubmitButton.Visible = true;
             this.SaveQuestionButton.Visible = false;
+
+            RadioAnswerA.Checked = true;
 
             this.DisplayCurrentQuestion();
 

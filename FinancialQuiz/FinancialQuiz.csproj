@@ -106,12 +106,14 @@
     <Compile Include="Controller\AgeController.cs" />
     <Compile Include="Controller\CategoryController.cs" />
     <Compile Include="Controller\GameLevelController.cs" />
+    <Compile Include="Controller\GamesController.cs" />
     <Compile Include="Controller\QuestionController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="DAL\AgeDAL.cs" />
     <Compile Include="DAL\CategoryDAL.cs" />
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="DAL\GameLevelDAL.cs" />
+    <Compile Include="DAL\GamesDAL.cs" />
     <Compile Include="DAL\QuestionDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Model\Age.cs" />
