@@ -136,6 +136,9 @@
     <Compile Include="UserControls\ManageUserControl.Designer.cs">
       <DependentUpon>ManageUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserStatsDataSet.cs">
+      <DependentUpon>UserStatsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserStatsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
