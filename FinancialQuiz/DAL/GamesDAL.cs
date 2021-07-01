@@ -38,7 +38,8 @@ namespace FinancialQuiz.DAL
                     if (ageID > 0)
                     {
                         selectCommand.Parameters.AddWithValue("@AgeGroupID", ageID);
-                    }               
+                    }
+                    
 
 
                     using (SqlDataReader reader = selectCommand.ExecuteReader())
