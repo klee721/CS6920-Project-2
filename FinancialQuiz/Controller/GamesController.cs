@@ -25,9 +25,9 @@ namespace FinancialQuiz.Controller
         /// <param name="ageID">ID# for the selected age category</param>
         /// <param name="gameLevelID">ID# for the selected game level</param>
         /// <returns></returns>
-        public int InsertQuizGameDetails(int userID, int numberOfQuestions, int categoryID, int ageID, int gameLevelID)
+        public int InsertQuizGameDetails(int userID, int numberOfQuestions, int categoryID, int ageID)
         {
-            return this.gamesDAL.InsertQuizGameDetails(userID, numberOfQuestions, categoryID, ageID, gameLevelID);
+            return this.gamesDAL.InsertQuizGameDetails(userID, numberOfQuestions, categoryID, ageID);
         }
 
 

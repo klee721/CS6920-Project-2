@@ -18,7 +18,6 @@ namespace FinancialQuiz.View
         int categoryID;
         int ageID;
         int numberOfQuestions;
-        int gameLevelID;
         string categoryName;
         int currentQuestionCount;
         int gameID;
