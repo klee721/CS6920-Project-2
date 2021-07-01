@@ -13,7 +13,7 @@ namespace FinancialQuiz.DAL
         int generatedID = 0;
         
 
-        public int InsertQuizGameDetails(int userID, int numberOfQuestions, int categoryID, int ageID, int gameLevelID)
+        public int InsertQuizGameDetails(int userID, int numberOfQuestions, int categoryID, int ageID)
         {
             using (SqlConnection connection = DBConnection.GetConnection())
             {
@@ -39,10 +39,7 @@ namespace FinancialQuiz.DAL
                     {
                         selectCommand.Parameters.AddWithValue("@AgeGroupID", ageID);
                     }
-                    if (gameLevelID > 0)
-                    {
-                        selectCommand.Parameters.AddWithValue("@GameLevelID", gameLevelID);
-                    }
+                    
 
 
                     using (SqlDataReader reader = selectCommand.ExecuteReader())
