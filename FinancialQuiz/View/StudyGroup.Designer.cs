@@ -37,6 +37,8 @@ namespace FinancialQuiz.View
             this.RemoveButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.AnswerDisplayCheckBox = new System.Windows.Forms.CheckBox();
+            this.DifficultyLabel = new System.Windows.Forms.Label();
+            this.DifficultyTextLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@ namespace FinancialQuiz.View
             // 
             this.QuestionText.AutoSize = true;
             this.QuestionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionText.Location = new System.Drawing.Point(130, 53);
+            this.QuestionText.Location = new System.Drawing.Point(130, 35);
             this.QuestionText.MaximumSize = new System.Drawing.Size(800, 0);
             this.QuestionText.Name = "QuestionText";
             this.QuestionText.Size = new System.Drawing.Size(226, 40);
@@ -86,7 +88,7 @@ namespace FinancialQuiz.View
             // 
             this.QuestionLabel.AutoSize = true;
             this.QuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionLabel.Location = new System.Drawing.Point(28, 53);
+            this.QuestionLabel.Location = new System.Drawing.Point(28, 35);
             this.QuestionLabel.MaximumSize = new System.Drawing.Size(800, 0);
             this.QuestionLabel.Name = "QuestionLabel";
             this.QuestionLabel.Size = new System.Drawing.Size(86, 20);
@@ -124,11 +126,37 @@ namespace FinancialQuiz.View
             this.AnswerDisplayCheckBox.UseVisualStyleBackColor = true;
             this.AnswerDisplayCheckBox.CheckedChanged += new System.EventHandler(this.AnswerDisplayCheckBox_CheckedChanged);
             // 
+            // DifficultyLabel
+            // 
+            this.DifficultyLabel.AutoSize = true;
+            this.DifficultyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DifficultyLabel.Location = new System.Drawing.Point(28, 104);
+            this.DifficultyLabel.MaximumSize = new System.Drawing.Size(800, 0);
+            this.DifficultyLabel.Name = "DifficultyLabel";
+            this.DifficultyLabel.Size = new System.Drawing.Size(84, 20);
+            this.DifficultyLabel.TabIndex = 15;
+            this.DifficultyLabel.Text = "Difficulty:";
+            // 
+            // DifficultyTextLabel
+            // 
+            this.DifficultyTextLabel.AutoSize = true;
+            this.DifficultyTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DifficultyTextLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DifficultyTextLabel.Location = new System.Drawing.Point(130, 104);
+            this.DifficultyTextLabel.MaximumSize = new System.Drawing.Size(800, 0);
+            this.DifficultyTextLabel.Name = "DifficultyTextLabel";
+            this.DifficultyTextLabel.Size = new System.Drawing.Size(57, 20);
+            this.DifficultyTextLabel.TabIndex = 16;
+            this.DifficultyTextLabel.Text = "EASY";
+            this.DifficultyTextLabel.Visible = false;
+            // 
             // StudyGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.DifficultyTextLabel);
+            this.Controls.Add(this.DifficultyLabel);
             this.Controls.Add(this.AnswerDisplayCheckBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RemoveButton);
@@ -160,5 +188,7 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox AnswerDisplayCheckBox;
+        private System.Windows.Forms.Label DifficultyLabel;
+        private System.Windows.Forms.Label DifficultyTextLabel;
     }
 }

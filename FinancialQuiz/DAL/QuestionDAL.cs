@@ -199,7 +199,7 @@ namespace FinancialQuiz.DAL
         /// </summary>
         /// <param name="questionid">question id</param>
         /// <returns>Question object</returns>
-        public int InsertQuizQuestion(int userId, int total_questions, int categoryId , int AgeGroupId ,int gameLevelId)
+        public int InsertQuizQuestion(int userId, int total_questions, int categoryId , int AgeGroupId)
         {
 
 
@@ -225,11 +225,6 @@ namespace FinancialQuiz.DAL
                     if (categoryId > 0)
                     {
                         selectCommand.Parameters.AddWithValue("@CategoryId", categoryId);
-                    }
-
-                    if (gameLevelId > 0)
-                    {
-                        selectCommand.Parameters.AddWithValue("@GameLevelId", gameLevelId);
                     }
 
                     if (AgeGroupId > 0)

@@ -70,9 +70,9 @@ namespace FinancialQuiz.Controller
         }
 
 
-        public int InsertQuizQuestion(int userId, int total_questions, int categoryId, int AgeGroupId, int gameLevelId)
+        public int InsertQuizQuestion(int userId, int total_questions, int categoryId, int AgeGroupId)
         {
-            return this.questionDAL.InsertQuizQuestion(userId, total_questions, categoryId, AgeGroupId, gameLevelId);
+            return this.questionDAL.InsertQuizQuestion(userId, total_questions, categoryId, AgeGroupId);
         }
 
         /// <summary>

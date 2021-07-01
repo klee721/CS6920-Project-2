@@ -34,11 +34,10 @@ namespace FinancialQuiz.Controller.Tests
             int userId = 1;
             int totalQuestions = 5;
             int categoryId = 1;
-            int gameLevelId = 1;
             int agegroupId = 1;
             QuestionController controller = new QuestionController();
             int gameId = 0;
-            gameId = controller.InsertQuizQuestion(userId, totalQuestions, categoryId, agegroupId, gameLevelId);
+            gameId = controller.InsertQuizQuestion(userId, totalQuestions, categoryId, agegroupId);
             Console.WriteLine(gameId);
             Assert.AreNotEqual(gameId, 0);
 

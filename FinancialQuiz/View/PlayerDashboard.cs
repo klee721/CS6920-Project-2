@@ -92,9 +92,7 @@ namespace FinancialQuiz.View
             this.FillOutComponents();
 
 
-            //Hard coding GameLevelID 1 until a picker is provided
-            this.gameLevelID = 1;
-            this.gameID = this.gamesController.InsertQuizGameDetails(this.loggedInUser.UserID, this.numberOfQuestions, this.categoryID, this.ageID, this.gameLevelID);
+            this.gameID = this.gamesController.InsertQuizGameDetails(this.loggedInUser.UserID, this.numberOfQuestions, this.categoryID, this.ageID);
 
             Console.WriteLine("Procedure returned: " + this.gameID);
 
@@ -112,8 +110,17 @@ namespace FinancialQuiz.View
             this.QuestionLabel.Text = currentQuestion.Description;
             this.RadioAnswerA.Text = currentQuestion.OptionA;
             this.RadioAnswerB.Text = currentQuestion.OptionB;
-            this.RadioAnswerC.Text = currentQuestion.OptionC;
-            this.RadioAnswerD.Text = currentQuestion.OptionD;
+
+            if (currentQuestion.OptionA == "True" || currentQuestion.OptionA == "False")
+            {
+                this.RadioAnswerC.Visible = false;
+                this.RadioAnswerD.Visible = false;
+            }
+            else
+            {
+                this.RadioAnswerC.Text = currentQuestion.OptionC;
+                this.RadioAnswerD.Text = currentQuestion.OptionD;
+            }
         }
 
 
@@ -215,6 +222,12 @@ namespace FinancialQuiz.View
             this.NextButton.Visible = false;
             this.SubmitButton.Visible = true;
             this.SaveQuestionButton.Visible = false;
+
+            if (RadioAnswerC.Visible == false && RadioAnswerD.Visible == false)
+            {
+                RadioAnswerC.Visible = true;
+                RadioAnswerD.Visible = true;
+            }
 
             RadioAnswerA.Checked = true;
 
