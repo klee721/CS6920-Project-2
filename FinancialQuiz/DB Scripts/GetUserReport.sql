@@ -3,16 +3,11 @@ CREATE PROCEDURE [dbo].[GetUserReport]
 AS   
 BEGIn
   
-  select Id
-       , start_date
-	   , end_date
-	   , Total_questions
-	   , Completed_ind
-	   , questionsCorrect
-	   , questionsMissed
-	   , round(ISNULL(questionsCorrect,0)*100/Total_questions, 2) score_percentage 
-from Games 
-where USERID = @UserId
-and questionsCorrect is not null;
+select id, start_date, ISNULL(end_date,Start_Date) end_date, Total_questions, ISNULL(Completed_ind,'') as Completed_ind, sum(correct) as questionsCorrect, ISNULL(questionsMissed,0) as questionsMissed, (ISNULL(sum(correct),0) * 100/Total_questions) as score_percentage  from (select g.*, gd.userOption, q.Correct_Option,
+    CASE when (gd.userOption = q.Correct_Option) then 1 
+			else 0  end as correct
+from games g, GameDetails gd, Questions q 
+where g.ID = gd.gameID and gd.QuestionID = q.ID 
+and g.userID = @UserId) as a group by id, start_date, end_date, total_questions, completed_ind, questionsMissed;
 
 END

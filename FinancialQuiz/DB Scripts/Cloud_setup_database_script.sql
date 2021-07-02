@@ -168,4 +168,18 @@ REFERENCES [Game_Level] ([ID])
 GO
 ALTER TABLE [Questions] CHECK CONSTRAINT [FK_game_level]
 GO
-
+CREATE TABLE [UserFavorites](
+	[userId] [int]  NOT NULL,
+	[questionId] [int] NOT NULL
+PRIMARY KEY CLUSTERED 
+(
+	[userId] ASC,
+	[questionId] ASC
+))
+GO
+ALTER TABLE [UserFavorites]  WITH CHECK ADD  CONSTRAINT [FK_user_id] FOREIGN KEY([userID])
+REFERENCES [Users] ([ID])
+GO
+ALTER TABLE [UserFavorites]  WITH CHECK ADD  CONSTRAINT [FK_Question_id] FOREIGN KEY([QuestionID])
+REFERENCES [Questions] ([ID])
+GO
