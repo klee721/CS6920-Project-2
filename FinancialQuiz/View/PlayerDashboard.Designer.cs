@@ -336,7 +336,6 @@ namespace FinancialQuiz.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kiddie Cash Komprehension";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PlayerDashboard_FormClosed);
-            this.Load += new System.EventHandler(this.PlayerDashboard_Load);
             this.QuizPanel.ResumeLayout(false);
             this.QuizPanel.PerformLayout();
             this.ResumeLayout(false);

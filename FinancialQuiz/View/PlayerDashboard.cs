@@ -266,9 +266,5 @@ namespace FinancialQuiz.View
             
         }
 
-        private void PlayerDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
