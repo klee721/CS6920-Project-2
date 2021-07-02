@@ -214,6 +214,7 @@ namespace FinancialQuiz.View
             newLauncher.SetLoginForm(this.loginForm);
 
             this.loginForm.Hide();
+            this.exitClicked = 1;
             PlayerDashboard.ActiveForm.Close();
             newLauncher.Show();
         }
