@@ -113,14 +113,23 @@ namespace FinancialQuiz.View
             this.RadioAnswerA.Text = currentQuestion.OptionA;
             this.RadioAnswerB.Text = currentQuestion.OptionB;
 
-            if (currentQuestion.OptionA == "True" || currentQuestion.OptionA == "False")
+
+
+            if (currentQuestion.OptionC == "")
             {
                 this.RadioAnswerC.Visible = false;
-                this.RadioAnswerD.Visible = false;
             }
             else
             {
                 this.RadioAnswerC.Text = currentQuestion.OptionC;
+            }
+
+            if (currentQuestion.OptionD == "")
+            {
+                this.RadioAnswerD.Visible = false;
+            }
+            else
+            {
                 this.RadioAnswerD.Text = currentQuestion.OptionD;
             }
         }
@@ -226,9 +235,13 @@ namespace FinancialQuiz.View
             this.SubmitButton.Visible = true;
             this.SaveQuestionButton.Visible = false;
 
-            if (RadioAnswerC.Visible == false && RadioAnswerD.Visible == false)
+            if (RadioAnswerC.Visible == false)
             {
                 RadioAnswerC.Visible = true;
+            }
+
+            if (RadioAnswerD.Visible == false)
+            {
                 RadioAnswerD.Visible = true;
             }
 
@@ -251,6 +264,11 @@ namespace FinancialQuiz.View
                 Application.Exit();
             }
             
+        }
+
+        private void PlayerDashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
