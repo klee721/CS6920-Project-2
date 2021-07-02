@@ -22,6 +22,7 @@ namespace FinancialQuiz.View
         int currentQuestionCount;
         int gameID;
         string chosenAnswer;
+        int exitClicked;
 
         public PlayerDashboard(User user)
         {
@@ -34,7 +35,9 @@ namespace FinancialQuiz.View
             this.questionController = new QuestionController();
             this.gamesController = new GamesController();
             this.currentQuestionCount = 1;
-           
+            this.exitClicked = 0;
+
+
 
         }
 
@@ -132,6 +135,7 @@ namespace FinancialQuiz.View
         private void LogoutLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.loggedInUser = null;
+            this.exitClicked = 1;
             PlayerDashboard.ActiveForm.Close();
             this.loginForm.Show();
             
@@ -242,7 +246,11 @@ namespace FinancialQuiz.View
 
         private void PlayerDashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+            if (this.exitClicked == 0)
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }
