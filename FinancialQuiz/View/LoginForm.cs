@@ -51,6 +51,7 @@ namespace FinancialQuiz.View
         private void Exit(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+            
         }
 
         /// <summary>
@@ -61,6 +62,7 @@ namespace FinancialQuiz.View
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
 
         /// <summary>
