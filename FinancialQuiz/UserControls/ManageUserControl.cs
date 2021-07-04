@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -38,6 +39,9 @@ namespace FinancialQuiz.UserControls
         {
             cbxSearch.SelectedIndex = 0;
             cbxSearch.Focus();
+            txtConfirmPassword.Visible = false;
+            lblConfirmPassword.Visible = false;
+            lblUpdate.Visible = false;
         }
 
         /// <summary>
@@ -56,6 +60,8 @@ namespace FinancialQuiz.UserControls
             string searchString = txtSearch.Text;
 
             string errorMessage = "";
+            lblMessage.Text = "";
+
             if (searchString.Trim().Length == 0)
             {
                 errorMessage = "Please enter " + searchCriteria;
@@ -139,10 +145,16 @@ namespace FinancialQuiz.UserControls
             txtAge.Text = "";
             txtUsername.Text = "";
             txtPassword.Text = "";
+            txtConfirmPassword.Text = "";
             cbBoxAdminStatus.SelectedIndex = -1;
+            lblMessage.Text = "";
             btnRegister.Enabled = true;
             btnUpdate.Enabled = false;
             btnClear.Enabled = true;
+            txtConfirmPassword.Visible = false;
+            lblConfirmPassword.Visible = false;
+            lblUpdate.Visible = false;
+
         }
 
 
@@ -216,6 +228,7 @@ namespace FinancialQuiz.UserControls
                 MessageBox.Show("Username cannot be longer than 45 characters", "Invalid Username");
                 return false;
             }
+            
             else if (txtPassword.Text.Trim().Length > 45)
             {
                 txtPassword.Focus();
@@ -241,8 +254,8 @@ namespace FinancialQuiz.UserControls
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-           
-            if (this.HasValidFields())
+
+             if (this.HasValidFields())
             {
                 try
                 {
@@ -255,7 +268,16 @@ namespace FinancialQuiz.UserControls
                     newUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
 
                     String name = newUser.FirstName + " " + newUser.LastName;
-                   
+
+                    if (txtPassword.Text != txtConfirmPassword.Text)
+
+                    {
+                        txtPassword.Focus();
+                        lblMessage.ForeColor = System.Drawing.Color.Red;
+                        lblMessage.Text = "Passwords didn't match.";
+                        return;
+                    }
+
                     if (this.isExistingUsername(newUser.UserName))
                     {
                         MessageBox.Show("User " + newUser.UserName + " already exists!", "Error");
@@ -285,6 +307,10 @@ namespace FinancialQuiz.UserControls
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            txtConfirmPassword.Visible = false;
+            lblConfirmPassword.Visible = false;
+            lblUpdate.Visible = false;
+
             if (this.HasValidFields())
             {
                 try
@@ -299,9 +325,9 @@ namespace FinancialQuiz.UserControls
                     updatedUser.Password = txtPassword.Text;
                     updatedUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
                     String name = updatedUser.FirstName + " " + updatedUser.LastName;
-                    
 
-                    bool isUpdated = this.userController.UpdateUser(updatedUser);
+                   
+                        bool isUpdated = this.userController.UpdateUser(updatedUser);
 
 
                     if (isUpdated)
@@ -318,6 +344,14 @@ namespace FinancialQuiz.UserControls
                     MessageBox.Show(ex.Message, ex.GetType().ToString());
                 }
             }
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtConfirmPassword.Visible = true;
+            lblConfirmPassword.Visible = true;
+            lblUpdate.Visible = true;
+
         }
     }
 }
