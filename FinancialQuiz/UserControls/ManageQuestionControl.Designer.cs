@@ -429,7 +429,7 @@ namespace FinancialQuiz.UserControls
             this.btnDeleteQ.Name = "btnDeleteQ";
             this.btnDeleteQ.Size = new System.Drawing.Size(136, 37);
             this.btnDeleteQ.TabIndex = 32;
-            this.btnDeleteQ.Text = "Delete";
+            this.btnDeleteQ.Text = "Disable";
             this.btnDeleteQ.UseVisualStyleBackColor = true;
             // 
             // ManageQuestionControl

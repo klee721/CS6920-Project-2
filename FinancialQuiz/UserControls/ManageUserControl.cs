@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -202,14 +203,13 @@ namespace FinancialQuiz.UserControls
                 MessageBox.Show("Last Name cannot be longer than 45 characters.", "Invalid Last Name");
                 return false;
             }
-            
-            else if (lblAge.Text.Trim().Length == 0 ||
-                lblAge.Text.Trim().Length < 3)
+            else if (!Regex.IsMatch(txtAge.Text, @"^[5-9]$|^[1-9][0-9]$|^(100)$"))
             {
                 lblAge.Focus();
-                MessageBox.Show("Please enter valid age.", "Invalid Age");
+                MessageBox.Show("Please enter only numbers. Children must be at least 5 years old", "Invalid Age");
                 return false;
             }
+
             else if (txtUsername.Text.Trim().Length > 45)
             {
                 txtUsername.Focus();
