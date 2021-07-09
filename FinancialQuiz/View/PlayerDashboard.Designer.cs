@@ -248,6 +248,7 @@ namespace FinancialQuiz.View
             this.SaveQuestionButton.Text = "Add to Study Group";
             this.SaveQuestionButton.UseVisualStyleBackColor = true;
             this.SaveQuestionButton.Visible = false;
+            this.SaveQuestionButton.Click += new System.EventHandler(this.SaveQuestionButton_Click);
             // 
             // StudyGroupLink
             // 

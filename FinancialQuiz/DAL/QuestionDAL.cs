@@ -150,12 +150,12 @@ namespace FinancialQuiz.DAL
         {
             Question question = new Question();
 
-            
-           
+
+
             using (SqlConnection connection = DBConnection.GetConnection())
             {
                 connection.Open();
-                
+
 
                 using (SqlCommand selectCommand = new SqlCommand("GetGameQuestion", connection))
                 {
@@ -170,13 +170,13 @@ namespace FinancialQuiz.DAL
                         selectCommand.Parameters.AddWithValue("@questionNumber", questionNumber);
                     }
 
-                    
+
 
                     using (SqlDataReader reader = selectCommand.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                           
+
                             question.QuestionID = Convert.ToInt32(reader["ID"].ToString());
                             question.Description = reader["Description"].ToString();
                             question.OptionA = reader["OptionA"].ToString();
@@ -185,7 +185,7 @@ namespace FinancialQuiz.DAL
                             question.OptionD = reader["OptionD"].ToString();
                             question.CorrectOption = reader["Correct_Option"].ToString();
 
-                            
+
                         }
                     }
                 }
@@ -199,11 +199,11 @@ namespace FinancialQuiz.DAL
         /// </summary>
         /// <param name="questionid">question id</param>
         /// <returns>Question object</returns>
-        public int InsertQuizQuestion(int userId, int total_questions, int categoryId , int AgeGroupId)
+        public int InsertQuizQuestion(int userId, int total_questions, int categoryId, int AgeGroupId)
         {
 
 
-            int gameId =0;
+            int gameId = 0;
             using (SqlConnection connection = DBConnection.GetConnection())
             {
                 connection.Open();
@@ -239,7 +239,7 @@ namespace FinancialQuiz.DAL
                         {
 
                             gameId = Convert.ToInt32(reader["gameId"].ToString());
-                            
+
                         }
                     }
                 }
@@ -255,7 +255,7 @@ namespace FinancialQuiz.DAL
         /// <returns>Question object</returns>
         public string UpdateUserQuestionAnswer(int gameId, int questionId, string userOption)
         {
-            string  useranswer = "";
+            string useranswer = "";
 
 
 
@@ -277,9 +277,9 @@ namespace FinancialQuiz.DAL
                         selectCommand.Parameters.AddWithValue("@questionId", questionId);
                     }
 
-                    
-                        selectCommand.Parameters.AddWithValue("@userOption", userOption);
-                    
+
+                    selectCommand.Parameters.AddWithValue("@userOption", userOption);
+
 
 
 
@@ -289,7 +289,7 @@ namespace FinancialQuiz.DAL
                         {
 
                             useranswer = reader["userOption"].ToString();
-                            
+
                         }
                     }
                 }
@@ -337,6 +337,83 @@ namespace FinancialQuiz.DAL
                     return true;
                 }
             }
+
         }
+
+        /// <summary>
+        /// Method to retrieve a list of questionIDs that correspond with the players favorited question list
+        /// </summary>
+        /// <param name="userID">the user whos favorites are being pulled</param>
+        /// <returns>an integer list of all favorited questions</returns>
+        public List<int> GetFavoritesList(int userID)
+        {
+            List<int> favList = new List<int>();
+
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                string sqlStatement = "SELECT questionId FROM UserFavorites " +
+                    "WHERE userId = @userID";
+
+                connection.Open();
+
+                using (SqlCommand selectCommand = new SqlCommand(sqlStatement, connection))
+                {
+                    selectCommand.Parameters.AddWithValue("@userId", userID);
+
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            favList.Add((int)reader["questionId"]);
+                        }
+                    }
+                    return favList;
+                }
+
+
+            }
+
+
+        }
+
+        /// <summary>
+        /// Adds a user/question value pair to the favorites table, indicating the user has favorited this question
+        /// </summary>
+        /// <param name="userID">logged in user</param>
+        /// <param name="questionID">the current question they are favoriting</param>
+        /// <returns>true when the query succeeds</returns>
+        public bool AddQuestionToFavorites(int userID, int questionID)
+        {
+
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+
+                string insertStatement =
+               "INSERT INTO UserFavorites " +
+               "VALUES (@userId, @questionID)";
+                
+
+                connection.Open();
+
+                using (SqlCommand insertCommand = new SqlCommand(insertStatement, connection))
+                {
+                    insertCommand.Parameters.AddWithValue("@userId", userID);
+                    insertCommand.Parameters.AddWithValue("@questionID", questionID);
+                    int result = insertCommand.ExecuteNonQuery();
+
+                    // Check Error
+                    if (result > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+            }
+        }
+
     }
 }

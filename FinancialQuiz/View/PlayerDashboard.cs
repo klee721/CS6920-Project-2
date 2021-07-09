@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using FinancialQuiz.Model;
 using FinancialQuiz.Controller;
+using System.Collections.Generic;
 
 
 namespace FinancialQuiz.View
@@ -134,6 +135,21 @@ namespace FinancialQuiz.View
             }
         }
 
+        private void DisableRadios()
+        {
+            this.RadioAnswerA.Enabled = false;
+            this.RadioAnswerB.Enabled = false;
+            this.RadioAnswerC.Enabled = false;
+            this.RadioAnswerD.Enabled = false;
+        }
+
+        private void EnableRadios()
+        {
+            this.RadioAnswerA.Enabled = true;
+            this.RadioAnswerB.Enabled = true;
+            this.RadioAnswerC.Enabled = true;
+            this.RadioAnswerD.Enabled = true;
+        }
 
 
         /// <summary>
@@ -159,6 +175,8 @@ namespace FinancialQuiz.View
 
         private void SubmitButton_Click(object sender, EventArgs e)   //TODO refactor this to cleaner code
         {
+            this.DisableRadios();
+
             SubmitButton.Visible = false;
             NextButton.Visible = true;
             SaveQuestionButton.Visible = true;
@@ -228,6 +246,8 @@ namespace FinancialQuiz.View
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            this.EnableRadios();
+
             this.CorrectLabel.Visible = false;
             this.WrongLabel.Visible = false;
 
@@ -267,5 +287,20 @@ namespace FinancialQuiz.View
             
         }
 
+        private void SaveQuestionButton_Click(object sender, EventArgs e)
+        {
+            List<int> allFavorites = this.questionController.GetFavoritesList(this.loggedInUser.UserID);
+            if (allFavorites.Contains(this.currentQuestion.QuestionID))
+            {
+                MessageBox.Show("You have already added this question to your study list.");
+            }
+            else
+            {
+                 if (this.questionController.AddQuestionToFavorites(this.loggedInUser.UserID, this.currentQuestion.QuestionID)){
+                    this.SaveQuestionButton.Visible = false;
+                    MessageBox.Show("Successfully added to your study group.");
+                 }
+            }
+        }
     }
 }

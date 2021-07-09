@@ -83,6 +83,20 @@ namespace FinancialQuiz.Controller
         {
             return QuestionDAL.AddQuestion(question);
         }
+        /// <summary>
+        /// Returns an integer list of all the input users favorited questions
+        /// </summary>
+        /// <param name="userID">users whos list is being pulled</param>
+        /// <returns></returns>
+        public List<int> GetFavoritesList(int userID)
+        {
+            return this.questionDAL.GetFavoritesList(userID);
+        }
+
+        public bool AddQuestionToFavorites(int userId, int questionID)
+        {
+            return this.questionDAL.AddQuestionToFavorites(userId, questionID);
+        }
 
     }
 }
