@@ -415,5 +415,41 @@ namespace FinancialQuiz.DAL
             }
         }
 
+        public bool RemoveQuestionFromFavorites(int userID, int questionID)
+        {
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+
+                string deleteStatement =
+               "DELETE FROM UserFavorites " +
+               "WHERE userId = @userId " +
+               "AND questionId = @questionID";
+
+
+                connection.Open();
+
+                using (SqlCommand deleteCommand = new SqlCommand(deleteStatement, connection))
+                {
+                    deleteCommand.Parameters.AddWithValue("@userId", userID);
+                    deleteCommand.Parameters.AddWithValue("@questionID", questionID);
+                    int result = deleteCommand.ExecuteNonQuery();
+
+                    // Check Error
+                    if (result > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+            }
+
+
+        }
+
+
     }
 }

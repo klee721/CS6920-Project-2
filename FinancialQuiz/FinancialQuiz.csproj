@@ -150,12 +150,6 @@
     <Compile Include="View\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BackupUserStatsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\BackupUserStatsForm.Designer.cs">
-      <DependentUpon>BackupUserStatsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\GameLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,9 +211,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\BackupUserStatsForm.resx">
-      <DependentUpon>BackupUserStatsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\GameLauncher.resx">
       <DependentUpon>GameLauncher.cs</DependentUpon>

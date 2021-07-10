@@ -98,5 +98,10 @@ namespace FinancialQuiz.Controller
             return this.questionDAL.AddQuestionToFavorites(userId, questionID);
         }
 
+        public bool RemoveQuestionFromFavorites(int userId, int questionID)
+        {
+            return this.questionDAL.RemoveQuestionFromFavorites(userId, questionID);
+        }
+
     }
 }
