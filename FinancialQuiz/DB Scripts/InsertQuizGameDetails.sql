@@ -25,7 +25,7 @@ BEGIN
 	insert into gameDetails(gameId,questionId)
   (select TOP(ISNULL(@Total_questions,5)) 
     @gameId,id from Questions
-   where category_id = ISNULL(@CategoryId, 1) 
+   where active ='Y' and category_id = ISNULL(@CategoryId, 1) 
    and age_range_id = ISNULL(@AgeGroupId, 1));
    
    select max(id) gameId from games where userID = @UserId;

@@ -183,3 +183,7 @@ GO
 ALTER TABLE [UserFavorites]  WITH CHECK ADD  CONSTRAINT [FK_Question_id] FOREIGN KEY([QuestionID])
 REFERENCES [Questions] ([ID])
 GO
+Alter table questions add active varchar(1) default 'Y'
+GO
+update questions set active ='Y'
+GO
