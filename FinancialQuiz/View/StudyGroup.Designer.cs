@@ -43,6 +43,7 @@ namespace FinancialQuiz.View
             // 
             // FavoritesDataGrid
             // 
+            this.FavoritesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FavoritesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FavoritesDataGrid.Location = new System.Drawing.Point(23, 252);
             this.FavoritesDataGrid.Name = "FavoritesDataGrid";
@@ -131,9 +132,9 @@ namespace FinancialQuiz.View
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(330, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 13);
+            this.label2.Size = new System.Drawing.Size(154, 13);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Double click to select a question";
+            this.label2.Text = "Click a row to select a question";
             // 
             // StudyGroup
             // 

@@ -47,7 +47,18 @@ namespace FinancialQuiz.View
                 this.favList.Add(this.questionController.GetQuestions(id)[0]);
             }
 
+           
             FavoritesDataGrid.DataSource = this.favList;
+
+            FavoritesDataGrid.Columns[0].Visible = false;
+            FavoritesDataGrid.Columns[2].Visible = false;
+            FavoritesDataGrid.Columns[3].Visible = false;
+            FavoritesDataGrid.Columns[4].Visible = false;
+            FavoritesDataGrid.Columns[5].Visible = false;
+            FavoritesDataGrid.Columns[6].Visible = false;
+            FavoritesDataGrid.Columns[7].Visible = false;
+            FavoritesDataGrid.Columns[8].Visible = false;
+            FavoritesDataGrid.Columns[9].Visible = false;
 
         }
 
