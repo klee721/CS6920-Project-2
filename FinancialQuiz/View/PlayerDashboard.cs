@@ -182,6 +182,10 @@ namespace FinancialQuiz.View
             SaveQuestionButton.Visible = true;
 
             this.ExplanationRichText.Text = this.currentQuestion.Explanation;
+            if (this.ExplanationRichText.Text == "")
+            {
+                this.ExplanationRichText.Text = "No explanation available";
+            }
 
             if (RadioAnswerA.Checked == true)
             {
