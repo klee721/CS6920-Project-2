@@ -118,7 +118,7 @@ namespace FinancialQuiz.DAL
                 string sqlStatement = "UPDATE Questions" +
                 " SET Age_range_id = @AgeRangeId, Game_Level_ID = @GameLevelID, Category_ID = @CategoryID, " +
                 "Description = @Description, OptionA = @OptionA, OptionB = @OptionB, " +
-                "OptionC = @OptionC, OptionD = @OptionD, Correct_Option = @CorrectOption " +
+                "OptionC = @OptionC, OptionD = @OptionD, Explanation = @Explanation, Correct_Option = @CorrectOption " +
                 "WHERE ID = @QuestionID";
                 connection.Open();
 
@@ -134,6 +134,7 @@ namespace FinancialQuiz.DAL
                     updateCommand.Parameters.AddWithValue("@OptionB", question.OptionB);
                     updateCommand.Parameters.AddWithValue("@OptionC", question.OptionC);
                     updateCommand.Parameters.AddWithValue("@OptionD", question.OptionD);
+                    updateCommand.Parameters.AddWithValue("@Explanation", question.Explanation);
                     updateCommand.Parameters.AddWithValue("@CorrectOption", question.CorrectOption);
 
                     updateCommand.ExecuteNonQuery();
@@ -312,12 +313,12 @@ namespace FinancialQuiz.DAL
                 //OptionA,OptionB,OptionC,OptionD,Correct_Option) VALUES 
                 string insertStatement =
                "INSERT INTO questions " +
-                "(Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, " +
+                "(Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, Explanation" +
                 "Correct_Option) " +
 
                 "VALUES (@AgeRangeId, @GameLevelID, @CategoryID, " +
                 "@Description, @OptionA, @OptionB, " +
-                "@OptionC, @OptionD, @CorrectOption ); " +
+                "@OptionC, @OptionD, @Explanation, @CorrectOption ); " +
                 "SELECT CAST(scope_identity() AS int)";
 
                 connection.Open();
@@ -332,6 +333,7 @@ namespace FinancialQuiz.DAL
                     insertCommand.Parameters.AddWithValue("@OptionB", question.OptionB);
                     insertCommand.Parameters.AddWithValue("@OptionC", question.OptionC);
                     insertCommand.Parameters.AddWithValue("@OptionD", question.OptionD);
+                    insertCommand.Parameters.AddWithValue("@Explanation", question.Explanation);
                     insertCommand.Parameters.AddWithValue("@CorrectOption", question.CorrectOption);
                     question.QuestionID = Convert.ToInt32(insertCommand.ExecuteScalar());
 

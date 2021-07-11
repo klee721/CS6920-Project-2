@@ -148,7 +148,8 @@ namespace FinancialQuiz.UserControls
             txtAnswerC.Text = "";
             txtAnswerD.Text = "";
             txtCorrectAnswer.Text = "";
-            
+            txtBoxExplanation.Text = "";
+
             btnUpdateQ.Enabled = false;
             btnAddQ.Enabled = true;
             btnDeleteQ.Enabled = false;
@@ -198,6 +199,7 @@ namespace FinancialQuiz.UserControls
                     updatedQuestion.OptionB = txtAnswerB.Text;
                     updatedQuestion.OptionC = txtAnswerC.Text;
                     updatedQuestion.OptionD = txtAnswerD.Text;
+                    updatedQuestion.Explanation = txtBoxExplanation.Text;
                     updatedQuestion.CorrectOption = txtCorrectAnswer.Text;
 
                     bool isUpdated = this.questionController.UpdateQuestion(updatedQuestion);
