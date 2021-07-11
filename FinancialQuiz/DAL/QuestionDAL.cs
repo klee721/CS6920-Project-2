@@ -59,7 +59,7 @@ namespace FinancialQuiz.DAL
         {
             List<Question> questionList = new List<Question>();
 
-            string sqlStatement = "SELECT ID, Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, Correct_Option from Questions ";
+            string sqlStatement = "SELECT ID, Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, Explanation, Correct_Option from Questions ";
 
             if (questionid > 0)
             {
@@ -92,6 +92,7 @@ namespace FinancialQuiz.DAL
                             question.OptionB = reader["OptionB"].ToString();
                             question.OptionC = reader["OptionC"].ToString();
                             question.OptionD = reader["OptionD"].ToString();
+                            question.Explanation = reader["Explanation"].ToString();
                             question.CorrectOption = reader["Correct_Option"].ToString();
 
                             questionList.Add(question);

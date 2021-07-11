@@ -127,6 +127,7 @@ namespace FinancialQuiz.UserControls
             txtAnswerB.Text = question.OptionB;
             txtAnswerC.Text = question.OptionC;
             txtAnswerD.Text = question.OptionD;
+            txtBoxExplanation.Text = question.Explanation;
             txtCorrectAnswer.Text = question.CorrectOption;
             Console.WriteLine("Question cat id : " + question.CategoryID);
             Console.WriteLine("Question age id : " + question.AgeRangeID);

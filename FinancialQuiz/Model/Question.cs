@@ -31,5 +31,7 @@ namespace FinancialQuiz.Model
 
         public int GameLevelID { get; set; }
 
+        public string Explanation { get; set; }
+
     }
 }
