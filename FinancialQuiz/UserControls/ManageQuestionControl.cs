@@ -262,6 +262,7 @@ namespace FinancialQuiz.UserControls
                     newQuestion.OptionC = txtAnswerC.Text;
                     newQuestion.OptionD = txtAnswerD.Text;
                     newQuestion.CorrectOption = txtCorrectAnswer.Text;
+                    newQuestion.Explanation = txtBoxExplanation.Text;
   
                     bool isAdded = this.questionController.AddQuestion(newQuestion);
 

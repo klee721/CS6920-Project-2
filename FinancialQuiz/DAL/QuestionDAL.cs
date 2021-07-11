@@ -313,7 +313,7 @@ namespace FinancialQuiz.DAL
                 //OptionA,OptionB,OptionC,OptionD,Correct_Option) VALUES 
                 string insertStatement =
                "INSERT INTO questions " +
-                "(Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, Explanation" +
+                "(Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, Explanation, " +
                 "Correct_Option) " +
 
                 "VALUES (@AgeRangeId, @GameLevelID, @CategoryID, " +
