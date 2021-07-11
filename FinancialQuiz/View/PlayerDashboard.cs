@@ -52,19 +52,6 @@ namespace FinancialQuiz.View
             this.QuestionProgressLabel.Text = this.currentQuestion+ "/" + this.numberOfQuestions;
         }
 
-        /// <summary>
-        /// Takes in a User object and stores it for use in game
-        /// </summary>
-        /// <param name="user"></param>
-        public void SetLoggedInUser(User user)
-        {
-            if (user != null)
-            {
-                this.loggedInUser = new User();
-                this.loggedInUser = user;
-            }
-
-        }
 
         /// <summary>
         /// Stores a reference to the 'main menu' login form so the player can log out and return to it
@@ -224,9 +211,24 @@ namespace FinancialQuiz.View
 
             if (this.currentQuestionCount == this.numberOfQuestions)
             {
+                GameStats gameStats = this.gamesController.GetGameStats(this.gameID);
+
+
+                //TEST DATA
+                //gameStats.totalQuestions = 10;
+                //gameStats.questionsCorrect = 9;
+                //gameStats.questionsMissed = 1;
+                //gameStats.score = 9;
+                //TEST DATA
+
                 NextButton.Visible = false;
                 this.NewGameButton.Visible = true;
-                MessageBox.Show("You have completed this quiz! Click 'Start a New Game' to play again, or logout to quit.");
+                MessageBox.Show("You have completed this quiz!" +
+                    "\n\n\nTotal Questions: " + gameStats.totalQuestions +
+                    "\n\nQuestions Correct: " + gameStats.questionsCorrect +
+                    "\n\nQuestions Missed: " + gameStats.questionsMissed +
+                    "\n\nFinal Score: " + gameStats.score +
+                    "\n\n\nClick 'Start a New Game' to play again, or logout to quit."); 
             }
 
         }

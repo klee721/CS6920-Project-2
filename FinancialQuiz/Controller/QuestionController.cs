@@ -20,14 +20,7 @@ namespace FinancialQuiz.Controller
             this.questionDAL = new QuestionDAL();
         }
 
-        /// <summary>
-        /// Methos to retrieve the first question in the DB for demo and development purposes
-        /// </summary>
-        /// <returns>A question object populated from the DB</returns>
-        public Question GetSampleQuestion()
-        {
-            return this.questionDAL.GetSampleQuestion();
-        }
+    
 
         /// <summary>
         /// Method that returns a selected question from the question table

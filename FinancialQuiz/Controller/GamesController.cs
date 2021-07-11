@@ -30,6 +30,12 @@ namespace FinancialQuiz.Controller
             return this.gamesDAL.InsertQuizGameDetails(userID, numberOfQuestions, categoryID, ageID);
         }
 
+        public GameStats GetGameStats(int gameID)
+        {
+            return this.gamesDAL.GetGameStats(gameID);
+        }
+
+
 
     }
 }
