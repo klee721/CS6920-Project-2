@@ -186,6 +186,7 @@ namespace FinancialQuiz.DAL
                             question.OptionC = reader["OptionC"].ToString();
                             question.OptionD = reader["OptionD"].ToString();
                             question.CorrectOption = reader["Correct_Option"].ToString();
+                            question.Explanation = reader["Explanation"].ToString();
 
 
                         }

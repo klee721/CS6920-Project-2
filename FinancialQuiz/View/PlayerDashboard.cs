@@ -181,6 +181,8 @@ namespace FinancialQuiz.View
             NextButton.Visible = true;
             SaveQuestionButton.Visible = true;
 
+            this.ExplanationRichText.Text = this.currentQuestion.Explanation;
+
             if (RadioAnswerA.Checked == true)
             {
                 chosenAnswer = "A";
@@ -250,6 +252,7 @@ namespace FinancialQuiz.View
 
             this.CorrectLabel.Visible = false;
             this.WrongLabel.Visible = false;
+            this.ExplanationRichText.Text = "";
 
             this.currentQuestionCount++;
             this.NextButton.Visible = false;
