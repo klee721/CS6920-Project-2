@@ -65,6 +65,7 @@ namespace FinancialQuiz.UserControls
             // 
             // tblLtPnlManageUser
             // 
+            this.tblLtPnlManageUser.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tblLtPnlManageUser.ColumnCount = 3;
             this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.5138F));
             this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.66222F));
@@ -109,12 +110,14 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblLtPnlManageUser.Size = new System.Drawing.Size(1322, 695);
             this.tblLtPnlManageUser.TabIndex = 3;
+            this.tblLtPnlManageUser.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblLtPnlManageUser_CellPaint);
             // 
             // cbxCat
             // 
             this.cbxCat.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxCat.BackColor = System.Drawing.SystemColors.Info;
             this.cbxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCat.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCat.FormattingEnabled = true;
             this.cbxCat.ItemHeight = 22;
             this.cbxCat.Location = new System.Drawing.Point(224, 70);
@@ -127,11 +130,13 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblQuestion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(101, 223);
+            this.lblQuestion.BackColor = System.Drawing.Color.Gray;
+            this.lblQuestion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblQuestion.Location = new System.Drawing.Point(91, 224);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblQuestion.Size = new System.Drawing.Size(101, 21);
+            this.lblQuestion.Size = new System.Drawing.Size(111, 19);
             this.lblQuestion.TabIndex = 29;
             this.lblQuestion.Text = "Question: ";
             // 
@@ -139,35 +144,40 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblSearchBy.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSearchBy.AutoSize = true;
-            this.lblSearchBy.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchBy.Location = new System.Drawing.Point(92, 19);
+            this.lblSearchBy.BackColor = System.Drawing.Color.Gray;
+            this.lblSearchBy.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchBy.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblSearchBy.Location = new System.Drawing.Point(76, 20);
             this.lblSearchBy.Name = "lblSearchBy";
             this.lblSearchBy.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblSearchBy.Size = new System.Drawing.Size(110, 21);
+            this.lblSearchBy.Size = new System.Drawing.Size(126, 19);
             this.lblSearchBy.TabIndex = 26;
             this.lblSearchBy.Text = "Search By : ";
             // 
             // txtQuestion
             // 
             this.txtQuestion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtQuestion.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtQuestion.Location = new System.Drawing.Point(225, 199);
+            this.txtQuestion.BackColor = System.Drawing.SystemColors.Info;
+            this.txtQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuestion.Location = new System.Drawing.Point(225, 198);
             this.txtQuestion.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtQuestion.MaxLength = 0;
             this.txtQuestion.Multiline = true;
             this.txtQuestion.Name = "txtQuestion";
-            this.txtQuestion.Size = new System.Drawing.Size(964, 69);
+            this.txtQuestion.Size = new System.Drawing.Size(964, 71);
             this.txtQuestion.TabIndex = 7;
             // 
             // lblAnswerD
             // 
             this.lblAnswerD.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAnswerD.AutoSize = true;
-            this.lblAnswerD.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswerD.Location = new System.Drawing.Point(97, 498);
+            this.lblAnswerD.BackColor = System.Drawing.Color.Gray;
+            this.lblAnswerD.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswerD.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblAnswerD.Location = new System.Drawing.Point(85, 499);
             this.lblAnswerD.Name = "lblAnswerD";
             this.lblAnswerD.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblAnswerD.Size = new System.Drawing.Size(105, 21);
+            this.lblAnswerD.Size = new System.Drawing.Size(117, 19);
             this.lblAnswerD.TabIndex = 38;
             this.lblAnswerD.Text = " Answer D:";
             // 
@@ -175,11 +185,13 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblAgeRange.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAgeRange.AutoSize = true;
-            this.lblAgeRange.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgeRange.Location = new System.Drawing.Point(91, 164);
+            this.lblAgeRange.BackColor = System.Drawing.Color.Gray;
+            this.lblAgeRange.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeRange.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblAgeRange.Location = new System.Drawing.Point(70, 165);
             this.lblAgeRange.Name = "lblAgeRange";
             this.lblAgeRange.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblAgeRange.Size = new System.Drawing.Size(111, 21);
+            this.lblAgeRange.Size = new System.Drawing.Size(132, 19);
             this.lblAgeRange.TabIndex = 27;
             this.lblAgeRange.Text = "Age Range: ";
             // 
@@ -187,11 +199,13 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblAnswerB.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAnswerB.AutoSize = true;
-            this.lblAnswerB.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswerB.Location = new System.Drawing.Point(98, 362);
+            this.lblAnswerB.BackColor = System.Drawing.Color.Gray;
+            this.lblAnswerB.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswerB.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblAnswerB.Location = new System.Drawing.Point(87, 363);
             this.lblAnswerB.Name = "lblAnswerB";
             this.lblAnswerB.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblAnswerB.Size = new System.Drawing.Size(104, 21);
+            this.lblAnswerB.Size = new System.Drawing.Size(115, 19);
             this.lblAnswerB.TabIndex = 32;
             this.lblAnswerB.Text = "Answer B: ";
             // 
@@ -199,11 +213,13 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(105, 75);
+            this.lblCategory.BackColor = System.Drawing.Color.Gray;
+            this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblCategory.Location = new System.Drawing.Point(92, 76);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblCategory.Size = new System.Drawing.Size(97, 21);
+            this.lblCategory.Size = new System.Drawing.Size(110, 19);
             this.lblCategory.TabIndex = 43;
             this.lblCategory.Text = "Category:";
             // 
@@ -211,102 +227,114 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblAnswer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAnswer.AutoSize = true;
-            this.lblAnswer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswer.Location = new System.Drawing.Point(97, 294);
+            this.lblAnswer.BackColor = System.Drawing.Color.Gray;
+            this.lblAnswer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblAnswer.Location = new System.Drawing.Point(84, 295);
             this.lblAnswer.Name = "lblAnswer";
             this.lblAnswer.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblAnswer.Size = new System.Drawing.Size(105, 21);
+            this.lblAnswer.Size = new System.Drawing.Size(118, 19);
             this.lblAnswer.TabIndex = 45;
             this.lblAnswer.Text = "Answer A: ";
             // 
             // txtAnswerA
             // 
             this.txtAnswerA.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAnswerA.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtAnswerA.Location = new System.Drawing.Point(225, 274);
+            this.txtAnswerA.BackColor = System.Drawing.SystemColors.Info;
+            this.txtAnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswerA.Location = new System.Drawing.Point(225, 273);
             this.txtAnswerA.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerA.MaxLength = 0;
             this.txtAnswerA.Multiline = true;
             this.txtAnswerA.Name = "txtAnswerA";
-            this.txtAnswerA.Size = new System.Drawing.Size(964, 61);
+            this.txtAnswerA.Size = new System.Drawing.Size(964, 64);
             this.txtAnswerA.TabIndex = 46;
             // 
             // txtAnswerB
             // 
             this.txtAnswerB.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAnswerB.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtAnswerB.Location = new System.Drawing.Point(225, 342);
+            this.txtAnswerB.BackColor = System.Drawing.SystemColors.Info;
+            this.txtAnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswerB.Location = new System.Drawing.Point(225, 341);
             this.txtAnswerB.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerB.MaxLength = 0;
             this.txtAnswerB.Multiline = true;
             this.txtAnswerB.Name = "txtAnswerB";
-            this.txtAnswerB.Size = new System.Drawing.Size(964, 62);
+            this.txtAnswerB.Size = new System.Drawing.Size(964, 64);
             this.txtAnswerB.TabIndex = 47;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 430);
+            this.label1.BackColor = System.Drawing.Color.Gray;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.Location = new System.Drawing.Point(84, 431);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.label1.Size = new System.Drawing.Size(104, 21);
+            this.label1.Size = new System.Drawing.Size(118, 19);
             this.label1.TabIndex = 48;
             this.label1.Text = "Answer C: ";
             // 
             // txtAnswerC
             // 
             this.txtAnswerC.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAnswerC.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtAnswerC.Location = new System.Drawing.Point(225, 410);
+            this.txtAnswerC.BackColor = System.Drawing.SystemColors.Info;
+            this.txtAnswerC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswerC.Location = new System.Drawing.Point(225, 409);
             this.txtAnswerC.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerC.MaxLength = 0;
             this.txtAnswerC.Multiline = true;
             this.txtAnswerC.Name = "txtAnswerC";
-            this.txtAnswerC.Size = new System.Drawing.Size(964, 62);
+            this.txtAnswerC.Size = new System.Drawing.Size(964, 64);
             this.txtAnswerC.TabIndex = 49;
             // 
             // txtAnswerD
             // 
             this.txtAnswerD.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAnswerD.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtAnswerD.Location = new System.Drawing.Point(225, 478);
+            this.txtAnswerD.BackColor = System.Drawing.SystemColors.Info;
+            this.txtAnswerD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswerD.Location = new System.Drawing.Point(225, 477);
             this.txtAnswerD.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAnswerD.MaxLength = 0;
             this.txtAnswerD.Multiline = true;
             this.txtAnswerD.Name = "txtAnswerD";
-            this.txtAnswerD.Size = new System.Drawing.Size(964, 62);
+            this.txtAnswerD.Size = new System.Drawing.Size(964, 64);
             this.txtAnswerD.TabIndex = 50;
             // 
             // txtCorrectAnswer
             // 
             this.txtCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCorrectAnswer.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtCorrectAnswer.Location = new System.Drawing.Point(225, 660);
+            this.txtCorrectAnswer.BackColor = System.Drawing.SystemColors.Info;
+            this.txtCorrectAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorrectAnswer.Location = new System.Drawing.Point(225, 661);
             this.txtCorrectAnswer.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtCorrectAnswer.MaxLength = 45;
             this.txtCorrectAnswer.Name = "txtCorrectAnswer";
-            this.txtCorrectAnswer.Size = new System.Drawing.Size(103, 28);
+            this.txtCorrectAnswer.Size = new System.Drawing.Size(103, 27);
             this.txtCorrectAnswer.TabIndex = 51;
             // 
             // lblCorrectAnswer
             // 
             this.lblCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCorrectAnswer.AutoSize = true;
-            this.lblCorrectAnswer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorrectAnswer.Location = new System.Drawing.Point(60, 664);
+            this.lblCorrectAnswer.BackColor = System.Drawing.Color.Gray;
+            this.lblCorrectAnswer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorrectAnswer.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblCorrectAnswer.Location = new System.Drawing.Point(42, 665);
             this.lblCorrectAnswer.Name = "lblCorrectAnswer";
             this.lblCorrectAnswer.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblCorrectAnswer.Size = new System.Drawing.Size(142, 21);
+            this.lblCorrectAnswer.Size = new System.Drawing.Size(160, 19);
             this.lblCorrectAnswer.TabIndex = 42;
             this.lblCorrectAnswer.Text = "Correct Answer:";
             // 
             // cbxAge
             // 
             this.cbxAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxAge.BackColor = System.Drawing.SystemColors.Info;
             this.cbxAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxAge.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxAge.FormattingEnabled = true;
             this.cbxAge.ItemHeight = 22;
             this.cbxAge.Location = new System.Drawing.Point(224, 160);
@@ -335,8 +363,9 @@ namespace FinancialQuiz.UserControls
             // cbxSearch
             // 
             this.cbxSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxSearch.BackColor = System.Drawing.SystemColors.Info;
             this.cbxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSearch.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSearch.FormattingEnabled = true;
             this.cbxSearch.ItemHeight = 22;
             this.cbxSearch.Items.AddRange(new object[] {
@@ -350,42 +379,48 @@ namespace FinancialQuiz.UserControls
             // txtSearch
             // 
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Info;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(249, 2);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(597, 28);
+            this.txtSearch.Size = new System.Drawing.Size(597, 27);
             this.txtSearch.TabIndex = 3;
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSearch.BackColor = System.Drawing.Color.Orange;
+            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(1195, 11);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(124, 37);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblGameLevel
             // 
             this.lblGameLevel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblGameLevel.AutoSize = true;
-            this.lblGameLevel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameLevel.Location = new System.Drawing.Point(87, 122);
+            this.lblGameLevel.BackColor = System.Drawing.Color.Gray;
+            this.lblGameLevel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameLevel.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblGameLevel.Location = new System.Drawing.Point(68, 123);
             this.lblGameLevel.Name = "lblGameLevel";
             this.lblGameLevel.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblGameLevel.Size = new System.Drawing.Size(115, 21);
+            this.lblGameLevel.Size = new System.Drawing.Size(134, 19);
             this.lblGameLevel.TabIndex = 53;
             this.lblGameLevel.Text = "Game Level:";
             // 
             // cbxGameLevel
             // 
             this.cbxGameLevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbxGameLevel.BackColor = System.Drawing.SystemColors.Info;
             this.cbxGameLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxGameLevel.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGameLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGameLevel.FormattingEnabled = true;
             this.cbxGameLevel.ItemHeight = 22;
             this.cbxGameLevel.Location = new System.Drawing.Point(224, 118);
@@ -396,56 +431,67 @@ namespace FinancialQuiz.UserControls
             // 
             // btnAddQ
             // 
+            this.btnAddQ.BackColor = System.Drawing.Color.Orange;
+            this.btnAddQ.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddQ.Location = new System.Drawing.Point(607, 701);
             this.btnAddQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddQ.Name = "btnAddQ";
             this.btnAddQ.Size = new System.Drawing.Size(133, 37);
             this.btnAddQ.TabIndex = 30;
             this.btnAddQ.Text = "Add";
-            this.btnAddQ.UseVisualStyleBackColor = true;
+            this.btnAddQ.UseVisualStyleBackColor = false;
             this.btnAddQ.Click += new System.EventHandler(this.btnAddQ_Click);
             // 
             // btnUpdateQ
             // 
+            this.btnUpdateQ.BackColor = System.Drawing.Color.Orange;
+            this.btnUpdateQ.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateQ.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnUpdateQ.Location = new System.Drawing.Point(469, 701);
             this.btnUpdateQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateQ.Name = "btnUpdateQ";
             this.btnUpdateQ.Size = new System.Drawing.Size(133, 37);
             this.btnUpdateQ.TabIndex = 29;
             this.btnUpdateQ.Text = "Update";
-            this.btnUpdateQ.UseVisualStyleBackColor = true;
+            this.btnUpdateQ.UseVisualStyleBackColor = false;
             this.btnUpdateQ.Click += new System.EventHandler(this.btnUpdateQ_Click);
             // 
             // btnClearQ
             // 
+            this.btnClearQ.BackColor = System.Drawing.Color.Orange;
+            this.btnClearQ.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearQ.Location = new System.Drawing.Point(889, 701);
             this.btnClearQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearQ.Name = "btnClearQ";
             this.btnClearQ.Size = new System.Drawing.Size(136, 37);
             this.btnClearQ.TabIndex = 31;
             this.btnClearQ.Text = "Clear";
-            this.btnClearQ.UseVisualStyleBackColor = true;
+            this.btnClearQ.UseVisualStyleBackColor = false;
             this.btnClearQ.Click += new System.EventHandler(this.btnClearQ_Click);
             // 
             // btnDeleteQ
             // 
+            this.btnDeleteQ.BackColor = System.Drawing.Color.Orange;
+            this.btnDeleteQ.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteQ.Location = new System.Drawing.Point(747, 701);
             this.btnDeleteQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteQ.Name = "btnDeleteQ";
             this.btnDeleteQ.Size = new System.Drawing.Size(136, 37);
             this.btnDeleteQ.TabIndex = 32;
             this.btnDeleteQ.Text = "Disable";
-            this.btnDeleteQ.UseVisualStyleBackColor = true;
+            this.btnDeleteQ.UseVisualStyleBackColor = false;
             // 
             // lblExplanation
             // 
             this.lblExplanation.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblExplanation.AutoSize = true;
-            this.lblExplanation.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplanation.Location = new System.Drawing.Point(87, 588);
+            this.lblExplanation.BackColor = System.Drawing.Color.Gray;
+            this.lblExplanation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExplanation.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblExplanation.Location = new System.Drawing.Point(73, 589);
             this.lblExplanation.Name = "lblExplanation";
             this.lblExplanation.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblExplanation.Size = new System.Drawing.Size(115, 21);
+            this.lblExplanation.Size = new System.Drawing.Size(129, 19);
             this.lblExplanation.TabIndex = 55;
             this.lblExplanation.Text = "Explanation:";
             // 
@@ -454,14 +500,15 @@ namespace FinancialQuiz.UserControls
             this.txtBoxExplanation.AcceptsTab = true;
             this.txtBoxExplanation.AllowDrop = true;
             this.txtBoxExplanation.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBoxExplanation.Font = new System.Drawing.Font("Calibri", 10.2F);
-            this.txtBoxExplanation.Location = new System.Drawing.Point(225, 549);
+            this.txtBoxExplanation.BackColor = System.Drawing.SystemColors.Info;
+            this.txtBoxExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxExplanation.Location = new System.Drawing.Point(225, 545);
             this.txtBoxExplanation.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtBoxExplanation.MaxLength = 0;
             this.txtBoxExplanation.Multiline = true;
             this.txtBoxExplanation.Name = "txtBoxExplanation";
             this.txtBoxExplanation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBoxExplanation.Size = new System.Drawing.Size(964, 99);
+            this.txtBoxExplanation.Size = new System.Drawing.Size(964, 107);
             this.txtBoxExplanation.TabIndex = 56;
             // 
             // ManageQuestionControl

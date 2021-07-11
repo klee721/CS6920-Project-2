@@ -285,6 +285,15 @@ namespace FinancialQuiz.UserControls
             }
         }
 
+        private void tblLtPnlManageUser_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+                if (e.Column == 0)
+                {
+                    e.Graphics.FillRectangle(Brushes.Gray,
+                         e.CellBounds);
+                }
+           
+        }
     }
 }
 
