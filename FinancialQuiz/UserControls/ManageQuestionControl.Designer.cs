@@ -72,7 +72,6 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.823977F));
             this.tblLtPnlManageUser.Controls.Add(this.cbxCat, 1, 1);
             this.tblLtPnlManageUser.Controls.Add(this.lblQuestion, 0, 4);
-            this.tblLtPnlManageUser.Controls.Add(this.lblSearchBy, 0, 0);
             this.tblLtPnlManageUser.Controls.Add(this.txtQuestion, 1, 4);
             this.tblLtPnlManageUser.Controls.Add(this.lblAnswerD, 0, 8);
             this.tblLtPnlManageUser.Controls.Add(this.lblAgeRange, 0, 3);
@@ -93,6 +92,7 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.Controls.Add(this.cbxGameLevel, 1, 2);
             this.tblLtPnlManageUser.Controls.Add(this.lblExplanation, 0, 9);
             this.tblLtPnlManageUser.Controls.Add(this.txtBoxExplanation, 1, 9);
+            this.tblLtPnlManageUser.Controls.Add(this.lblSearchBy, 0, 0);
             this.tblLtPnlManageUser.Location = new System.Drawing.Point(58, 2);
             this.tblLtPnlManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblLtPnlManageUser.Name = "tblLtPnlManageUser";
@@ -152,7 +152,7 @@ namespace FinancialQuiz.UserControls
             this.lblSearchBy.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.lblSearchBy.Size = new System.Drawing.Size(126, 19);
             this.lblSearchBy.TabIndex = 26;
-            this.lblSearchBy.Text = "Search By : ";
+            this.lblSearchBy.Text = "Search By: ";
             // 
             // txtQuestion
             // 
