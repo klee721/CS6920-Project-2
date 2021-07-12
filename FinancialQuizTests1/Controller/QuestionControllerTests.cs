@@ -65,9 +65,9 @@ namespace FinancialQuiz.Controller.Tests
         {
             // Arrange
             int gameId = 1;
-            int correctCount = 1;
-            int missedCount = 1;
-            int score = 1;
+            int correctCount = 3;
+            int missedCount = 0;
+            int score = 3;
             bool processed = false;
 
             GamesController controller = new GamesController();
