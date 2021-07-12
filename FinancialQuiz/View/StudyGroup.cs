@@ -59,6 +59,7 @@ namespace FinancialQuiz.View
             FavoritesDataGrid.Columns[7].Visible = false;
             FavoritesDataGrid.Columns[8].Visible = false;
             FavoritesDataGrid.Columns[9].Visible = false;
+            FavoritesDataGrid.Columns[10].Visible = false;
 
         }
 
