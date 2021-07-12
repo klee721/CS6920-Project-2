@@ -136,6 +136,14 @@ namespace FinancialQuizTests1.Model
 
         }
 
+        [TestMethod]
+        public void TestQuestionGetSetExplanation()
+        {
+            Question testQuestion = new Question();
+            testQuestion.Explanation = "Test explanation";
+            Assert.AreEqual(testQuestion.Explanation, "Test explanation");
+
+        }
 
 
 
