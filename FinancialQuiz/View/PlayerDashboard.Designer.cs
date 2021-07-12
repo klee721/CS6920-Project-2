@@ -29,6 +29,7 @@ namespace FinancialQuiz.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerDashboard));
             this.HelloLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.LogoutLink = new System.Windows.Forms.LinkLabel();
@@ -52,33 +53,39 @@ namespace FinancialQuiz.View
             this.NewGameButton = new System.Windows.Forms.Button();
             this.QuizPanel = new System.Windows.Forms.Panel();
             this.ExplanationRichText = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.QuizPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // HelloLabel
             // 
             this.HelloLabel.AutoSize = true;
-            this.HelloLabel.Location = new System.Drawing.Point(907, 19);
+            this.HelloLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelloLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.HelloLabel.Location = new System.Drawing.Point(1086, 23);
             this.HelloLabel.Name = "HelloLabel";
-            this.HelloLabel.Size = new System.Drawing.Size(31, 13);
+            this.HelloLabel.Size = new System.Drawing.Size(46, 18);
             this.HelloLabel.TabIndex = 0;
             this.HelloLabel.Text = "Hello";
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Location = new System.Drawing.Point(944, 19);
+            this.UserNameLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.UserNameLabel.Location = new System.Drawing.Point(1127, 23);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(126, 13);
+            this.UserNameLabel.Size = new System.Drawing.Size(178, 18);
             this.UserNameLabel.TabIndex = 1;
             this.UserNameLabel.Text = "XXXXXXXXXXXXXXXXX";
             // 
             // LogoutLink
             // 
             this.LogoutLink.AutoSize = true;
-            this.LogoutLink.Location = new System.Drawing.Point(1030, 45);
+            this.LogoutLink.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutLink.Location = new System.Drawing.Point(1087, 118);
             this.LogoutLink.Name = "LogoutLink";
-            this.LogoutLink.Size = new System.Drawing.Size(40, 13);
+            this.LogoutLink.Size = new System.Drawing.Size(54, 17);
             this.LogoutLink.TabIndex = 2;
             this.LogoutLink.TabStop = true;
             this.LogoutLink.Text = "Logout";
@@ -87,30 +94,33 @@ namespace FinancialQuiz.View
             // CategoryHeaderLabel
             // 
             this.CategoryHeaderLabel.AutoSize = true;
-            this.CategoryHeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryHeaderLabel.Location = new System.Drawing.Point(14, 42);
+            this.CategoryHeaderLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryHeaderLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CategoryHeaderLabel.Location = new System.Drawing.Point(172, 55);
             this.CategoryHeaderLabel.Name = "CategoryHeaderLabel";
-            this.CategoryHeaderLabel.Size = new System.Drawing.Size(79, 16);
+            this.CategoryHeaderLabel.Size = new System.Drawing.Size(89, 19);
             this.CategoryHeaderLabel.TabIndex = 3;
             this.CategoryHeaderLabel.Text = "Category: ";
             // 
             // CategoryLabel
             // 
             this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryLabel.Location = new System.Drawing.Point(90, 42);
+            this.CategoryLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CategoryLabel.Location = new System.Drawing.Point(258, 55);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(162, 16);
+            this.CategoryLabel.Size = new System.Drawing.Size(207, 19);
             this.CategoryLabel.TabIndex = 4;
             this.CategoryLabel.Text = "xxxxxxxxxxxxxxxxxxxxxx";
             // 
             // QuestionProgressLabel
             // 
             this.QuestionProgressLabel.AutoSize = true;
-            this.QuestionProgressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionProgressLabel.Location = new System.Drawing.Point(90, 71);
+            this.QuestionProgressLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionProgressLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.QuestionProgressLabel.Location = new System.Drawing.Point(258, 87);
             this.QuestionProgressLabel.Name = "QuestionProgressLabel";
-            this.QuestionProgressLabel.Size = new System.Drawing.Size(29, 16);
+            this.QuestionProgressLabel.Size = new System.Drawing.Size(34, 19);
             this.QuestionProgressLabel.TabIndex = 5;
             this.QuestionProgressLabel.Text = "0/0";
             // 
@@ -118,7 +128,7 @@ namespace FinancialQuiz.View
             // 
             this.QuestionNumberLabel.AutoSize = true;
             this.QuestionNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionNumberLabel.Location = new System.Drawing.Point(33, 20);
+            this.QuestionNumberLabel.Location = new System.Drawing.Point(38, 25);
             this.QuestionNumberLabel.Name = "QuestionNumberLabel";
             this.QuestionNumberLabel.Size = new System.Drawing.Size(25, 24);
             this.QuestionNumberLabel.TabIndex = 6;
@@ -128,8 +138,8 @@ namespace FinancialQuiz.View
             // 
             this.QuestionLabel.AutoSize = true;
             this.QuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionLabel.Location = new System.Drawing.Point(64, 20);
-            this.QuestionLabel.MaximumSize = new System.Drawing.Size(800, 0);
+            this.QuestionLabel.Location = new System.Drawing.Point(75, 25);
+            this.QuestionLabel.MaximumSize = new System.Drawing.Size(933, 0);
             this.QuestionLabel.Name = "QuestionLabel";
             this.QuestionLabel.Size = new System.Drawing.Size(226, 40);
             this.QuestionLabel.TabIndex = 7;
@@ -140,7 +150,8 @@ namespace FinancialQuiz.View
             this.RadioAnswerA.AutoSize = true;
             this.RadioAnswerA.Checked = true;
             this.RadioAnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerA.Location = new System.Drawing.Point(37, 100);
+            this.RadioAnswerA.Location = new System.Drawing.Point(43, 123);
+            this.RadioAnswerA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerA.Name = "RadioAnswerA";
             this.RadioAnswerA.Size = new System.Drawing.Size(112, 24);
             this.RadioAnswerA.TabIndex = 8;
@@ -152,7 +163,8 @@ namespace FinancialQuiz.View
             // 
             this.RadioAnswerB.AutoSize = true;
             this.RadioAnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerB.Location = new System.Drawing.Point(37, 168);
+            this.RadioAnswerB.Location = new System.Drawing.Point(43, 207);
+            this.RadioAnswerB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerB.Name = "RadioAnswerB";
             this.RadioAnswerB.Size = new System.Drawing.Size(112, 24);
             this.RadioAnswerB.TabIndex = 9;
@@ -163,7 +175,8 @@ namespace FinancialQuiz.View
             // 
             this.RadioAnswerC.AutoSize = true;
             this.RadioAnswerC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerC.Location = new System.Drawing.Point(37, 243);
+            this.RadioAnswerC.Location = new System.Drawing.Point(43, 299);
+            this.RadioAnswerC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerC.Name = "RadioAnswerC";
             this.RadioAnswerC.Size = new System.Drawing.Size(112, 24);
             this.RadioAnswerC.TabIndex = 10;
@@ -174,7 +187,8 @@ namespace FinancialQuiz.View
             // 
             this.RadioAnswerD.AutoSize = true;
             this.RadioAnswerD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioAnswerD.Location = new System.Drawing.Point(37, 318);
+            this.RadioAnswerD.Location = new System.Drawing.Point(43, 391);
+            this.RadioAnswerD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerD.Name = "RadioAnswerD";
             this.RadioAnswerD.Size = new System.Drawing.Size(113, 24);
             this.RadioAnswerD.TabIndex = 11;
@@ -184,9 +198,10 @@ namespace FinancialQuiz.View
             // SubmitButton
             // 
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(461, 623);
+            this.SubmitButton.Location = new System.Drawing.Point(538, 767);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(138, 47);
+            this.SubmitButton.Size = new System.Drawing.Size(161, 58);
             this.SubmitButton.TabIndex = 12;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -195,10 +210,11 @@ namespace FinancialQuiz.View
             // reportLabel
             // 
             this.reportLabel.AutoSize = true;
-            this.reportLabel.Location = new System.Drawing.Point(909, 45);
+            this.reportLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportLabel.Location = new System.Drawing.Point(1087, 55);
             this.reportLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.reportLabel.Name = "reportLabel";
-            this.reportLabel.Size = new System.Drawing.Size(63, 13);
+            this.reportLabel.Size = new System.Drawing.Size(80, 17);
             this.reportLabel.TabIndex = 14;
             this.reportLabel.TabStop = true;
             this.reportLabel.Text = "Player Stats";
@@ -209,7 +225,7 @@ namespace FinancialQuiz.View
             this.CorrectLabel.AutoSize = true;
             this.CorrectLabel.Font = new System.Drawing.Font("Cooper Black", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorrectLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.CorrectLabel.Location = new System.Drawing.Point(801, 616);
+            this.CorrectLabel.Location = new System.Drawing.Point(934, 758);
             this.CorrectLabel.Name = "CorrectLabel";
             this.CorrectLabel.Size = new System.Drawing.Size(206, 40);
             this.CorrectLabel.TabIndex = 15;
@@ -221,7 +237,7 @@ namespace FinancialQuiz.View
             this.WrongLabel.AutoSize = true;
             this.WrongLabel.Font = new System.Drawing.Font("Cooper Black", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WrongLabel.ForeColor = System.Drawing.Color.Red;
-            this.WrongLabel.Location = new System.Drawing.Point(776, 623);
+            this.WrongLabel.Location = new System.Drawing.Point(905, 767);
             this.WrongLabel.Name = "WrongLabel";
             this.WrongLabel.Size = new System.Drawing.Size(249, 40);
             this.WrongLabel.TabIndex = 16;
@@ -231,32 +247,36 @@ namespace FinancialQuiz.View
             // ProgressLabel
             // 
             this.ProgressLabel.AutoSize = true;
-            this.ProgressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProgressLabel.Location = new System.Drawing.Point(12, 71);
+            this.ProgressLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ProgressLabel.Location = new System.Drawing.Point(172, 86);
             this.ProgressLabel.Name = "ProgressLabel";
-            this.ProgressLabel.Size = new System.Drawing.Size(79, 16);
+            this.ProgressLabel.Size = new System.Drawing.Size(79, 19);
             this.ProgressLabel.TabIndex = 17;
             this.ProgressLabel.Text = "Progress: ";
             // 
             // SaveQuestionButton
             // 
+            this.SaveQuestionButton.BackColor = System.Drawing.Color.Orange;
             this.SaveQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveQuestionButton.Location = new System.Drawing.Point(53, 626);
+            this.SaveQuestionButton.Location = new System.Drawing.Point(64, 758);
+            this.SaveQuestionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SaveQuestionButton.Name = "SaveQuestionButton";
-            this.SaveQuestionButton.Size = new System.Drawing.Size(262, 47);
+            this.SaveQuestionButton.Size = new System.Drawing.Size(308, 67);
             this.SaveQuestionButton.TabIndex = 18;
             this.SaveQuestionButton.Text = "Add to Study Group";
-            this.SaveQuestionButton.UseVisualStyleBackColor = true;
+            this.SaveQuestionButton.UseVisualStyleBackColor = false;
             this.SaveQuestionButton.Visible = false;
             this.SaveQuestionButton.Click += new System.EventHandler(this.SaveQuestionButton_Click);
             // 
             // StudyGroupLink
             // 
             this.StudyGroupLink.AutoSize = true;
-            this.StudyGroupLink.Location = new System.Drawing.Point(932, 71);
+            this.StudyGroupLink.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudyGroupLink.Location = new System.Drawing.Point(1087, 87);
             this.StudyGroupLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudyGroupLink.Name = "StudyGroupLink";
-            this.StudyGroupLink.Size = new System.Drawing.Size(109, 13);
+            this.StudyGroupLink.Size = new System.Drawing.Size(144, 17);
             this.StudyGroupLink.TabIndex = 19;
             this.StudyGroupLink.TabStop = true;
             this.StudyGroupLink.Text = "View My Study Group";
@@ -265,9 +285,10 @@ namespace FinancialQuiz.View
             // NextButton
             // 
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.Location = new System.Drawing.Point(461, 623);
+            this.NextButton.Location = new System.Drawing.Point(538, 767);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(138, 47);
+            this.NextButton.Size = new System.Drawing.Size(161, 58);
             this.NextButton.TabIndex = 20;
             this.NextButton.Text = "Next Question";
             this.NextButton.UseVisualStyleBackColor = true;
@@ -276,18 +297,21 @@ namespace FinancialQuiz.View
             // 
             // NewGameButton
             // 
+            this.NewGameButton.BackColor = System.Drawing.Color.Orange;
             this.NewGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewGameButton.Location = new System.Drawing.Point(461, 617);
+            this.NewGameButton.Location = new System.Drawing.Point(538, 759);
+            this.NewGameButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NewGameButton.Name = "NewGameButton";
-            this.NewGameButton.Size = new System.Drawing.Size(138, 53);
+            this.NewGameButton.Size = new System.Drawing.Size(161, 65);
             this.NewGameButton.TabIndex = 21;
             this.NewGameButton.Text = "Start a New Game";
-            this.NewGameButton.UseVisualStyleBackColor = true;
+            this.NewGameButton.UseVisualStyleBackColor = false;
             this.NewGameButton.Visible = false;
             this.NewGameButton.Click += new System.EventHandler(this.NewGameButton_Click);
             // 
             // QuizPanel
             // 
+            this.QuizPanel.BackColor = System.Drawing.SystemColors.HighlightText;
             this.QuizPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.QuizPanel.Controls.Add(this.RadioAnswerB);
             this.QuizPanel.Controls.Add(this.QuestionNumberLabel);
@@ -295,31 +319,50 @@ namespace FinancialQuiz.View
             this.QuizPanel.Controls.Add(this.RadioAnswerA);
             this.QuizPanel.Controls.Add(this.RadioAnswerC);
             this.QuizPanel.Controls.Add(this.RadioAnswerD);
-            this.QuizPanel.Location = new System.Drawing.Point(17, 118);
+            this.QuizPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.QuizPanel.Location = new System.Drawing.Point(20, 153);
+            this.QuizPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuizPanel.Name = "QuizPanel";
-            this.QuizPanel.Size = new System.Drawing.Size(1075, 366);
+            this.QuizPanel.Size = new System.Drawing.Size(1254, 442);
             this.QuizPanel.TabIndex = 22;
             // 
             // ExplanationRichText
             // 
-            this.ExplanationRichText.Location = new System.Drawing.Point(17, 500);
+            this.ExplanationRichText.Location = new System.Drawing.Point(20, 615);
+            this.ExplanationRichText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ExplanationRichText.Name = "ExplanationRichText";
-            this.ExplanationRichText.Size = new System.Drawing.Size(1075, 96);
+            this.ExplanationRichText.Size = new System.Drawing.Size(1253, 117);
             this.ExplanationRichText.TabIndex = 23;
             this.ExplanationRichText.Text = "";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, -3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(140, 149);
+            this.tableLayoutPanel1.TabIndex = 24;
+            // 
             // PlayerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 811);
+            this.BackColor = System.Drawing.Color.Ivory;
+            this.ClientSize = new System.Drawing.Size(1301, 845);
+            this.Controls.Add(this.ProgressLabel);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ExplanationRichText);
             this.Controls.Add(this.QuizPanel);
             this.Controls.Add(this.NewGameButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.StudyGroupLink);
             this.Controls.Add(this.SaveQuestionButton);
-            this.Controls.Add(this.ProgressLabel);
             this.Controls.Add(this.WrongLabel);
             this.Controls.Add(this.CorrectLabel);
             this.Controls.Add(this.reportLabel);
@@ -330,9 +373,11 @@ namespace FinancialQuiz.View
             this.Controls.Add(this.LogoutLink);
             this.Controls.Add(this.UserNameLabel);
             this.Controls.Add(this.HelloLabel);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1131, 850);
-            this.MinimumSize = new System.Drawing.Size(1131, 850);
+            this.MaximumSize = new System.Drawing.Size(1317, 1037);
+            this.MinimumSize = new System.Drawing.Size(1317, 822);
             this.Name = "PlayerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kiddie Cash Komprehension";
@@ -369,5 +414,6 @@ namespace FinancialQuiz.View
         private System.Windows.Forms.Button NewGameButton;
         private System.Windows.Forms.Panel QuizPanel;
         private System.Windows.Forms.RichTextBox ExplanationRichText;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
