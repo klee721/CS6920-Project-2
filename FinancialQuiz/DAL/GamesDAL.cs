@@ -59,6 +59,64 @@ namespace FinancialQuiz.DAL
             return generatedID;
         }
 
+        /// <summary>
+        /// End the quiz.
+        /// </summary>
+        /// <param name="gameId">gameId</param>
+        /// <returns>true if game ends successfully</returns>
+        public bool EndQuiz(int gameId, int correctCount, int missedCount, int score)
+        {
+            string processed = "False";
+            using (SqlConnection connection = DBConnection.GetConnection())
+            {
+                connection.Open();
+
+
+                using (SqlCommand selectCommand = new SqlCommand("EndQuiz", connection))
+                {
+                    selectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    if (gameId > 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@gameId", gameId);
+                    }
+                    if (correctCount >= 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@correctCount", correctCount);
+                    }
+                    if (missedCount >= 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@missedCount", missedCount);
+                    }
+                    if (score >= 0)
+                    {
+                        selectCommand.Parameters.AddWithValue("@score", score);
+                    }
+
+
+
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            processed = reader["processed"].ToString();
+                            if (processed == "False")
+                            {
+                                return false;
+                            } 
+
+                        }
+                    }
+                    return true;
+                }
+            }
+
+
+
+            return true;
+        }
+
+
         public GameStats GetGameStats(int gameID)
         {
             GameStats myGame = new GameStats();

@@ -60,6 +60,22 @@ namespace FinancialQuiz.Controller.Tests
 
         }
 
+        [TestMethod()]
+        public void EndQuizTest()
+        {
+            // Arrange
+            int gameId = 1;
+            int correctCount = 1;
+            int missedCount = 1;
+            int score = 1;
+            bool processed = false;
+
+            GamesController controller = new GamesController();
+            processed = controller.EndQuiz(gameId, correctCount, missedCount, score);
+            Assert.AreEqual(processed, true);
+
+
+        }
 
     }
 }
