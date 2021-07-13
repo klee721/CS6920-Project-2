@@ -25,6 +25,7 @@ namespace FinancialQuiz.View
         string chosenAnswer;
         int exitClicked;
         int correctAnswers;
+        bool endGameFlag;
 
         public PlayerDashboard(User user)
         {
@@ -39,7 +40,7 @@ namespace FinancialQuiz.View
             this.currentQuestionCount = 1;
             this.exitClicked = 0;
             this.correctAnswers = 0;
-
+            this.endGameFlag = false;
 
 
         }
@@ -214,6 +215,7 @@ namespace FinancialQuiz.View
 
             if (this.currentQuestionCount == this.numberOfQuestions)
             {
+                this.endGameFlag = true;
                 int missedQuestions = (this.numberOfQuestions - this.correctAnswers);
                 this.gamesController.EndQuiz(this.gameID, this.correctAnswers, missedQuestions, this.correctAnswers);
                 GameStats gameStats = this.gamesController.GetGameStats(this.gameID);
@@ -287,7 +289,26 @@ namespace FinancialQuiz.View
         {
             if (this.exitClicked == 0)
             {
-                Application.Exit();
+                if (!this.endGameFlag)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Would you like to your current score to be saved?", "End Quiz", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        int missedQuestions = (this.numberOfQuestions - this.correctAnswers);
+                        this.gamesController.EndQuiz(this.gameID, this.correctAnswers, missedQuestions, this.correctAnswers);
+                        Application.Exit();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        Application.Exit();
+                    }
+
+                }
+                else
+                {
+                    Application.Exit();
+                }
+                
             }
             
         }
