@@ -24,6 +24,7 @@ namespace FinancialQuiz.View
         int gameID;
         string chosenAnswer;
         int exitClicked;
+        int correctAnswers;
 
         public PlayerDashboard(User user)
         {
@@ -37,6 +38,7 @@ namespace FinancialQuiz.View
             this.gamesController = new GamesController();
             this.currentQuestionCount = 1;
             this.exitClicked = 0;
+            this.correctAnswers = 0;
 
 
 
@@ -197,6 +199,7 @@ namespace FinancialQuiz.View
             {
                 this.WrongLabel.Visible = false;
                 this.CorrectLabel.Visible = true;
+                this.correctAnswers++;
             }else
             {
                 this.WrongLabel.Visible = true;
@@ -211,16 +214,9 @@ namespace FinancialQuiz.View
 
             if (this.currentQuestionCount == this.numberOfQuestions)
             {
+                int missedQuestions = (this.numberOfQuestions - this.correctAnswers);
+                this.gamesController.EndQuiz(this.gameID, this.correctAnswers, missedQuestions, this.correctAnswers);
                 GameStats gameStats = this.gamesController.GetGameStats(this.gameID);
-
-
-                //TEST DATA
-                //gameStats.totalQuestions = 10;
-                //gameStats.questionsCorrect = 9;
-                //gameStats.questionsMissed = 1;
-                //gameStats.score = 9;
-                //TEST DATA
-
                 NextButton.Visible = false;
                 this.NewGameButton.Visible = true;
                 MessageBox.Show("You have completed this quiz!" +
