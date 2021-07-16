@@ -116,6 +116,14 @@
     <Compile Include="DAL\GamesDAL.cs" />
     <Compile Include="DAL\QuestionDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="GameSummaryDataSet.cs">
+      <DependentUpon>GameSummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GameSummaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameSummaryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\Age.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\GameLevel.cs" />
@@ -151,11 +159,22 @@
     <Compile Include="View\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\GameLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\GameLauncher.Designer.cs">
       <DependentUpon>GameLauncher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GamesSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GamesSummaryForm.Designer.cs">
+      <DependentUpon>GamesSummaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
@@ -187,6 +206,11 @@
     <Compile Include="View\UserTableView.Designer.cs">
       <DependentUpon>UserTableView.cs</DependentUpon>
     </Compile>
+    <Compile Include="_CS6920_Team4DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_CS6920_Team4DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_CS6920_Team4DataSetUsers.cs">
       <DependentUpon>_CS6920_Team4DataSetUsers.xsd</DependentUpon>
     </Compile>
@@ -216,6 +240,9 @@
     <EmbeddedResource Include="View\GameLauncher.resx">
       <DependentUpon>GameLauncher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\GamesSummaryForm.resx">
+      <DependentUpon>GamesSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,7 +252,7 @@
     <EmbeddedResource Include="View\StudyGroup.resx">
       <DependentUpon>StudyGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserReport.rdlc" />
+    <EmbeddedResource Include="View\UserGamesReport.rdlc" />
     <EmbeddedResource Include="View\UserStatsForm.resx">
       <DependentUpon>UserStatsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +260,17 @@
       <DependentUpon>UserTableView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FinancialQuiz_TemporaryKey.pfx" />
+    <None Include="GameSummaryDataSet.xsc">
+      <DependentUpon>GameSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GameSummaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GameSummaryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GameSummaryDataSet.xss">
+      <DependentUpon>GameSummaryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -254,6 +292,28 @@
     </None>
     <None Include="UserStatsDataSet.xss">
       <DependentUpon>UserStatsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="View\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_CS6920_Team4DataSet.xsc">
+      <DependentUpon>_CS6920_Team4DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_CS6920_Team4DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_CS6920_Team4DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_CS6920_Team4DataSet.xss">
+      <DependentUpon>_CS6920_Team4DataSet.xsd</DependentUpon>
     </None>
     <None Include="_CS6920_Team4DataSetUsers.xsc">
       <DependentUpon>_CS6920_Team4DataSetUsers.xsd</DependentUpon>
