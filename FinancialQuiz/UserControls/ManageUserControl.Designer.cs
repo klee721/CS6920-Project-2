@@ -112,11 +112,11 @@ namespace FinancialQuiz.UserControls
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 359);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(61, 359);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.label2.Size = new System.Drawing.Size(106, 21);
+            this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 39;
             this.label2.Text = " Password:";
             // 
@@ -124,11 +124,11 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblAdminStatus.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAdminStatus.AutoSize = true;
-            this.lblAdminStatus.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminStatus.Location = new System.Drawing.Point(50, 458);
+            this.lblAdminStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminStatus.Location = new System.Drawing.Point(35, 458);
             this.lblAdminStatus.Name = "lblAdminStatus";
             this.lblAdminStatus.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblAdminStatus.Size = new System.Drawing.Size(129, 21);
+            this.lblAdminStatus.Size = new System.Drawing.Size(144, 21);
             this.lblAdminStatus.TabIndex = 42;
             this.lblAdminStatus.Text = "Admin Status:";
             // 
@@ -136,11 +136,11 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(17, 404);
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(66, 393);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblConfirmPassword.Size = new System.Drawing.Size(162, 21);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(113, 42);
             this.lblConfirmPassword.TabIndex = 45;
             this.lblConfirmPassword.Text = "Confirm Password:";
             this.lblConfirmPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -148,7 +148,7 @@ namespace FinancialQuiz.UserControls
             // txtUsername
             // 
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtUsername.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(202, 305);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtUsername.MaxLength = 45;
@@ -160,11 +160,11 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(63, 173);
+            this.lblLastName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(44, 173);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblLastName.Size = new System.Drawing.Size(116, 21);
+            this.lblLastName.Size = new System.Drawing.Size(135, 21);
             this.lblLastName.TabIndex = 29;
             this.lblLastName.Text = "Last Name : ";
             // 
@@ -172,18 +172,18 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblSearchBy.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSearchBy.AutoSize = true;
-            this.lblSearchBy.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchBy.Location = new System.Drawing.Point(69, 17);
+            this.lblSearchBy.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchBy.Location = new System.Drawing.Point(54, 17);
             this.lblSearchBy.Name = "lblSearchBy";
             this.lblSearchBy.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblSearchBy.Size = new System.Drawing.Size(110, 21);
+            this.lblSearchBy.Size = new System.Drawing.Size(125, 21);
             this.lblSearchBy.TabIndex = 26;
             this.lblSearchBy.Text = "Search By : ";
             // 
             // txtLastName
             // 
             this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtLastName.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtLastName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(202, 170);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtLastName.MaxLength = 45;
@@ -195,8 +195,8 @@ namespace FinancialQuiz.UserControls
             // 
             this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.70135F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.29865F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.97048F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.02952F));
             this.tableLayoutPanel4.Controls.Add(this.txtSearch, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.cbxSearch, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(185, 9);
@@ -205,26 +205,26 @@ namespace FinancialQuiz.UserControls
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(495, 37);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(542, 37);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(241, 2);
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(279, 2);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(251, 28);
+            this.txtSearch.Size = new System.Drawing.Size(252, 28);
             this.txtSearch.TabIndex = 3;
             // 
             // cbxSearch
             // 
             this.cbxSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSearch.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxSearch.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSearch.FormattingEnabled = true;
-            this.cbxSearch.ItemHeight = 22;
+            this.cbxSearch.ItemHeight = 21;
             this.cbxSearch.Items.AddRange(new object[] {
             "First Name Last Name",
             "Username",
@@ -232,38 +232,40 @@ namespace FinancialQuiz.UserControls
             this.cbxSearch.Location = new System.Drawing.Point(19, 2);
             this.cbxSearch.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxSearch.Name = "cbxSearch";
-            this.cbxSearch.Size = new System.Drawing.Size(195, 30);
+            this.cbxSearch.Size = new System.Drawing.Size(233, 29);
             this.cbxSearch.TabIndex = 2;
             this.cbxSearch.SelectedIndexChanged += new System.EventHandler(this.cbxSearch_SelectedIndexChanged);
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSearch.BackColor = System.Drawing.Color.Orange;
+            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(733, 9);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(131, 37);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblFirstName
             // 
             this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(60, 120);
+            this.lblFirstName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(48, 120);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblFirstName.Size = new System.Drawing.Size(119, 21);
+            this.lblFirstName.Size = new System.Drawing.Size(131, 21);
             this.lblFirstName.TabIndex = 27;
             this.lblFirstName.Text = "First Name : ";
             // 
             // txtFirstName
             // 
             this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtFirstName.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtFirstName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(202, 116);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtFirstName.MaxLength = 45;
@@ -275,11 +277,11 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblAge.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(110, 257);
+            this.lblAge.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(99, 257);
             this.lblAge.Name = "lblAge";
             this.lblAge.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblAge.Size = new System.Drawing.Size(69, 21);
+            this.lblAge.Size = new System.Drawing.Size(80, 21);
             this.lblAge.TabIndex = 32;
             this.lblAge.Text = "Age : ";
             // 
@@ -287,34 +289,34 @@ namespace FinancialQuiz.UserControls
             // 
             this.cbBoxAdminStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbBoxAdminStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxAdminStatus.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBoxAdminStatus.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxAdminStatus.FormattingEnabled = true;
-            this.cbBoxAdminStatus.ItemHeight = 22;
+            this.cbBoxAdminStatus.ItemHeight = 21;
             this.cbBoxAdminStatus.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cbBoxAdminStatus.Location = new System.Drawing.Point(201, 453);
+            this.cbBoxAdminStatus.Location = new System.Drawing.Point(201, 454);
             this.cbBoxAdminStatus.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbBoxAdminStatus.Name = "cbBoxAdminStatus";
-            this.cbBoxAdminStatus.Size = new System.Drawing.Size(60, 30);
+            this.cbBoxAdminStatus.Size = new System.Drawing.Size(60, 29);
             this.cbBoxAdminStatus.TabIndex = 4;
             // 
             // lblUserID
             // 
             this.lblUserID.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(94, 69);
+            this.lblUserID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Location = new System.Drawing.Point(86, 69);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblUserID.Size = new System.Drawing.Size(85, 21);
+            this.lblUserID.Size = new System.Drawing.Size(93, 21);
             this.lblUserID.TabIndex = 43;
             this.lblUserID.Text = "User ID:";
             // 
             // txtbxUserId
             // 
             this.txtbxUserId.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtbxUserId.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtbxUserId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxUserId.Location = new System.Drawing.Point(202, 65);
             this.txtbxUserId.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtbxUserId.MaxLength = 10;
@@ -327,18 +329,18 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(69, 309);
+            this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(56, 309);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblUsername.Size = new System.Drawing.Size(110, 21);
+            this.lblUsername.Size = new System.Drawing.Size(123, 21);
             this.lblUsername.TabIndex = 38;
             this.lblUsername.Text = " Username:";
             // 
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPassword.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(202, 356);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtPassword.MaxLength = 45;
@@ -368,7 +370,7 @@ namespace FinancialQuiz.UserControls
             // txtAge
             // 
             this.txtAge.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAge.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtAge.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.Location = new System.Drawing.Point(20, 7);
             this.txtAge.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtAge.MaxLength = 10;
@@ -380,9 +382,10 @@ namespace FinancialQuiz.UserControls
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(172, 12);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(172, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 17);
+            this.label6.Size = new System.Drawing.Size(160, 19);
             this.label6.TabIndex = 41;
             this.label6.Text = "(Only Numbers: 5-100)";
             // 
@@ -404,7 +407,7 @@ namespace FinancialQuiz.UserControls
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Calibri", 10.2F);
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.Location = new System.Drawing.Point(20, 4);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtConfirmPassword.MaxLength = 45;
@@ -430,52 +433,59 @@ namespace FinancialQuiz.UserControls
             // 
             this.lblUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUpdate.AutoSize = true;
-            this.lblUpdate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdate.Location = new System.Drawing.Point(779, 393);
+            this.lblUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdate.Location = new System.Drawing.Point(762, 393);
             this.lblUpdate.Name = "lblUpdate";
             this.lblUpdate.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblUpdate.Size = new System.Drawing.Size(153, 42);
+            this.lblUpdate.Size = new System.Drawing.Size(170, 42);
             this.lblUpdate.TabIndex = 50;
             this.lblUpdate.Text = "Only for new user registration";
             this.lblUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(461, 609);
+            this.btnRegister.BackColor = System.Drawing.Color.Orange;
+            this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Location = new System.Drawing.Point(454, 573);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(133, 37);
             this.btnRegister.TabIndex = 27;
             this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(313, 609);
+            this.btnUpdate.BackColor = System.Drawing.Color.Orange;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(306, 573);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 37);
             this.btnUpdate.TabIndex = 26;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(604, 609);
+            this.btnClear.BackColor = System.Drawing.Color.Orange;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(597, 573);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(136, 37);
             this.btnClear.TabIndex = 28;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ManageUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
