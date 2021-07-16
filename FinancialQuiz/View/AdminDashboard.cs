@@ -16,6 +16,7 @@ namespace FinancialQuiz.View
 
         User loggedInUser;
         private LoginForm loginForm;
+        private GamesSummaryForm gamesSummaryForm;
 
         public AdminDashboard(User user)
         {
@@ -52,6 +53,12 @@ namespace FinancialQuiz.View
             this.loggedInUser = null;
             AdminDashboard.ActiveForm.Close();
             this.loginForm.Show();
+        }
+
+        private void userGamesLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.gamesSummaryForm = new GamesSummaryForm();
+            this.gamesSummaryForm.Show();
         }
     }
 }

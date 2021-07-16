@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GameSummaryDataSet" targetNamespace="http://tempuri.org/GameSummaryDataSet.xsd" xmlns:mstns="http://tempuri.org/GameSummaryDataSet.xsd" xmlns="http://tempuri.org/GameSummaryDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CS6920_Team4ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CS6920_Team4ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FinancialQuiz.Properties.Settings.GlobalReference.Default.CS6920_Team4ConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserGamesTableAdapter" GeneratorDataComponentClassName="UserGamesTableAdapter" Name="UserGames" UserDataComponentName="UserGamesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CS6920_Team4ConnectionString1 (Settings)" DbObjectName="[CS6920-Team4].dbo.Users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select u.FirstName,u.LastName, count(*) games, AVG(score) average_score, MAX(score) max_score, MIN(score) min_score, max(start_date) last_played 
+from Games g INNER JOIN Users u
+ON u.ID = g.userID 
+group by u.FirstName,u.LastName
+order by 3 desc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="games" DataSetColumn="games" />
+              <Mapping SourceColumn="average_score" DataSetColumn="average_score" />
+              <Mapping SourceColumn="max_score" DataSetColumn="max_score" />
+              <Mapping SourceColumn="min_score" DataSetColumn="min_score" />
+              <Mapping SourceColumn="last_played" DataSetColumn="last_played" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GameSummaryDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GameSummaryDataSet" msprop:Generator_UserDSName="GameSummaryDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserGames" msprop:Generator_TableClassName="UserGamesDataTable" msprop:Generator_TableVarName="tableUserGames" msprop:Generator_RowChangedName="UserGamesRowChanged" msprop:Generator_TablePropName="UserGames" msprop:Generator_RowDeletingName="UserGamesRowDeleting" msprop:Generator_RowChangingName="UserGamesRowChanging" msprop:Generator_RowEvHandlerName="UserGamesRowChangeEventHandler" msprop:Generator_RowDeletedName="UserGamesRowDeleted" msprop:Generator_RowClassName="UserGamesRow" msprop:Generator_UserTableName="UserGames" msprop:Generator_RowEvArgName="UserGamesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="games" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columngames" msprop:Generator_ColumnPropNameInRow="games" msprop:Generator_ColumnPropNameInTable="gamesColumn" msprop:Generator_UserColumnName="games" type="xs:int" minOccurs="0" />
+              <xs:element name="average_score" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnaverage_score" msprop:Generator_ColumnPropNameInRow="average_score" msprop:Generator_ColumnPropNameInTable="average_scoreColumn" msprop:Generator_UserColumnName="average_score" type="xs:int" minOccurs="0" />
+              <xs:element name="max_score" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmax_score" msprop:Generator_ColumnPropNameInRow="max_score" msprop:Generator_ColumnPropNameInTable="max_scoreColumn" msprop:Generator_UserColumnName="max_score" type="xs:int" minOccurs="0" />
+              <xs:element name="min_score" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmin_score" msprop:Generator_ColumnPropNameInRow="min_score" msprop:Generator_ColumnPropNameInTable="min_scoreColumn" msprop:Generator_UserColumnName="min_score" type="xs:int" minOccurs="0" />
+              <xs:element name="last_played" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnlast_played" msprop:Generator_ColumnPropNameInRow="last_played" msprop:Generator_ColumnPropNameInTable="last_playedColumn" msprop:Generator_UserColumnName="last_played" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
