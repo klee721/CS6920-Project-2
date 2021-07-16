@@ -159,11 +159,6 @@
     <Compile Include="View\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\GameLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,11 +200,6 @@
     </Compile>
     <Compile Include="View\UserTableView.Designer.cs">
       <DependentUpon>UserTableView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="_CS6920_Team4DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_CS6920_Team4DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="_CS6920_Team4DataSetUsers.cs">
       <DependentUpon>_CS6920_Team4DataSetUsers.xsd</DependentUpon>
@@ -292,28 +282,6 @@
     </None>
     <None Include="UserStatsDataSet.xss">
       <DependentUpon>UserStatsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="View\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="View\DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="View\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_CS6920_Team4DataSet.xsc">
-      <DependentUpon>_CS6920_Team4DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_CS6920_Team4DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_CS6920_Team4DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_CS6920_Team4DataSet.xss">
-      <DependentUpon>_CS6920_Team4DataSet.xsd</DependentUpon>
     </None>
     <None Include="_CS6920_Team4DataSetUsers.xsc">
       <DependentUpon>_CS6920_Team4DataSetUsers.xsd</DependentUpon>
