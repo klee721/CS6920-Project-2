@@ -269,6 +269,12 @@ namespace FinancialQuiz.UserControls
 
                     String name = newUser.FirstName + " " + newUser.LastName;
 
+                    if (!validatePassword(txtPassword.Text)) {
+                        MessageBox.Show("Password must include: at least one lower case letter, one upper case letter, one special character (@, #, $, %, ^, &, +, =), "
+                            + "one number, and 8 characters length", "Error");
+                        return;
+                    }
+
                     if (txtPassword.Text != txtConfirmPassword.Text)
 
                     {
@@ -325,9 +331,15 @@ namespace FinancialQuiz.UserControls
                     updatedUser.Password = txtPassword.Text;
                     updatedUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
                     String name = updatedUser.FirstName + " " + updatedUser.LastName;
+                    
+                    if (!validatePassword(txtPassword.Text))
+                    {
+                        MessageBox.Show("Password must include: at least one lower case letter, one upper case letter, one special character (@, #, $, %, ^, &, +, =), "
+                            + "one number, and 8 characters length", "Error");
+                        return;
+                    }
 
-                   
-                        bool isUpdated = this.userController.UpdateUser(updatedUser);
+                    bool isUpdated = this.userController.UpdateUser(updatedUser);
 
 
                     if (isUpdated)
@@ -353,6 +365,56 @@ namespace FinancialQuiz.UserControls
             lblUpdate.Visible = true;
 
         }
+
+        static private Boolean validatePassword(string passWord)
+        {
+            int validConditions = 0;
+            foreach (char c in passWord)
+            {
+                if (c >= 'a' && c <= 'z')
+                {
+                    validConditions++;
+                    break;
+                }
+            }
+            foreach (char c in passWord)
+            {
+                if (c >= 'A' && c <= 'Z')
+                {
+                    validConditions++;
+                    break;
+                }
+            }
+            
+            foreach (char c in passWord)
+            {
+                if (c >= '0' && c <= '9')
+                {
+                    validConditions++;
+                    break;
+                }
+            }
+
+            if (validConditions == 0)
+            {
+                return false;
+            }
+            if (validConditions == 1)
+            {
+                return false;
+            }
+            if (validConditions == 2)
+            {
+                return false;
+            }
+                if (validConditions == 3)
+            {
+                char[] special = { '@', '#', '$', '%', '^', '&', '+', '=' };  
+                if (passWord.IndexOfAny(special) == -1) return false;
+            }
+            return true;
+        }
     }
 }
+
 
