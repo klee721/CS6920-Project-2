@@ -83,7 +83,7 @@ namespace FinancialQuiz.DAL
                 string sqlStatement = "UPDATE Questions" +
                 " SET Age_range_id = @AgeRangeId, Game_Level_ID = @GameLevelID, Category_ID = @CategoryID, " +
                 "Description = @Description, OptionA = @OptionA, OptionB = @OptionB, " +
-                "OptionC = @OptionC, OptionD = @OptionD, Explanation = @Explanation, Correct_Option = @CorrectOption " +
+                "OptionC = @OptionC, OptionD = @OptionD, Explanation = @Explanation, Correct_Option = @CorrectOption, active = @Active " +
                 "WHERE ID = @QuestionID";
                 connection.Open();
 
@@ -101,7 +101,7 @@ namespace FinancialQuiz.DAL
                     updateCommand.Parameters.AddWithValue("@OptionD", question.OptionD);
                     updateCommand.Parameters.AddWithValue("@Explanation", question.Explanation);
                     updateCommand.Parameters.AddWithValue("@CorrectOption", question.CorrectOption);
-
+                    updateCommand.Parameters.AddWithValue("@Active", question.Active);
                     updateCommand.ExecuteNonQuery();
                     return true;
                 }
