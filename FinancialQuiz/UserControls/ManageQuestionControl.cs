@@ -34,7 +34,7 @@ namespace FinancialQuiz.UserControls
             this.ageSource = new AgeController();
             btnAddQ.Enabled = true;
             btnUpdateQ.Enabled = false;
-            btnDeleteQ.Enabled = false;
+            //btnDeleteQ.Enabled = false;
             btnClearQ.Enabled = false;
             txtSearch.Focus();
             questionId = 0;
@@ -115,7 +115,7 @@ namespace FinancialQuiz.UserControls
             btnUpdateQ.Enabled = true;
             btnAddQ.Enabled = false;
             btnClearQ.Enabled = true;
-            btnDeleteQ.Enabled = true;
+            //btnDeleteQ.Enabled = true;
 
             questionId = question.QuestionID;
            
@@ -152,7 +152,7 @@ namespace FinancialQuiz.UserControls
 
             btnUpdateQ.Enabled = false;
             btnAddQ.Enabled = true;
-            btnDeleteQ.Enabled = false;
+            //btnDeleteQ.Enabled = false;
             btnClearQ.Enabled = false;
         }
 

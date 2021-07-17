@@ -58,9 +58,12 @@ namespace FinancialQuiz.UserControls
             this.btnAddQ = new System.Windows.Forms.Button();
             this.btnUpdateQ = new System.Windows.Forms.Button();
             this.btnClearQ = new System.Windows.Forms.Button();
-            this.btnDeleteQ = new System.Windows.Forms.Button();
+            this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
+            this.lblActiveStatus = new System.Windows.Forms.Label();
+            this.cbBoxActiveStatus = new System.Windows.Forms.ComboBox();
             this.tblLtPnlManageUser.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanelStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblLtPnlManageUser
@@ -83,7 +86,6 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.Controls.Add(this.label1, 0, 7);
             this.tblLtPnlManageUser.Controls.Add(this.txtAnswerC, 1, 7);
             this.tblLtPnlManageUser.Controls.Add(this.txtAnswerD, 1, 8);
-            this.tblLtPnlManageUser.Controls.Add(this.txtCorrectAnswer, 1, 10);
             this.tblLtPnlManageUser.Controls.Add(this.lblCorrectAnswer, 0, 10);
             this.tblLtPnlManageUser.Controls.Add(this.cbxAge, 1, 3);
             this.tblLtPnlManageUser.Controls.Add(this.tableLayoutPanel4, 1, 0);
@@ -93,6 +95,7 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.Controls.Add(this.lblExplanation, 0, 9);
             this.tblLtPnlManageUser.Controls.Add(this.txtBoxExplanation, 1, 9);
             this.tblLtPnlManageUser.Controls.Add(this.lblSearchBy, 0, 0);
+            this.tblLtPnlManageUser.Controls.Add(this.tableLayoutPanelStatus, 1, 10);
             this.tblLtPnlManageUser.Location = new System.Drawing.Point(59, 2);
             this.tblLtPnlManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblLtPnlManageUser.Name = "tblLtPnlManageUser";
@@ -120,7 +123,7 @@ namespace FinancialQuiz.UserControls
             this.cbxCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCat.FormattingEnabled = true;
             this.cbxCat.ItemHeight = 22;
-            this.cbxCat.Location = new System.Drawing.Point(224, 71);
+            this.cbxCat.Location = new System.Drawing.Point(224, 70);
             this.cbxCat.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxCat.Name = "cbxCat";
             this.cbxCat.Size = new System.Drawing.Size(541, 30);
@@ -294,7 +297,7 @@ namespace FinancialQuiz.UserControls
             this.txtCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCorrectAnswer.BackColor = System.Drawing.SystemColors.Info;
             this.txtCorrectAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorrectAnswer.Location = new System.Drawing.Point(225, 661);
+            this.txtCorrectAnswer.Location = new System.Drawing.Point(20, 3);
             this.txtCorrectAnswer.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.txtCorrectAnswer.MaxLength = 45;
             this.txtCorrectAnswer.Name = "txtCorrectAnswer";
@@ -323,7 +326,7 @@ namespace FinancialQuiz.UserControls
             this.cbxAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxAge.FormattingEnabled = true;
             this.cbxAge.ItemHeight = 22;
-            this.cbxAge.Location = new System.Drawing.Point(224, 161);
+            this.cbxAge.Location = new System.Drawing.Point(224, 160);
             this.cbxAge.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxAge.Name = "cbxAge";
             this.cbxAge.Size = new System.Drawing.Size(195, 30);
@@ -409,7 +412,7 @@ namespace FinancialQuiz.UserControls
             this.cbxGameLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGameLevel.FormattingEnabled = true;
             this.cbxGameLevel.ItemHeight = 22;
-            this.cbxGameLevel.Location = new System.Drawing.Point(224, 119);
+            this.cbxGameLevel.Location = new System.Drawing.Point(224, 118);
             this.cbxGameLevel.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxGameLevel.Name = "cbxGameLevel";
             this.cbxGameLevel.Size = new System.Drawing.Size(541, 30);
@@ -490,7 +493,7 @@ namespace FinancialQuiz.UserControls
             // 
             this.btnClearQ.BackColor = System.Drawing.Color.Orange;
             this.btnClearQ.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearQ.Location = new System.Drawing.Point(889, 702);
+            this.btnClearQ.Location = new System.Drawing.Point(746, 702);
             this.btnClearQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearQ.Name = "btnClearQ";
             this.btnClearQ.Size = new System.Drawing.Size(136, 37);
@@ -499,23 +502,59 @@ namespace FinancialQuiz.UserControls
             this.btnClearQ.UseVisualStyleBackColor = false;
             this.btnClearQ.Click += new System.EventHandler(this.btnClearQ_Click);
             // 
-            // btnDeleteQ
+            // tableLayoutPanelStatus
             // 
-            this.btnDeleteQ.BackColor = System.Drawing.Color.Orange;
-            this.btnDeleteQ.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteQ.Location = new System.Drawing.Point(747, 702);
-            this.btnDeleteQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDeleteQ.Name = "btnDeleteQ";
-            this.btnDeleteQ.Size = new System.Drawing.Size(136, 37);
-            this.btnDeleteQ.TabIndex = 32;
-            this.btnDeleteQ.Text = "Disable";
-            this.btnDeleteQ.UseVisualStyleBackColor = false;
+            this.tableLayoutPanelStatus.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tableLayoutPanelStatus.ColumnCount = 3;
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
+            this.tableLayoutPanelStatus.Controls.Add(this.txtCorrectAnswer, 0, 0);
+            this.tableLayoutPanelStatus.Controls.Add(this.lblActiveStatus, 1, 0);
+            this.tableLayoutPanelStatus.Controls.Add(this.cbBoxActiveStatus, 2, 0);
+            this.tableLayoutPanelStatus.Location = new System.Drawing.Point(208, 658);
+            this.tableLayoutPanelStatus.Name = "tableLayoutPanelStatus";
+            this.tableLayoutPanelStatus.RowCount = 1;
+            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelStatus.Size = new System.Drawing.Size(981, 34);
+            this.tableLayoutPanelStatus.TabIndex = 57;
+            // 
+            // lblActiveStatus
+            // 
+            this.lblActiveStatus.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblActiveStatus.AutoSize = true;
+            this.lblActiveStatus.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lblActiveStatus.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveStatus.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblActiveStatus.Location = new System.Drawing.Point(213, 5);
+            this.lblActiveStatus.Margin = new System.Windows.Forms.Padding(0);
+            this.lblActiveStatus.Name = "lblActiveStatus";
+            this.lblActiveStatus.Size = new System.Drawing.Size(134, 23);
+            this.lblActiveStatus.TabIndex = 52;
+            this.lblActiveStatus.Text = "Active Status:";
+            this.lblActiveStatus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cbBoxActiveStatus
+            // 
+            this.cbBoxActiveStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbBoxActiveStatus.BackColor = System.Drawing.SystemColors.Info;
+            this.cbBoxActiveStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxActiveStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBoxActiveStatus.FormattingEnabled = true;
+            this.cbBoxActiveStatus.ItemHeight = 22;
+            this.cbBoxActiveStatus.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.cbBoxActiveStatus.Location = new System.Drawing.Point(366, 2);
+            this.cbBoxActiveStatus.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
+            this.cbBoxActiveStatus.Name = "cbBoxActiveStatus";
+            this.cbBoxActiveStatus.Size = new System.Drawing.Size(60, 30);
+            this.cbBoxActiveStatus.TabIndex = 53;
             // 
             // ManageQuestionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnDeleteQ);
             this.Controls.Add(this.btnAddQ);
             this.Controls.Add(this.btnUpdateQ);
             this.Controls.Add(this.btnClearQ);
@@ -528,6 +567,8 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanelStatus.ResumeLayout(false);
+            this.tableLayoutPanelStatus.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -557,12 +598,14 @@ namespace FinancialQuiz.UserControls
         private System.Windows.Forms.Button btnAddQ;
         private System.Windows.Forms.Button btnUpdateQ;
         private System.Windows.Forms.Button btnClearQ;
-        private System.Windows.Forms.Button btnDeleteQ;
         private System.Windows.Forms.ComboBox cbxAge;
         private System.Windows.Forms.Label lblGameLevel;
         private System.Windows.Forms.ComboBox cbxGameLevel;
         private System.Windows.Forms.ComboBox cbxCat;
         private System.Windows.Forms.Label lblExplanation;
         private System.Windows.Forms.TextBox txtBoxExplanation;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelStatus;
+        private System.Windows.Forms.Label lblActiveStatus;
+        private System.Windows.Forms.ComboBox cbBoxActiveStatus;
     }
 }
