@@ -128,7 +128,7 @@ namespace FinancialQuiz.UserControls
             txtAnswerD.Text = question.OptionD;
             txtBoxExplanation.Text = question.Explanation;
             txtCorrectAnswer.Text = question.CorrectOption;
-            cbBoxActiveStatus.SelectedValue = question.Active;
+            cbBoxActiveStatus.Text = question.Active;
             Console.WriteLine("Question cat id : " + question.CategoryID);
             Console.WriteLine("Question age id : " + question.AgeRangeID);
             Console.WriteLine("Question game l id : " + question.GameLevelID);
