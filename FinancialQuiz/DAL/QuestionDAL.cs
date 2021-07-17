@@ -280,11 +280,11 @@ namespace FinancialQuiz.DAL
                 string insertStatement =
                "INSERT INTO questions " +
                 "(Age_range_id, Game_Level_ID, Category_ID, Description, OptionA, OptionB, OptionC, OptionD, Explanation, " +
-                "Correct_Option) " +
+                "Correct_Option, active) " +
 
                 "VALUES (@AgeRangeId, @GameLevelID, @CategoryID, " +
                 "@Description, @OptionA, @OptionB, " +
-                "@OptionC, @OptionD, @Explanation, @CorrectOption ); " +
+                "@OptionC, @OptionD, @Explanation, @CorrectOption, @Active); " +
                 "SELECT CAST(scope_identity() AS int)";
 
                 connection.Open();
@@ -301,6 +301,7 @@ namespace FinancialQuiz.DAL
                     insertCommand.Parameters.AddWithValue("@OptionD", question.OptionD);
                     insertCommand.Parameters.AddWithValue("@Explanation", question.Explanation);
                     insertCommand.Parameters.AddWithValue("@CorrectOption", question.CorrectOption);
+                    insertCommand.Parameters.AddWithValue("@Active", question.Active);
                     question.QuestionID = Convert.ToInt32(insertCommand.ExecuteScalar());
 
                     return true;
