@@ -64,7 +64,7 @@ namespace FinancialQuiz.View
             this.HelloLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.HelloLabel.Location = new System.Drawing.Point(1086, 23);
             this.HelloLabel.Name = "HelloLabel";
-            this.HelloLabel.Size = new System.Drawing.Size(46, 18);
+            this.HelloLabel.Size = new System.Drawing.Size(57, 23);
             this.HelloLabel.TabIndex = 0;
             this.HelloLabel.Text = "Hello";
             // 
@@ -75,7 +75,7 @@ namespace FinancialQuiz.View
             this.UserNameLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.UserNameLabel.Location = new System.Drawing.Point(1127, 23);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(178, 18);
+            this.UserNameLabel.Size = new System.Drawing.Size(231, 23);
             this.UserNameLabel.TabIndex = 1;
             this.UserNameLabel.Text = "XXXXXXXXXXXXXXXXX";
             // 
@@ -85,7 +85,7 @@ namespace FinancialQuiz.View
             this.LogoutLink.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutLink.Location = new System.Drawing.Point(1087, 118);
             this.LogoutLink.Name = "LogoutLink";
-            this.LogoutLink.Size = new System.Drawing.Size(54, 17);
+            this.LogoutLink.Size = new System.Drawing.Size(68, 21);
             this.LogoutLink.TabIndex = 2;
             this.LogoutLink.TabStop = true;
             this.LogoutLink.Text = "Logout";
@@ -98,7 +98,7 @@ namespace FinancialQuiz.View
             this.CategoryHeaderLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CategoryHeaderLabel.Location = new System.Drawing.Point(172, 55);
             this.CategoryHeaderLabel.Name = "CategoryHeaderLabel";
-            this.CategoryHeaderLabel.Size = new System.Drawing.Size(89, 19);
+            this.CategoryHeaderLabel.Size = new System.Drawing.Size(114, 23);
             this.CategoryHeaderLabel.TabIndex = 3;
             this.CategoryHeaderLabel.Text = "Category: ";
             // 
@@ -109,7 +109,7 @@ namespace FinancialQuiz.View
             this.CategoryLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CategoryLabel.Location = new System.Drawing.Point(258, 55);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(207, 19);
+            this.CategoryLabel.Size = new System.Drawing.Size(252, 23);
             this.CategoryLabel.TabIndex = 4;
             this.CategoryLabel.Text = "xxxxxxxxxxxxxxxxxxxxxx";
             // 
@@ -120,7 +120,7 @@ namespace FinancialQuiz.View
             this.QuestionProgressLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.QuestionProgressLabel.Location = new System.Drawing.Point(258, 87);
             this.QuestionProgressLabel.Name = "QuestionProgressLabel";
-            this.QuestionProgressLabel.Size = new System.Drawing.Size(34, 19);
+            this.QuestionProgressLabel.Size = new System.Drawing.Size(41, 23);
             this.QuestionProgressLabel.TabIndex = 5;
             this.QuestionProgressLabel.Text = "0/0";
             // 
@@ -130,7 +130,7 @@ namespace FinancialQuiz.View
             this.QuestionNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionNumberLabel.Location = new System.Drawing.Point(38, 25);
             this.QuestionNumberLabel.Name = "QuestionNumberLabel";
-            this.QuestionNumberLabel.Size = new System.Drawing.Size(25, 24);
+            this.QuestionNumberLabel.Size = new System.Drawing.Size(32, 29);
             this.QuestionNumberLabel.TabIndex = 6;
             this.QuestionNumberLabel.Text = "0.";
             // 
@@ -141,7 +141,7 @@ namespace FinancialQuiz.View
             this.QuestionLabel.Location = new System.Drawing.Point(75, 25);
             this.QuestionLabel.MaximumSize = new System.Drawing.Size(933, 0);
             this.QuestionLabel.Name = "QuestionLabel";
-            this.QuestionLabel.Size = new System.Drawing.Size(226, 40);
+            this.QuestionLabel.Size = new System.Drawing.Size(279, 50);
             this.QuestionLabel.TabIndex = 7;
             this.QuestionLabel.Text = "Using a credit card is most like:\r\n\r\n";
             // 
@@ -153,7 +153,7 @@ namespace FinancialQuiz.View
             this.RadioAnswerA.Location = new System.Drawing.Point(43, 123);
             this.RadioAnswerA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerA.Name = "RadioAnswerA";
-            this.RadioAnswerA.Size = new System.Drawing.Size(112, 24);
+            this.RadioAnswerA.Size = new System.Drawing.Size(139, 29);
             this.RadioAnswerA.TabIndex = 8;
             this.RadioAnswerA.TabStop = true;
             this.RadioAnswerA.Text = "A. Answer 1";
@@ -166,7 +166,7 @@ namespace FinancialQuiz.View
             this.RadioAnswerB.Location = new System.Drawing.Point(43, 207);
             this.RadioAnswerB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerB.Name = "RadioAnswerB";
-            this.RadioAnswerB.Size = new System.Drawing.Size(112, 24);
+            this.RadioAnswerB.Size = new System.Drawing.Size(138, 29);
             this.RadioAnswerB.TabIndex = 9;
             this.RadioAnswerB.Text = "B. Answer 2";
             this.RadioAnswerB.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@ namespace FinancialQuiz.View
             this.RadioAnswerC.Location = new System.Drawing.Point(43, 299);
             this.RadioAnswerC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerC.Name = "RadioAnswerC";
-            this.RadioAnswerC.Size = new System.Drawing.Size(112, 24);
+            this.RadioAnswerC.Size = new System.Drawing.Size(140, 29);
             this.RadioAnswerC.TabIndex = 10;
             this.RadioAnswerC.Text = "C. Answer 3";
             this.RadioAnswerC.UseVisualStyleBackColor = true;
@@ -190,7 +190,7 @@ namespace FinancialQuiz.View
             this.RadioAnswerD.Location = new System.Drawing.Point(43, 391);
             this.RadioAnswerD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RadioAnswerD.Name = "RadioAnswerD";
-            this.RadioAnswerD.Size = new System.Drawing.Size(113, 24);
+            this.RadioAnswerD.Size = new System.Drawing.Size(139, 29);
             this.RadioAnswerD.TabIndex = 11;
             this.RadioAnswerD.Text = "D. Answer 4";
             this.RadioAnswerD.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@ namespace FinancialQuiz.View
             this.reportLabel.Location = new System.Drawing.Point(1087, 55);
             this.reportLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.reportLabel.Name = "reportLabel";
-            this.reportLabel.Size = new System.Drawing.Size(80, 17);
+            this.reportLabel.Size = new System.Drawing.Size(105, 21);
             this.reportLabel.TabIndex = 14;
             this.reportLabel.TabStop = true;
             this.reportLabel.Text = "Player Stats";
@@ -227,7 +227,7 @@ namespace FinancialQuiz.View
             this.CorrectLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.CorrectLabel.Location = new System.Drawing.Point(934, 758);
             this.CorrectLabel.Name = "CorrectLabel";
-            this.CorrectLabel.Size = new System.Drawing.Size(206, 40);
+            this.CorrectLabel.Size = new System.Drawing.Size(260, 50);
             this.CorrectLabel.TabIndex = 15;
             this.CorrectLabel.Text = " CORRECT";
             this.CorrectLabel.Visible = false;
@@ -239,7 +239,7 @@ namespace FinancialQuiz.View
             this.WrongLabel.ForeColor = System.Drawing.Color.Red;
             this.WrongLabel.Location = new System.Drawing.Point(905, 767);
             this.WrongLabel.Name = "WrongLabel";
-            this.WrongLabel.Size = new System.Drawing.Size(249, 40);
+            this.WrongLabel.Size = new System.Drawing.Size(315, 50);
             this.WrongLabel.TabIndex = 16;
             this.WrongLabel.Text = " INCORRECT";
             this.WrongLabel.Visible = false;
@@ -251,7 +251,7 @@ namespace FinancialQuiz.View
             this.ProgressLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ProgressLabel.Location = new System.Drawing.Point(172, 86);
             this.ProgressLabel.Name = "ProgressLabel";
-            this.ProgressLabel.Size = new System.Drawing.Size(79, 19);
+            this.ProgressLabel.Size = new System.Drawing.Size(102, 23);
             this.ProgressLabel.TabIndex = 17;
             this.ProgressLabel.Text = "Progress: ";
             // 
@@ -276,7 +276,7 @@ namespace FinancialQuiz.View
             this.StudyGroupLink.Location = new System.Drawing.Point(1087, 87);
             this.StudyGroupLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudyGroupLink.Name = "StudyGroupLink";
-            this.StudyGroupLink.Size = new System.Drawing.Size(144, 17);
+            this.StudyGroupLink.Size = new System.Drawing.Size(189, 21);
             this.StudyGroupLink.TabIndex = 19;
             this.StudyGroupLink.TabStop = true;
             this.StudyGroupLink.Text = "View My Study Group";
@@ -328,6 +328,8 @@ namespace FinancialQuiz.View
             // 
             // ExplanationRichText
             // 
+            this.ExplanationRichText.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExplanationRichText.ForeColor = System.Drawing.Color.SeaGreen;
             this.ExplanationRichText.Location = new System.Drawing.Point(20, 615);
             this.ExplanationRichText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ExplanationRichText.Name = "ExplanationRichText";
@@ -345,16 +347,16 @@ namespace FinancialQuiz.View
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(140, 149);
             this.tableLayoutPanel1.TabIndex = 24;
             // 
             // PlayerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(1301, 845);
+            this.ClientSize = new System.Drawing.Size(1299, 845);
             this.Controls.Add(this.ProgressLabel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ExplanationRichText);

@@ -120,7 +120,7 @@ namespace FinancialQuiz.UserControls
             this.cbxCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCat.FormattingEnabled = true;
             this.cbxCat.ItemHeight = 22;
-            this.cbxCat.Location = new System.Drawing.Point(224, 70);
+            this.cbxCat.Location = new System.Drawing.Point(224, 71);
             this.cbxCat.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxCat.Name = "cbxCat";
             this.cbxCat.Size = new System.Drawing.Size(541, 30);
@@ -323,7 +323,7 @@ namespace FinancialQuiz.UserControls
             this.cbxAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxAge.FormattingEnabled = true;
             this.cbxAge.ItemHeight = 22;
-            this.cbxAge.Location = new System.Drawing.Point(224, 160);
+            this.cbxAge.Location = new System.Drawing.Point(224, 161);
             this.cbxAge.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxAge.Name = "cbxAge";
             this.cbxAge.Size = new System.Drawing.Size(195, 30);
@@ -409,7 +409,7 @@ namespace FinancialQuiz.UserControls
             this.cbxGameLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGameLevel.FormattingEnabled = true;
             this.cbxGameLevel.ItemHeight = 22;
-            this.cbxGameLevel.Location = new System.Drawing.Point(224, 118);
+            this.cbxGameLevel.Location = new System.Drawing.Point(224, 119);
             this.cbxGameLevel.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxGameLevel.Name = "cbxGameLevel";
             this.cbxGameLevel.Size = new System.Drawing.Size(541, 30);
