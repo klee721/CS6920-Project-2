@@ -34,8 +34,7 @@ namespace FinancialQuiz.UserControls
             this.ageSource = new AgeController();
             btnAddQ.Enabled = true;
             btnUpdateQ.Enabled = false;
-            //btnDeleteQ.Enabled = false;
-            btnClearQ.Enabled = false;
+            btnClearQ.Enabled = true;
             txtSearch.Focus();
             questionId = 0;
             toolTip = new ToolTip();
@@ -51,6 +50,7 @@ namespace FinancialQuiz.UserControls
             cbxAge.SelectedIndex = -1;
             cbxGameLevel.SelectedIndex = -1;
             cbxCat.SelectedIndex = -1;
+            cbBoxActiveStatus.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -115,7 +115,6 @@ namespace FinancialQuiz.UserControls
             btnUpdateQ.Enabled = true;
             btnAddQ.Enabled = false;
             btnClearQ.Enabled = true;
-            //btnDeleteQ.Enabled = true;
 
             questionId = question.QuestionID;
            
@@ -129,6 +128,7 @@ namespace FinancialQuiz.UserControls
             txtAnswerD.Text = question.OptionD;
             txtBoxExplanation.Text = question.Explanation;
             txtCorrectAnswer.Text = question.CorrectOption;
+            cbBoxActiveStatus.SelectedValue = question.Active;
             Console.WriteLine("Question cat id : " + question.CategoryID);
             Console.WriteLine("Question age id : " + question.AgeRangeID);
             Console.WriteLine("Question game l id : " + question.GameLevelID);
@@ -149,10 +149,9 @@ namespace FinancialQuiz.UserControls
             txtAnswerD.Text = "";
             txtCorrectAnswer.Text = "";
             txtBoxExplanation.Text = "";
-
+            cbBoxActiveStatus.SelectedIndex = -1;
             btnUpdateQ.Enabled = false;
             btnAddQ.Enabled = true;
-            //btnDeleteQ.Enabled = false;
             btnClearQ.Enabled = false;
         }
 
@@ -201,6 +200,7 @@ namespace FinancialQuiz.UserControls
                     updatedQuestion.OptionD = txtAnswerD.Text;
                     updatedQuestion.Explanation = txtBoxExplanation.Text;
                     updatedQuestion.CorrectOption = txtCorrectAnswer.Text;
+                    updatedQuestion.Active= cbBoxActiveStatus.SelectedItem.ToString();
 
                     bool isUpdated = this.questionController.UpdateQuestion(updatedQuestion);
 
@@ -229,7 +229,8 @@ namespace FinancialQuiz.UserControls
                 txtAnswerB.Text == "" ||
                 txtCorrectAnswer.Text == "" ||
                 cbxCat.Text == "" ||
-                cbxAge.Text == "")
+                cbxAge.Text == "" ||
+                cbBoxActiveStatus.Text == "")
             {
                 MessageBox.Show("Please check your information - some fields are empty.");
                 return false;
@@ -263,7 +264,8 @@ namespace FinancialQuiz.UserControls
                     newQuestion.OptionD = txtAnswerD.Text;
                     newQuestion.CorrectOption = txtCorrectAnswer.Text;
                     newQuestion.Explanation = txtBoxExplanation.Text;
-  
+                    newQuestion.Active = cbBoxActiveStatus.SelectedItem.ToString();
+
                     bool isAdded = this.questionController.AddQuestion(newQuestion);
 
                     if (isAdded)

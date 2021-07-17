@@ -33,5 +33,7 @@ namespace FinancialQuiz.Model
 
         public string Explanation { get; set; }
 
+        public string Active { get; set; }
+
     }
 }
