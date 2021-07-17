@@ -39,9 +39,7 @@ namespace FinancialQuiz.UserControls
         {
             cbxSearch.SelectedIndex = 0;
             cbxSearch.Focus();
-            txtConfirmPassword.Visible = false;
-            lblConfirmPassword.Visible = false;
-            lblUpdate.Visible = false;
+
         }
 
         /// <summary>
@@ -118,7 +116,7 @@ namespace FinancialQuiz.UserControls
             else if (userList.Count == 1)
             {
                 this.PopulateUserData(userList[0]);
-      
+
             }
             else if (userList.Count > 1)
             {
@@ -136,7 +134,7 @@ namespace FinancialQuiz.UserControls
         }
 
 
-        private void clearAllFields()
+        private void ClearAllFields()
         {
             txtbxUserId.Text = "";
             txtSearch.Text = "";
@@ -151,16 +149,13 @@ namespace FinancialQuiz.UserControls
             btnRegister.Enabled = true;
             btnUpdate.Enabled = false;
             btnClear.Enabled = true;
-            txtConfirmPassword.Visible = false;
-            lblConfirmPassword.Visible = false;
-            lblUpdate.Visible = false;
 
         }
 
 
         private void cbxSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.clearAllFields();
+            this.ClearAllFields();
             txtSearch.Text = "";
             btnRegister.Enabled = true;
             btnUpdate.Enabled = false;
@@ -184,14 +179,14 @@ namespace FinancialQuiz.UserControls
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            this.clearAllFields();
+            this.ClearAllFields();
             cbxSearch.SelectedIndex = 0;
 
         }
 
         private bool HasValidFields()
         {
-           
+
             if (txtFirstName.Text == "" ||
                 txtLastName.Text == "" ||
                 txtAge.Text == "" ||
@@ -228,7 +223,7 @@ namespace FinancialQuiz.UserControls
                 MessageBox.Show("Username cannot be longer than 45 characters", "Invalid Username");
                 return false;
             }
-            
+
             else if (txtPassword.Text.Trim().Length > 45)
             {
                 txtPassword.Focus();
@@ -241,7 +236,7 @@ namespace FinancialQuiz.UserControls
             }
         }
 
-        private Boolean isExistingUsername(String username)
+        private Boolean IsExistingUsername(String username)
         {
             List<User> userList = this.userController.GetUsers("", username, -1);
             if (userList.Count > 0)
@@ -255,7 +250,7 @@ namespace FinancialQuiz.UserControls
         private void btnRegister_Click(object sender, EventArgs e)
         {
 
-             if (this.HasValidFields())
+            if (this.HasValidFields())
             {
                 try
                 {
@@ -269,22 +264,23 @@ namespace FinancialQuiz.UserControls
 
                     String name = newUser.FirstName + " " + newUser.LastName;
 
-                    if (!validatePassword(txtPassword.Text)) {
+                    if (!txtPassword.Text.Equals(txtConfirmPassword.Text))
+                    {
+                        txtPassword.Focus();
+                        lblMessage.ForeColor = System.Drawing.Color.Red;
+                        lblMessage.Text = "Passwords didn't match. Retype your Password.";
+                        return;
+                    }
+
+                    if (!ValidatePassword(txtPassword.Text))
+                    {
                         MessageBox.Show("Password must include: at least one lower case letter, one upper case letter, one special character (@, #, $, %, ^, &, +, =), "
                             + "one number, and 8 characters length", "Error");
                         return;
                     }
 
-                    if (txtPassword.Text != txtConfirmPassword.Text)
 
-                    {
-                        txtPassword.Focus();
-                        lblMessage.ForeColor = System.Drawing.Color.Red;
-                        lblMessage.Text = "Passwords didn't match.";
-                        return;
-                    }
-
-                    if (this.isExistingUsername(newUser.UserName))
+                    if (this.IsExistingUsername(newUser.UserName))
                     {
                         MessageBox.Show("User " + newUser.UserName + " already exists!", "Error");
                         return;
@@ -313,15 +309,12 @@ namespace FinancialQuiz.UserControls
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            txtConfirmPassword.Visible = false;
-            lblConfirmPassword.Visible = false;
-            lblUpdate.Visible = false;
 
             if (this.HasValidFields())
             {
                 try
                 {
-                    
+                  
                     User updatedUser = new User();
                     updatedUser.UserID = this.userId;
                     updatedUser.FirstName = txtFirstName.Text;
@@ -330,9 +323,18 @@ namespace FinancialQuiz.UserControls
                     updatedUser.UserName = txtUsername.Text;
                     updatedUser.Password = txtPassword.Text;
                     updatedUser.AdminInd = cbBoxAdminStatus.SelectedItem.ToString();
+
                     String name = updatedUser.FirstName + " " + updatedUser.LastName;
-                    
-                    if (!validatePassword(txtPassword.Text))
+
+                    if (!txtPassword.Text.Equals(txtConfirmPassword.Text))
+                    {
+                        txtPassword.Focus();
+                        lblMessage.ForeColor = System.Drawing.Color.Red;
+                        lblMessage.Text = "Passwords didn't match. Retype your Password.";
+                        return;
+                    } 
+
+                    if (!ValidatePassword(txtPassword.Text))
                     {
                         MessageBox.Show("Password must include: at least one lower case letter, one upper case letter, one special character (@, #, $, %, ^, &, +, =), "
                             + "one number, and 8 characters length", "Error");
@@ -340,7 +342,6 @@ namespace FinancialQuiz.UserControls
                     }
 
                     bool isUpdated = this.userController.UpdateUser(updatedUser);
-
 
                     if (isUpdated)
                     {
@@ -358,15 +359,8 @@ namespace FinancialQuiz.UserControls
             }
         }
 
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-            txtConfirmPassword.Visible = true;
-            lblConfirmPassword.Visible = true;
-            lblUpdate.Visible = true;
 
-        }
-
-        static private Boolean validatePassword(string passWord)
+        static private Boolean ValidatePassword(string passWord)
         {
             int validConditions = 0;
             foreach (char c in passWord)
@@ -385,7 +379,7 @@ namespace FinancialQuiz.UserControls
                     break;
                 }
             }
-            
+
             foreach (char c in passWord)
             {
                 if (c >= '0' && c <= '9')
@@ -407,9 +401,9 @@ namespace FinancialQuiz.UserControls
             {
                 return false;
             }
-                if (validConditions == 3)
+            if (validConditions == 3)
             {
-                char[] special = { '@', '#', '$', '%', '^', '&', '+', '=' };  
+                char[] special = { '@', '#', '$', '%', '^', '&', '+', '=' };
                 if (passWord.IndexOfAny(special) == -1) return false;
             }
             return true;

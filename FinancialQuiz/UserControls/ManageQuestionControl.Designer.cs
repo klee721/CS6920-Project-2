@@ -43,7 +43,6 @@ namespace FinancialQuiz.UserControls
             this.label1 = new System.Windows.Forms.Label();
             this.txtAnswerC = new System.Windows.Forms.TextBox();
             this.txtAnswerD = new System.Windows.Forms.TextBox();
-            this.txtCorrectAnswer = new System.Windows.Forms.TextBox();
             this.lblCorrectAnswer = new System.Windows.Forms.Label();
             this.cbxAge = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -55,12 +54,13 @@ namespace FinancialQuiz.UserControls
             this.lblExplanation = new System.Windows.Forms.Label();
             this.txtBoxExplanation = new System.Windows.Forms.TextBox();
             this.lblSearchBy = new System.Windows.Forms.Label();
+            this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCorrectAnswer = new System.Windows.Forms.TextBox();
+            this.lblActiveStatus = new System.Windows.Forms.Label();
+            this.cbBoxActiveStatus = new System.Windows.Forms.ComboBox();
             this.btnAddQ = new System.Windows.Forms.Button();
             this.btnUpdateQ = new System.Windows.Forms.Button();
             this.btnClearQ = new System.Windows.Forms.Button();
-            this.tableLayoutPanelStatus = new System.Windows.Forms.TableLayoutPanel();
-            this.lblActiveStatus = new System.Windows.Forms.Label();
-            this.cbBoxActiveStatus = new System.Windows.Forms.ComboBox();
             this.tblLtPnlManageUser.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanelStatus.SuspendLayout();
@@ -123,7 +123,7 @@ namespace FinancialQuiz.UserControls
             this.cbxCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCat.FormattingEnabled = true;
             this.cbxCat.ItemHeight = 22;
-            this.cbxCat.Location = new System.Drawing.Point(224, 70);
+            this.cbxCat.Location = new System.Drawing.Point(224, 71);
             this.cbxCat.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxCat.Name = "cbxCat";
             this.cbxCat.Size = new System.Drawing.Size(541, 30);
@@ -292,18 +292,6 @@ namespace FinancialQuiz.UserControls
             this.txtAnswerD.Size = new System.Drawing.Size(963, 62);
             this.txtAnswerD.TabIndex = 50;
             // 
-            // txtCorrectAnswer
-            // 
-            this.txtCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCorrectAnswer.BackColor = System.Drawing.SystemColors.Info;
-            this.txtCorrectAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorrectAnswer.Location = new System.Drawing.Point(20, 3);
-            this.txtCorrectAnswer.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.txtCorrectAnswer.MaxLength = 45;
-            this.txtCorrectAnswer.Name = "txtCorrectAnswer";
-            this.txtCorrectAnswer.Size = new System.Drawing.Size(103, 27);
-            this.txtCorrectAnswer.TabIndex = 51;
-            // 
             // lblCorrectAnswer
             // 
             this.lblCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -326,7 +314,7 @@ namespace FinancialQuiz.UserControls
             this.cbxAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxAge.FormattingEnabled = true;
             this.cbxAge.ItemHeight = 22;
-            this.cbxAge.Location = new System.Drawing.Point(224, 160);
+            this.cbxAge.Location = new System.Drawing.Point(224, 161);
             this.cbxAge.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxAge.Name = "cbxAge";
             this.cbxAge.Size = new System.Drawing.Size(195, 30);
@@ -412,7 +400,7 @@ namespace FinancialQuiz.UserControls
             this.cbxGameLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGameLevel.FormattingEnabled = true;
             this.cbxGameLevel.ItemHeight = 22;
-            this.cbxGameLevel.Location = new System.Drawing.Point(224, 118);
+            this.cbxGameLevel.Location = new System.Drawing.Point(224, 119);
             this.cbxGameLevel.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbxGameLevel.Name = "cbxGameLevel";
             this.cbxGameLevel.Size = new System.Drawing.Size(541, 30);
@@ -462,6 +450,67 @@ namespace FinancialQuiz.UserControls
             this.lblSearchBy.TabIndex = 26;
             this.lblSearchBy.Text = "Search By: ";
             // 
+            // tableLayoutPanelStatus
+            // 
+            this.tableLayoutPanelStatus.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tableLayoutPanelStatus.ColumnCount = 3;
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 634F));
+            this.tableLayoutPanelStatus.Controls.Add(this.txtCorrectAnswer, 0, 0);
+            this.tableLayoutPanelStatus.Controls.Add(this.lblActiveStatus, 1, 0);
+            this.tableLayoutPanelStatus.Controls.Add(this.cbBoxActiveStatus, 2, 0);
+            this.tableLayoutPanelStatus.Location = new System.Drawing.Point(208, 658);
+            this.tableLayoutPanelStatus.Name = "tableLayoutPanelStatus";
+            this.tableLayoutPanelStatus.RowCount = 1;
+            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelStatus.Size = new System.Drawing.Size(981, 34);
+            this.tableLayoutPanelStatus.TabIndex = 57;
+            // 
+            // txtCorrectAnswer
+            // 
+            this.txtCorrectAnswer.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCorrectAnswer.BackColor = System.Drawing.SystemColors.Info;
+            this.txtCorrectAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorrectAnswer.Location = new System.Drawing.Point(20, 3);
+            this.txtCorrectAnswer.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.txtCorrectAnswer.MaxLength = 45;
+            this.txtCorrectAnswer.Name = "txtCorrectAnswer";
+            this.txtCorrectAnswer.Size = new System.Drawing.Size(103, 27);
+            this.txtCorrectAnswer.TabIndex = 51;
+            // 
+            // lblActiveStatus
+            // 
+            this.lblActiveStatus.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblActiveStatus.AutoSize = true;
+            this.lblActiveStatus.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lblActiveStatus.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveStatus.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblActiveStatus.Location = new System.Drawing.Point(213, 5);
+            this.lblActiveStatus.Margin = new System.Windows.Forms.Padding(0);
+            this.lblActiveStatus.Name = "lblActiveStatus";
+            this.lblActiveStatus.Size = new System.Drawing.Size(134, 23);
+            this.lblActiveStatus.TabIndex = 52;
+            this.lblActiveStatus.Text = "Active Status:";
+            this.lblActiveStatus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cbBoxActiveStatus
+            // 
+            this.cbBoxActiveStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbBoxActiveStatus.BackColor = System.Drawing.SystemColors.Info;
+            this.cbBoxActiveStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxActiveStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBoxActiveStatus.FormattingEnabled = true;
+            this.cbBoxActiveStatus.ItemHeight = 22;
+            this.cbBoxActiveStatus.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.cbBoxActiveStatus.Location = new System.Drawing.Point(366, 2);
+            this.cbBoxActiveStatus.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
+            this.cbBoxActiveStatus.Name = "cbBoxActiveStatus";
+            this.cbBoxActiveStatus.Size = new System.Drawing.Size(60, 30);
+            this.cbBoxActiveStatus.TabIndex = 53;
+            // 
             // btnAddQ
             // 
             this.btnAddQ.BackColor = System.Drawing.Color.Orange;
@@ -501,55 +550,6 @@ namespace FinancialQuiz.UserControls
             this.btnClearQ.Text = "Clear";
             this.btnClearQ.UseVisualStyleBackColor = false;
             this.btnClearQ.Click += new System.EventHandler(this.btnClearQ_Click);
-            // 
-            // tableLayoutPanelStatus
-            // 
-            this.tableLayoutPanelStatus.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tableLayoutPanelStatus.ColumnCount = 3;
-            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
-            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
-            this.tableLayoutPanelStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.tableLayoutPanelStatus.Controls.Add(this.txtCorrectAnswer, 0, 0);
-            this.tableLayoutPanelStatus.Controls.Add(this.lblActiveStatus, 1, 0);
-            this.tableLayoutPanelStatus.Controls.Add(this.cbBoxActiveStatus, 2, 0);
-            this.tableLayoutPanelStatus.Location = new System.Drawing.Point(208, 658);
-            this.tableLayoutPanelStatus.Name = "tableLayoutPanelStatus";
-            this.tableLayoutPanelStatus.RowCount = 1;
-            this.tableLayoutPanelStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelStatus.Size = new System.Drawing.Size(981, 34);
-            this.tableLayoutPanelStatus.TabIndex = 57;
-            // 
-            // lblActiveStatus
-            // 
-            this.lblActiveStatus.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblActiveStatus.AutoSize = true;
-            this.lblActiveStatus.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.lblActiveStatus.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveStatus.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblActiveStatus.Location = new System.Drawing.Point(213, 5);
-            this.lblActiveStatus.Margin = new System.Windows.Forms.Padding(0);
-            this.lblActiveStatus.Name = "lblActiveStatus";
-            this.lblActiveStatus.Size = new System.Drawing.Size(134, 23);
-            this.lblActiveStatus.TabIndex = 52;
-            this.lblActiveStatus.Text = "Active Status:";
-            this.lblActiveStatus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cbBoxActiveStatus
-            // 
-            this.cbBoxActiveStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbBoxActiveStatus.BackColor = System.Drawing.SystemColors.Info;
-            this.cbBoxActiveStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxActiveStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBoxActiveStatus.FormattingEnabled = true;
-            this.cbBoxActiveStatus.ItemHeight = 22;
-            this.cbBoxActiveStatus.Items.AddRange(new object[] {
-            "Y",
-            "N"});
-            this.cbBoxActiveStatus.Location = new System.Drawing.Point(366, 2);
-            this.cbBoxActiveStatus.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
-            this.cbBoxActiveStatus.Name = "cbBoxActiveStatus";
-            this.cbBoxActiveStatus.Size = new System.Drawing.Size(60, 30);
-            this.cbBoxActiveStatus.TabIndex = 53;
             // 
             // ManageQuestionControl
             // 

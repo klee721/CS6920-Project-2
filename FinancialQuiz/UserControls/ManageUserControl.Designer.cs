@@ -55,7 +55,6 @@ namespace FinancialQuiz.UserControls
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.lblUpdate = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -70,7 +69,7 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.ColumnCount = 3;
             this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.96552F));
             this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.03448F));
-            this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tblLtPnlManageUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tblLtPnlManageUser.Controls.Add(this.label2, 0, 7);
             this.tblLtPnlManageUser.Controls.Add(this.lblAdminStatus, 0, 9);
             this.tblLtPnlManageUser.Controls.Add(this.lblConfirmPassword, 0, 8);
@@ -90,7 +89,6 @@ namespace FinancialQuiz.UserControls
             this.tblLtPnlManageUser.Controls.Add(this.txtPassword, 1, 7);
             this.tblLtPnlManageUser.Controls.Add(this.tableLayoutPanel, 1, 5);
             this.tblLtPnlManageUser.Controls.Add(this.tableLayoutPanel1, 1, 8);
-            this.tblLtPnlManageUser.Controls.Add(this.lblUpdate, 2, 8);
             this.tblLtPnlManageUser.Location = new System.Drawing.Point(52, 55);
             this.tblLtPnlManageUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblLtPnlManageUser.Name = "tblLtPnlManageUser";
@@ -205,7 +203,7 @@ namespace FinancialQuiz.UserControls
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(541, 37);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(540, 37);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // txtSearch
@@ -241,7 +239,7 @@ namespace FinancialQuiz.UserControls
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnSearch.BackColor = System.Drawing.Color.Orange;
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(731, 9);
+            this.btnSearch.Location = new System.Drawing.Point(730, 9);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(131, 37);
@@ -295,7 +293,7 @@ namespace FinancialQuiz.UserControls
             this.cbBoxAdminStatus.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.cbBoxAdminStatus.Location = new System.Drawing.Point(200, 454);
+            this.cbBoxAdminStatus.Location = new System.Drawing.Point(200, 453);
             this.cbBoxAdminStatus.Margin = new System.Windows.Forms.Padding(19, 2, 3, 2);
             this.cbBoxAdminStatus.Name = "cbBoxAdminStatus";
             this.cbBoxAdminStatus.Size = new System.Drawing.Size(60, 29);
@@ -348,14 +346,13 @@ namespace FinancialQuiz.UserControls
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(159, 28);
             this.txtPassword.TabIndex = 19;
-            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
             // tableLayoutPanel
             // 
             this.tableLayoutPanel.ColumnCount = 3;
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.47573F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.52427F));
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel.Controls.Add(this.txtAge, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel.Location = new System.Drawing.Point(184, 246);
@@ -364,7 +361,7 @@ namespace FinancialQuiz.UserControls
             this.tableLayoutPanel.RowCount = 1;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(541, 42);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(540, 42);
             this.tableLayoutPanel.TabIndex = 47;
             // 
             // txtAge
@@ -383,7 +380,7 @@ namespace FinancialQuiz.UserControls
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(170, 11);
+            this.label6.Location = new System.Drawing.Point(169, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 19);
             this.label6.TabIndex = 41;
@@ -401,7 +398,7 @@ namespace FinancialQuiz.UserControls
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(541, 37);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(540, 37);
             this.tableLayoutPanel1.TabIndex = 49;
             // 
             // txtConfirmPassword
@@ -428,19 +425,6 @@ namespace FinancialQuiz.UserControls
             this.lblMessage.Size = new System.Drawing.Size(20, 21);
             this.lblMessage.TabIndex = 48;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblUpdate
-            // 
-            this.lblUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblUpdate.AutoSize = true;
-            this.lblUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdate.Location = new System.Drawing.Point(762, 393);
-            this.lblUpdate.Name = "lblUpdate";
-            this.lblUpdate.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblUpdate.Size = new System.Drawing.Size(170, 42);
-            this.lblUpdate.TabIndex = 50;
-            this.lblUpdate.Text = "Only for new user registration";
-            this.lblUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRegister
             // 
@@ -537,6 +521,5 @@ namespace FinancialQuiz.UserControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblUpdate;
     }
 }
