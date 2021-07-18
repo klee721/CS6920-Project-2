@@ -987,10 +987,12 @@ namespace FinancialQuiz.GameSummaryDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select u.FirstName,u.LastName, count(*) games, AVG(score) average_score, MAX(scor" +
-                "e) max_score, MIN(score) min_score, max(start_date) last_played \r\nfrom Games g I" +
-                "NNER JOIN Users u\r\nON u.ID = g.userID \r\ngroup by u.FirstName,u.LastName\r\norder b" +
-                "y 3 desc";
+            this._commandCollection[0].CommandText = @"select u.FirstName,u.LastName, count(*) games, AVG(score) average_score, MAX(score) max_score, MIN(score) min_score, max(start_date) last_played 
+from Games g INNER JOIN Users u
+ON u.ID = g.userID 
+WHERE Completed_ind='Y'
+group by u.FirstName,u.LastName
+order by 3 desc";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

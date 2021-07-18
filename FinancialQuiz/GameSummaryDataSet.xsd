@@ -9,12 +9,13 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserGamesTableAdapter" GeneratorDataComponentClassName="UserGamesTableAdapter" Name="UserGames" UserDataComponentName="UserGamesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CS6920_Team4ConnectionString1 (Settings)" DbObjectName="[CS6920-Team4].dbo.Users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CS6920_Team4ConnectionString1 (Settings)" DbObjectName="[CS6920-Team4].dbo.Users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select u.FirstName,u.LastName, count(*) games, AVG(score) average_score, MAX(score) max_score, MIN(score) min_score, max(start_date) last_played 
 from Games g INNER JOIN Users u
 ON u.ID = g.userID 
+WHERE Completed_ind='Y'
 group by u.FirstName,u.LastName
 order by 3 desc</CommandText>
                     <Parameters />
@@ -41,7 +42,7 @@ order by 3 desc</CommandText>
   <xs:element name="GameSummaryDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GameSummaryDataSet" msprop:Generator_UserDSName="GameSummaryDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="UserGames" msprop:Generator_TableClassName="UserGamesDataTable" msprop:Generator_TableVarName="tableUserGames" msprop:Generator_RowChangedName="UserGamesRowChanged" msprop:Generator_TablePropName="UserGames" msprop:Generator_RowDeletingName="UserGamesRowDeleting" msprop:Generator_RowChangingName="UserGamesRowChanging" msprop:Generator_RowEvHandlerName="UserGamesRowChangeEventHandler" msprop:Generator_RowDeletedName="UserGamesRowDeleted" msprop:Generator_RowClassName="UserGamesRow" msprop:Generator_UserTableName="UserGames" msprop:Generator_RowEvArgName="UserGamesRowChangeEvent">
+        <xs:element name="UserGames" msprop:Generator_TableClassName="UserGamesDataTable" msprop:Generator_TableVarName="tableUserGames" msprop:Generator_TablePropName="UserGames" msprop:Generator_RowDeletingName="UserGamesRowDeleting" msprop:Generator_RowChangingName="UserGamesRowChanging" msprop:Generator_RowEvHandlerName="UserGamesRowChangeEventHandler" msprop:Generator_RowDeletedName="UserGamesRowDeleted" msprop:Generator_UserTableName="UserGames" msprop:Generator_RowChangedName="UserGamesRowChanged" msprop:Generator_RowEvArgName="UserGamesRowChangeEvent" msprop:Generator_RowClassName="UserGamesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
