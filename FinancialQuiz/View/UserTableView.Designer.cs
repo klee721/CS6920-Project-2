@@ -49,33 +49,37 @@ namespace FinancialQuiz.View
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Orange;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(680, 349);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 41);
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblSearchResults
             // 
             this.lblSearchResults.AutoSize = true;
-            this.lblSearchResults.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchResults.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchResults.Location = new System.Drawing.Point(12, 60);
             this.lblSearchResults.Name = "lblSearchResults";
-            this.lblSearchResults.Size = new System.Drawing.Size(173, 24);
+            this.lblSearchResults.Size = new System.Drawing.Size(195, 23);
             this.lblSearchResults.TabIndex = 12;
             this.lblSearchResults.Text = "User Search Results";
             // 
             // btnSelect
             // 
+            this.btnSelect.BackColor = System.Drawing.Color.Orange;
             this.btnSelect.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSelect.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.Location = new System.Drawing.Point(511, 349);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(163, 41);
             this.btnSelect.TabIndex = 11;
             this.btnSelect.Text = "Select";
-            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // _CS6920_Team4DataSetUsers
@@ -160,6 +164,7 @@ namespace FinancialQuiz.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(808, 450);
             this.Controls.Add(this.usersDataGridView);
             this.Controls.Add(this.btnCancel);
