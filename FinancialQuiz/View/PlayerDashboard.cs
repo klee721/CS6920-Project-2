@@ -217,7 +217,8 @@ namespace FinancialQuiz.View
             {
                 this.endGameFlag = true;
                 int missedQuestions = (this.numberOfQuestions - this.correctAnswers);
-                this.gamesController.EndQuiz(this.gameID, this.correctAnswers, missedQuestions, this.correctAnswers);
+                int calculatedPct = (this.correctAnswers / this.numberOfQuestions * 100);
+                this.gamesController.EndQuiz(this.gameID, this.correctAnswers, missedQuestions, calculatedPct);
                 GameStats gameStats = this.gamesController.GetGameStats(this.gameID);
                 NextButton.Visible = false;
                 this.NewGameButton.Visible = true;
@@ -225,7 +226,7 @@ namespace FinancialQuiz.View
                     "\n\n\nTotal Questions: " + gameStats.totalQuestions +
                     "\n\nQuestions Correct: " + gameStats.questionsCorrect +
                     "\n\nQuestions Missed: " + gameStats.questionsMissed +
-                    "\n\nFinal Score: " + gameStats.score +
+                    "\n\nFinal Score: " + gameStats.score + "%" +
                     "\n\n\nClick 'Start a New Game' to play again, or logout to quit."); 
             }
 
@@ -295,7 +296,8 @@ namespace FinancialQuiz.View
                     if (dialogResult == DialogResult.Yes)
                     {
                         int missedQuestions = (this.numberOfQuestions - this.correctAnswers);
-                        this.gamesController.EndQuiz(this.gameID, this.correctAnswers, missedQuestions, this.correctAnswers);
+                        int calculatedPct = (this.correctAnswers / this.numberOfQuestions * 100);
+                        this.gamesController.EndQuiz(this.gameID, this.correctAnswers, missedQuestions, calculatedPct);
                         Application.Exit();
                     }
                     else if (dialogResult == DialogResult.No)
