@@ -142,8 +142,8 @@ namespace FinancialQuiz.DAL
                             myGame.totalQuestions = reader["Total_questions"] as int? ?? default(int);
                             myGame.compIndex = reader["Completed_ind"].ToString();
                             myGame.questionsCorrect = reader["questionsCorrect"] as int? ?? default(int);
-                            myGame.questionsMissed = myGame.questionsCorrect = reader["questionsMissed"] as int? ?? default(int);
-                            myGame.score = myGame.questionsCorrect = reader["score"] as int? ?? default(int);
+                            myGame.questionsMissed = reader["questionsMissed"] as int? ?? default(int);
+                            myGame.score = reader["score"] as int? ?? default(int);
 
 
                         }
