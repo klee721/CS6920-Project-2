@@ -30,7 +30,7 @@ namespace FinancialQuiz.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserStatsForm));
             this.getUserReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userStatsDataSet = new FinancialQuiz.UserStatsDataSet();
@@ -58,9 +58,9 @@ namespace FinancialQuiz.View
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "UserStatsReportDataSet";
-            reportDataSource1.Value = this.getUserReportBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "UserStatsReportDataSet";
+            reportDataSource2.Value = this.getUserReportBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FinancialQuiz.View.UserReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 84);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -106,6 +106,7 @@ namespace FinancialQuiz.View
             this.Controls.Add(this.reportViewer1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserStatsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserStatsForm";
             this.Load += new System.EventHandler(this.UserStatsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.getUserReportBindingSource)).EndInit();
