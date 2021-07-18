@@ -6,25 +6,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.20833in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.86458in</Width>
+              <Width>1.04791in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.1875in</Width>
+              <Width>1.32083in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.21875in</Width>
+              <Width>1.34375in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.23958in</Width>
+              <Width>1.31458in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.02083in</Width>
+              <Width>1.19583in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -42,14 +42,15 @@
                             <TextRun>
                               <Value>First Name</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -58,7 +59,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundColor>Orange</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -78,14 +79,15 @@
                             <TextRun>
                               <Value>Last Name</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -94,7 +96,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundColor>Orange</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -112,16 +114,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total games</Value>
+                              <Value># of Total Games</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -130,7 +133,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundColor>Orange</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -148,16 +151,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Average score</Value>
+                              <Value>Average Score</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -166,7 +170,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundColor>Orange</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -184,16 +188,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Highest score</Value>
+                              <Value>Highest Score, %</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -202,7 +207,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundColor>Orange</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -220,16 +225,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Lowest score</Value>
+                              <Value>Lowest Score, %</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -238,7 +244,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundColor>Orange</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -256,16 +262,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Last played</Value>
+                              <Value>Last Played On</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontFamily>Century Gothic</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -274,7 +281,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundColor>Orange</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -299,12 +306,15 @@
                             <TextRun>
                               <Value>=Fields!FirstName.Value</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>FirstName</rd:DefaultName>
@@ -332,12 +342,15 @@
                             <TextRun>
                               <Value>=Fields!LastName.Value</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>LastName</rd:DefaultName>
@@ -365,12 +378,15 @@
                             <TextRun>
                               <Value>=Sum(Fields!games.Value)</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>games</rd:DefaultName>
@@ -398,12 +414,15 @@
                             <TextRun>
                               <Value>=Sum(Fields!average_score.Value)</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>average_score</rd:DefaultName>
@@ -431,12 +450,15 @@
                             <TextRun>
                               <Value>=Sum(Fields!max_score.Value)</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>max_score</rd:DefaultName>
@@ -464,12 +486,15 @@
                             <TextRun>
                               <Value>=Sum(Fields!min_score.Value)</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>min_score</rd:DefaultName>
@@ -497,13 +522,16 @@
                             <TextRun>
                               <Value>=Fields!last_played.Value</Value>
                               <Style>
+                                <FontFamily>Century Gothic</FontFamily>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>M/d/yyyy</Format>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>last_played</rd:DefaultName>
@@ -546,8 +574,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
+        <Top>0.21667in</Top>
+        <Left>0.02084in</Left>
         <Height>0.5in</Height>
-        <Width>7.53124in</Width>
+        <Width>8.53124in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -558,7 +588,7 @@
     <Height>2.1875in</Height>
     <Style />
   </Body>
-  <Width>7.55208in</Width>
+  <Width>8.55208in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
