@@ -18,13 +18,13 @@ namespace UserDAL.Tests
         public void UserLoginTest()
         {
             // Arrange
-            string username = "jane";
-            string password = "test1234";
+            string username = "Laura";
+            string password = "Te$t4321";
             UserController userController = new UserController();
             List<User> listUsers = new List<User>();
             listUsers = userController.UserLogin(username, password);
             Assert.AreEqual(1, listUsers.Count);
-            Assert.AreEqual("jane", listUsers[0].UserName);
+            Assert.AreEqual("Laura", listUsers[0].UserName);
             
         }
 
@@ -33,7 +33,7 @@ namespace UserDAL.Tests
         {
             // Arrange
             string username = "Laura";
-            string password = "test4321";
+            string password = "Te$t4321";
             UserController userController = new UserController();
             List<User> listUsers = new List<User>();
             listUsers = userController.AdminLogin(username, password);
