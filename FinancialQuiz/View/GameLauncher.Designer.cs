@@ -157,7 +157,7 @@ namespace FinancialQuiz.View
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 152F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(153, 152);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
@@ -182,6 +182,7 @@ namespace FinancialQuiz.View
             this.Name = "GameLauncher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameLauncher";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameLauncher_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfQuestionsNumUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

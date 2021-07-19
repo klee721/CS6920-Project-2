@@ -17,6 +17,7 @@ namespace FinancialQuiz.View
         User loggedInUser;
         private LoginForm loginForm;
         private GamesSummaryForm gamesSummaryForm;
+        int exitClicked;
 
         public AdminDashboard(User user)
         {
@@ -25,6 +26,7 @@ namespace FinancialQuiz.View
             this.loggedInUser = user;
             this.loginForm = new LoginForm();
             this.FillOutComponents();
+            this.exitClicked = 1;
         }
 
 
@@ -50,15 +52,27 @@ namespace FinancialQuiz.View
 
         private void LogoutLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.exitClicked = 0;
             this.loggedInUser = null;
             AdminDashboard.ActiveForm.Close();
+            
             this.loginForm.Show();
+            
         }
 
         private void userGamesLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.gamesSummaryForm = new GamesSummaryForm();
             this.gamesSummaryForm.Show();
+        }
+
+        private void AdminDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.exitClicked == 1)
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }

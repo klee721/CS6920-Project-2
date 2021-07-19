@@ -12,6 +12,7 @@ namespace FinancialQuiz.View
         private LoginForm loginForm;
         CategoryController categorySource;
         AgeController ageSource;
+        int exitClicked;
 
         public GameLauncher(User user)
         {
@@ -26,6 +27,7 @@ namespace FinancialQuiz.View
             this.FillOutCategoryComboBox();
             this.FillOutAgeComboBox();
             this.FillOutQuestionsComboBox();
+            this.exitClicked = 1;
 
         }
 
@@ -89,13 +91,22 @@ namespace FinancialQuiz.View
             selectedAge = (int)this.AgeComboBox.SelectedValue;
             numberOfQuestions = (int)this.NumberOfQuestionsNumUpDown.Value;
             categoryName = this.CategoryComboBox.Text;
-
+            this.exitClicked = 0;
             playerDashboard.GetGameSettings(selectedCategory, categoryName, selectedAge, numberOfQuestions);
 
             GameLauncher.ActiveForm.Close();
             playerDashboard.Show();
             
 
+        }
+
+        private void GameLauncher_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.exitClicked ==1)
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }
